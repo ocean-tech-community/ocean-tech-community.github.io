@@ -1,0 +1,245 @@
+:root {
+    /* Palette océan sobre */
+    --blue-deep: #03314B; /* océan profond */
+    --blue: #0F5E7E; /* vague */
+    --teal: #19B5C8; /* écume / accent doux */
+    --sand: #F3ECE1; /* sable */
+    --white: #FFFFFF;
+    --ink: #0f172a;
+    --muted: #5b6775;
+    --accent: #F07C3E; /* accent rare (boutons) */
+}
+
+* {
+    box-sizing: border-box
+}
+
+html, body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--sand);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.text-center {
+    text-align: center
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.25rem
+}
+
+/* ---- Header ---- */
+.site-header {
+    background: linear-gradient(180deg, var(--blue-deep), #06283d);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid #ffffff22;
+}
+
+.nav {
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .8rem
+}
+
+.brand-title {
+    line-height: 1.05
+}
+
+.nav-links {
+    display: none;
+    gap: 1.6rem;
+    opacity: .9
+}
+
+@media (min-width: 880px) {
+    .nav-links {
+        display: flex
+    }
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    height: 2.8rem;
+    padding: 0 1rem;
+    border-radius: 12px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+    line-height: 1;
+    transition: .18s transform, .18s filter;
+}
+
+.btn:hover {
+    transform: translateY(-1px)
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--white)
+}
+
+.btn-ghost {
+    background: #ffffff14;
+    color: #fff
+}
+
+/* ---- Hero ---- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    color: var(--white);
+    background: linear-gradient(180deg, #0a3b56 0%, #06283d 55%, #041d2c 100%);
+    padding: 3rem 0 9rem;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns:1fr auto;
+    gap:2rem;
+    align-items:center;
+}
+
+.hero h1 {
+    font-family: Poppins, Inter, sans-serif;
+    font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+    line-height: 1.1;
+    margin: 0;
+}
+
+.hero p {
+    margin: 1rem 0 0;
+    opacity: .95;
+    max-width: 60ch
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1.25rem
+}
+
+/* Vague séparatrice */
+.wave {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: auto;
+    display: block
+}
+
+/* ---- Sections ---- */
+section {
+    padding: 3.6rem 0
+}
+
+.section-title {
+    font-family: Poppins, Inter, sans-serif;
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    margin: 0 0 .6rem;
+    color: #09263a
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.lead {
+    font-size: 1.05rem;
+    color: #2a3440
+}
+
+/* Grille cartes sobres */
+.grid {
+    display: grid;
+    gap: 1rem
+}
+
+@media (min-width: 900px) {
+    .grid.cols-3 {
+        grid-template-columns:repeat(3, 1fr)
+    }
+}
+
+/* Liste points */
+.list {
+    display: grid;
+    gap: .4rem;
+    margin: .6rem 0 0
+}
+
+.list li {
+    display: flex;
+    gap: .6rem;
+    align-items: flex-start
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--teal);
+    margin-top: .45rem;
+    flex: 0 0 auto
+}
+
+/* Newsletter */
+.newsletter {
+    background: var(--white);
+    border: 1px solid #e7e5e4;
+    border-radius: 16px;
+    padding: 1rem 1.1rem;
+    display: grid;
+    gap: .8rem
+}
+
+.newsletter form {
+    display: grid;
+    gap: .6rem;
+    grid-template-columns:1fr auto
+}
+
+.newsletter input {
+    height: 2.8rem;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    padding: 0 .9rem;
+    font: inherit
+}
+
+/* Footer */
+.site-footer {
+    background: linear-gradient(180deg, #06283d, #051f31);
+    color: #e8f7fb;
+    padding: 2.2rem 0;
+    border-top: 1px solid #ffffff22
+}
