@@ -117,7 +117,16 @@ a {
     overflow: hidden;
     color: var(--white);
     background: linear-gradient(180deg, #0a3b56 0%, #06283d 55%, #041d2c 100%);
-    padding: 3rem 0 9rem;
+    padding: 20px 0 120px;
+
+    
+    @media (max-width: 640px) {
+        padding-bottom: 50px;
+        img {
+            display: none;
+        }
+    }
+
 }
 
 .hero-content {
