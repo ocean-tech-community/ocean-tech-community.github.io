@@ -111,6 +111,11 @@ a {
     color: #fff
 }
 
+/* ---- Subscribe ---- */
+.subscribe {
+    display: flex;
+    justify-content: center;
+}
 /* ---- Hero ---- */
 .hero {
     position: relative;
