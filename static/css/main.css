@@ -66,6 +66,12 @@ a {
     gap: .8rem
 }
 
+.logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .brand-title {
     line-height: 1.05
 }
