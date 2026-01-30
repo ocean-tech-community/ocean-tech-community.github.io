@@ -11,7 +11,7 @@
           {{ partial "meetup-link" (dict "ctx" . "class" "btn-ghost") }}
         </div>
       </div>
-      <img src="images/hero.webp" width="400">
+      <img src="/images/hero.webp" width="400" alt="" loading="lazy">
     </div>
   </div>
 
@@ -47,7 +47,7 @@
     </div>
     <div class="solution-media">
       <img src="/images/presse.jpg"
-           alt="  {{ i18n "home.section.solution.imageAlt" | markdownify }}"
+           alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
            loading="lazy">
     </div>
   </div>

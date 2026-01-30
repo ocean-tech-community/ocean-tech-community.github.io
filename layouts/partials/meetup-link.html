@@ -1,5 +1,6 @@
 <a class="btn {{ .class | default "btn-secondary" }}"
    target="_blank"
+   rel="noopener"
    href="{{ .ctx.Site.Params.meetupUrl }}">
   {{ i18n "buttons.meetup" | markdownify }}
 </a>
