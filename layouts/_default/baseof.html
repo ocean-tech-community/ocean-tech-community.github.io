@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="{{ block "description" . }}{{ .Site.Params.description }}{{ end }}">
+  <meta name="keywords" content="{{ block "keywords" . }}{{ .Site.Params.keywords }}{{ end }}">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="89df8b6b-5775-4150-88d7-c8c101d471c7"></script>
+</head>
+<body>
+{{ partial "header.html" . }}
+
+<main>
+  {{ block "main" . }}{{ end }}
+</main>
+
+{{ partial "footer.html" . }}
+</body>
+</html>
