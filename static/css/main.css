@@ -124,8 +124,7 @@ a {
 
 /* ---- Subscribe ---- */
 
-.subscribe .form {
-     min-height:500px;
+.page {
      display: flex;
      justify-content: center;
  }

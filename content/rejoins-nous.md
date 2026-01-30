@@ -1,3 +1,5 @@
 ---
-title: "Rejoins la communauté Ocean Tech"
+title: "On se retrouve pour parler tech & produit sur la côte pays basque ?"
 ---
+
+{{< join-form >}}
