@@ -230,6 +230,12 @@ section {
   }
 }
 
+.action .button {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
 /* ---- Footer ---- */
 .site-footer {
   background: linear-gradient(180deg, #06283d, #051f31);

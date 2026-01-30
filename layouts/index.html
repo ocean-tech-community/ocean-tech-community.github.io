@@ -54,15 +54,15 @@
 </section>
 
 <!-- Action -->
-<section>
+<section class="action">
   <div class="container">
     <h2 class="section-title">{{ i18n "home.section.action.title" | markdownify }}</h2>
     <p>{{ i18n "home.section.action.text" | markdownify }}</p>
-    <p class="text-center">
+    <div class="button">
       {{ partial "join-link" . }}
       {{ partial "meetup-link" (dict "ctx" .)  }}
-    </p>
-    <p class="text-center">{{ i18n "home.section.action.sublink" | markdownify }}</p>
+    </div>
+    <p>{{ i18n "home.section.action.sublink" | markdownify }}</p>
   </div>
 </section>
 
