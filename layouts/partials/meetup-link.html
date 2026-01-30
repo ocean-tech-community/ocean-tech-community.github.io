@@ -1,5 +1,5 @@
-<a class="btn btn-ghost"
+<a class="btn {{ .class | default "btn-secondary" }}"
    target="_blank"
-   href="{{ .Site.Params.meetupUrl }}">
+   href="{{ .ctx.Site.Params.meetupUrl }}">
   {{ i18n "buttons.meetup" | markdownify }}
 </a>

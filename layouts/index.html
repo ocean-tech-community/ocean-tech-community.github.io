@@ -8,7 +8,7 @@
         <p>{{ i18n "home.hero.text" | markdownify }}</p>
         <div class="hero-actions">
           {{ partial "join-link" . }}
-          {{ partial "meetup-link" . }}
+          {{ partial "meetup-link" (dict "ctx" . "class" "btn-ghost") }}
         </div>
       </div>
       <img src="images/hero.webp" width="400">
@@ -51,7 +51,7 @@
     <p>{{ i18n "home.section.action.text" | markdownify }}</p>
     <p class="text-center">
       {{ partial "join-link" . }}
-      {{ partial "meetup-link" . }}
+      {{ partial "meetup-link" (dict "ctx" .)  }}
     </p>
     <p>{{ i18n "home.section.action.sublink" | markdownify }}</p>
   </div>
