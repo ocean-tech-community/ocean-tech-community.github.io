@@ -1,5 +1,7 @@
+defaultContentLanguage: fr
 title: "Ocean Tech, la communauté tech & produit sur la côte basco-landaise"
 params:
   description: "Ocean Tech rassemble la communauté tech & produit de la côte basco-landaise. Meetups, talks et ateliers pour partager, apprendre et créer du lien entre passionné·es de la tech et du produit, au Pays Basque et dans les Landes."
   keywords: "ocean tech, pays basque, landes, côte basco-landaise, communauté tech, communauté produit, meetups tech, conférences tech, ateliers produit, talks développeurs, startup pays basque, startup landes, Biarritz, Bayonne, Anglet, Hossegor, Capbreton"
   meetupUrl: "https://mobilizon.fr/events/60bbc627-545d-43d5-8a29-99e4f6e1a022"
+  cfpUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfp_rmx9DOQyo1ejs8w4496CuD8QlWmIuatBIKBf2vi--HF0Q/viewform"

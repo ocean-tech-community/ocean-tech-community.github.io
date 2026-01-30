@@ -4,12 +4,8 @@
   <div class="container">
     <div class="hero-content">
       <div>
-        <h1>Ocean Tech <br> La communauté tech & produit</h1>
-        <p>
-          Ici, les acteurs du logiciel sont dispersés : plus dur de se croiser qu’à Bordeaux ou Toulouse. Ocean Tech
-          veut changer ça : créer un rendez-vous régulier pour apprendre, échanger, réseauter… et passer un bon moment
-          avec l’océan pas loin.
-        </p>
+        <h1>{{ i18n "home.hero.title" | safeHTML }}</h1>
+        <p>{{ i18n "home.hero.text" | markdownify }}</p>
         <div class="hero-actions">
           {{ partial "join-link" . }}
           {{ partial "meetup-link" . }}
@@ -32,33 +28,45 @@
 
 </section>
 
-<!-- À propos -->
-<section id="a-propos">
+<!-- Problem -->
+<section>
   <div class="container">
-    <h2 class="section-title">Chez nous, la tech est là… mais chacun·e dans son coin</h2>
-    <p class="lead">Nous sommes nombreux à travailler dans la tech & le produit sur le BAB et ses alentours :
-      freelances, salarié·es, en remote ou en présentiel. Mais dispersés, il est difficile de se rassembler. Il
-      n’existe pas encore de communauté pour nous retrouver et partager régulièrement.</p>
-    <p class="lead">Ocean Tech, c’est l’envie de réunir les acteurs du monde du logiciel : devs, PMs, designers,
-      data & ops pour partager, apprendre, s’entraider et créer des connexions locales utiles.</p>
+    <h2 class="section-title">{{ i18n "home.section.problem.title" | markdownify }}</h2>
+    {{ i18n "home.section.problem.text" | markdownify }}
   </div>
 </section>
 
-<!-- Format & contenus -->
-<section id="format" style="background:var(--white)">
+<!-- Solution -->
+<section style="background:var(--white)">
   <div class="container">
-    <h2 class="section-title">Rassemblons les acteurs du logiciel sur la côte</h2>
-    <p class="lead">On a des idées… mais on veut d’abord écouter. Les sujets, la fréquence, les lieux, les formats…
-      dites-nous ce qui vous ferait venir.</p>
-    <p class="text-center">
-      <a class="btn btn-primary"
-         href="rejoins-nous.html"
-      >
-        Dis-nous ce que tu attends (2 min)
-      </a>
-    </p>
-    <p class="lead">La communauté est en cours de lancement. Vos retours nous aident à démarrer au bon endroit, avec le
-      bon rythme.</p>
+    <h2 class="section-title">{{ i18n "home.section.solution.title" | markdownify }}</h2>
+    {{ i18n "home.section.solution.text" | markdownify }}
   </div>
 </section>
+
+<!-- Action -->
+<section>
+  <div class="container">
+    <h2 class="section-title">{{ i18n "home.section.action.title" | markdownify }}</h2>
+    <p>{{ i18n "home.section.action.text" | markdownify }}</p>
+    <p class="text-center">
+      {{ partial "join-link" . }}
+      {{ partial "meetup-link" . }}
+    </p>
+    <p>{{ i18n "home.section.action.sublink" | markdownify }}</p>
+  </div>
+</section>
+
+<!-- CFP -->
+<section style="background:var(--white)">
+  <div class="container">
+    <h2 class="section-title">{{ i18n "home.section.cfp.title" | markdownify }}</h2>
+    {{ i18n "home.section.cfp.text" | markdownify }}
+    <p class="text-center">
+      {{ partial "cfp-link" . }}
+    </p>
+    <p>{{ i18n "home.section.cfp.sublink" | markdownify }}</p>
+  </div>
+</section>
+
 {{ end }}

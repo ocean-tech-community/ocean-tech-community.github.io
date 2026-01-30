@@ -1,0 +1,43 @@
+buttons:
+  join: Rejoins la communauté Ocean Tech
+  meetup: Inscris-toi au prochain rendez-vous
+  cfp: Propose un sujet via le CFP
+home:
+  hero:
+    title: "Ocean Tech : <br> La communauté tech & produit"
+    text: |
+      Ici, les acteurs du logiciel sont dispersés : plus dur de se croiser qu’à Bordeaux ou Toulouse.
+      Ocean Tech change la donne en proposant un rendez-vous régulier pour apprendre, échanger, réseauter… et passer un bon moment, l’océan pas loin.
+  section:
+    problem:
+      title: Chez nous, la tech est là… mais chacun·e dans son coin
+      text: |
+        Nous sommes nombreux à travailler dans la tech & le produit sur le BAB et ses alentours : freelances, salarié·es, en remote ou en présentiel.
+
+        Mais dispersés, il est difficile de se rassembler. Il n’existe que très peu d’événements ou de rendez-vous réguliers pour se retrouver en dehors du travail et partager entre pairs.
+
+        C’est frustrant. Surtout quand on vit et travaille dans un endroit aussi agréable.
+    solution:
+      title: Ocean Tech, c’est la solution
+      text: |
+        Ocean Tech, c’est un rendez-vous mensuel pour les personnes de la tech & du produit sur la côte.
+        Un moment simple et ouvert pour :
+        
+        * se rencontrer entre pros de la tech & du produit,
+        * échanger sur nos pratiques, nos projets, nos galères,
+        * apprendre via des talks, des retours d’expérience ou des discussions informelles,
+        * développer un réseau local,
+        * et surtout passer un bon moment et rencontrer de nouvelles personnes.
+
+        La communauté compte **déjà plus de 100 personnes inscrites** et l’initiative a été **relayée dans la presse locale**.
+    action:
+      title: Tu travailles dans la tech ou le produit sur le BAB ?
+      text: Alors **Ocean Tech est fait pour toi.**
+      sublink: On se retrouve bientôt autour d’un verre, entre gens du logiciel 🍻
+    cfp:
+      title: Tu veux proposer un sujet ?
+      text: |
+        Ocean Tech, ce n’est pas que des meetups classiques.
+        
+        Des formats hors-série sont aussi organisés : talks, retours d’expérience, discussions thématiques...
+      sublink: (le lien est ouvert à toutes celles et ceux qui souhaitent partager)
