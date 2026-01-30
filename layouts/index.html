@@ -37,10 +37,19 @@
 </section>
 
 <!-- Solution -->
-<section style="background:var(--white)">
-  <div class="container">
-    <h2 class="section-title">{{ i18n "home.section.solution.title" | markdownify }}</h2>
-    {{ i18n "home.section.solution.text" | markdownify }}
+<section class="solution">
+  <div class="container solution-grid">
+    <div class="solution-text">
+      <h2 class="section-title">
+        {{ i18n "home.section.solution.title" | markdownify }}
+      </h2>
+      {{ i18n "home.section.solution.text" | markdownify }}
+    </div>
+    <div class="solution-media">
+      <img src="/images/presse.jpg"
+           alt="  {{ i18n "home.section.solution.imageAlt" | markdownify }}"
+           loading="lazy">
+    </div>
   </div>
 </section>
 

@@ -272,3 +272,33 @@ section {
     padding: 2.2rem 0;
     border-top: 1px solid #ffffff22
 }
+
+.solution {
+  background: var(--white);
+  padding: 5rem 0;
+}
+
+.solution-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.solution-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .solution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-media {
+    order: -1; /* image au-dessus */
+  }
+}
