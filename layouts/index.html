@@ -53,7 +53,7 @@
       {{ partial "join-link" . }}
       {{ partial "meetup-link" (dict "ctx" .)  }}
     </p>
-    <p>{{ i18n "home.section.action.sublink" | markdownify }}</p>
+    <p class="text-center">{{ i18n "home.section.action.sublink" | markdownify }}</p>
   </div>
 </section>
 
@@ -65,7 +65,7 @@
     <p class="text-center">
       {{ partial "cfp-link" . }}
     </p>
-    <p>{{ i18n "home.section.cfp.sublink" | markdownify }}</p>
+    <p class="text-center">{{ i18n "home.section.cfp.sublink" | markdownify }}</p>
   </div>
 </section>
 
