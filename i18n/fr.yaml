@@ -1,7 +1,7 @@
 buttons:
   join: Rejoins la communauté
   meetup: Inscris-toi au prochain rendez-vous
-  cfp: Propose un sujet via le CFP
+  cfp: Propose un sujet
 home:
   hero:
     title: "Ocean Tech : <br> La communauté tech & produit"
