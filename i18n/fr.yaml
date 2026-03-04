@@ -4,17 +4,18 @@ buttons:
   cfp: Propose un sujet
 home:
   hero:
-    title: "Ocean Tech : <br> La communauté tech & produit"
+    title: "Ocean Tech : <br> La communauté tech & produit basco-landaise"
     text: |
-      Ici, les acteurs du logiciel sont dispersés : plus dur de se croiser qu’à Bordeaux ou Toulouse.
-      Ocean Tech change la donne en proposant un rendez-vous régulier pour apprendre, échanger, réseauter… et passer un bon moment, l’océan pas loin.
+      Ocean Tech souhaite rassembler les acteurs du logiciel sur la côte basque et landaise et créer une vraie communauté en proposant des rendez-vous réguliers pour se rencontrer, échanger, réseauter… et surtout passer un bon moment ensemble.
+
+Tous les mois on organise un Apéro Ocean Tech dans un bar (Bob's Beer..) et une fois par trimestre, une Soirée Ocean Tech avec des conférences organisées dans une entreprise du coin. 
   section:
     problem:
       title: Chez nous, la tech est là… mais chacun·e dans son coin
       text: |
         Nous sommes nombreux à travailler dans la tech & le produit sur le BAB et ses alentours : freelances, salarié·es, en remote ou en présentiel.
 
-        Mais dispersés, il est difficile de se rassembler. Il n’existe que très peu d’événements ou de rendez-vous réguliers pour se retrouver en dehors du travail et partager entre pairs.
+        Mais dispersés, il est difficile de se rassembler. Il n’existe que très peu d’événements ou de rendez-vous réguliers pour se retrouver en dehors du travail et discuter entre pairs.
 
         C’est frustrant. Surtout quand on vit et travaille dans un endroit aussi agréable.
     solution:
@@ -40,5 +41,5 @@ home:
       text: |
         Ocean Tech, ce n’est pas que des meetups classiques.
         
-        Des formats hors-série sont aussi organisés : talks, retours d’expérience, discussions thématiques...
+        Des formats "conférences" sont aussi organisés : talks, retours d’expérience, discussions thématiques...
       sublink: (le lien est ouvert à toutes celles et ceux qui souhaitent partager)
