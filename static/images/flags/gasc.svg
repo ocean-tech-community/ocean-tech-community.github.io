@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16" role="img" aria-label="Gascon">
+  <path fill="#B20D18" d="M0 0h24v16H0z"/>
+  <path fill="#FFD34D" d="M3 7h18v2H3z"/>
+  <path fill="#FFD34D" d="M11 2h2v12h-2z"/>
+  <circle cx="12" cy="8" r="4.2" fill="none" stroke="#FFD34D" stroke-width="1.6"/>
+</svg>

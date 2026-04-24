@@ -1,0 +1,49 @@
+buttons:
+  join: Batu komunitatera
+  meetup: Eman izena hurrengo hitzorduan
+  cfp: Proposatu gai bat
+footer:
+  tagline: Ocean Tech, teknologia eta produktu komunitatea
+  location: Euskal-landesetako kostaldea
+languages:
+  label: Aldatu hizkuntza
+home:
+  hero:
+    title: "Ocean Tech : <br> Teknologia eta produktu komunitatea"
+    text: |
+      Hemen, softwarearen inguruko eragileak sakabanatuta gaude: zailagoa da elkar topatzea Bordelen edo Tolosan baino.
+      Ocean Tech-ek dinamika aldatzen du, ikasteko, trukatzeko, sareak egiteko... eta ozeanoa gertu dugula une on bat pasatzeko ohiko hitzordu bat proposatuz.
+  section:
+    problem:
+      title: Gurean teknologia badago... baina bakoitza bere aldetik
+      text: |
+        Asko gara BAB inguruan teknologian eta produktuan lanean ari garenak: freelanceak, soldatapekoak, urrunetik edo aurrez aurre.
+
+        Baina sakabanatuta, zaila da elkartzea. Oso ekitaldi edo ohiko hitzordu gutxi daude lanetik kanpo elkar ikusteko eta parekoekin partekatzeko.
+
+        Frustragarria da. Are gehiago hain leku atseginean bizi eta lan egiten dugunean.
+    solution:
+      title: Ocean Tech da erantzuna
+      text: |
+        Ocean Tech kostaldeko teknologia eta produktu arloko pertsonentzako hileroko hitzordua da.
+        Une xume eta irekia, honetarako:
+
+        * teknologia eta produktu arloko profesionalekin elkartzeko,
+        * gure praktikak, proiektuak eta zailtasunak partekatzeko,
+        * hitzaldien, esperientzia partekatzeen edo solasaldi informalen bidez ikasteko,
+        * tokiko sarea garatzeko,
+        * eta batez ere une on bat pasatzeko eta jende berria ezagutzeko.
+
+        Komunitateak **dagoeneko 100 pertsona baino gehiago ditu izena emanda**, eta ekimena **tokiko prentsan zabaldu da**.
+      imageAlt: Placéco egunkarian argitaratutako prentsa artikulua
+    action:
+      title: Teknologian edo produktuan lan egiten duzu BAB inguruan ?
+      text: Orduan **Ocean Tech zuretzat da.**
+      sublink: Laster elkartuko gara zerbait hartzeko, software munduko jendearekin
+    cfp:
+      title: Gai bat proposatu nahi duzu ?
+      text: |
+        Ocean Tech ez da meetup klasikoak bakarrik.
+
+        Formatu bereziak ere antolatzen dira: hitzaldiak, esperientzia partekatzeak, solasaldi tematikoak...
+      sublink: (esteka partekatu nahi duen ororentzat dago zabalik)

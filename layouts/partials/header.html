@@ -2,12 +2,43 @@
 <header class="site-header">
   <div class="container nav">
     <div class="brand">
-      <a href="{{ "/" | relURL }}" class="logo">
-        <img src="/images/logo.png" alt="Ocean Tech" height="50">
+      <a href="{{ "/" | relLangURL }}" class="logo">
+        <img src="{{ "images/logo.png" | relURL }}" alt="Ocean Tech" height="50">
       </a>
     </div>
-    <nav class="nav-links">
-      {{ partial "join-link" . }}
-    </nav>
+    <div class="header-actions">
+      <nav class="nav-links" aria-label="Navigation">
+        {{ partial "join-link" . }}
+      </nav>
+      <details class="language-switcher">
+        <summary aria-label="{{ i18n "languages.label" }}">
+          <img class="language-flag"
+               src="{{ printf "images/flags/%s.svg" .Site.Language.Lang | relURL }}"
+               alt="">
+        </summary>
+        <nav class="language-menu" aria-label="{{ i18n "languages.label" }}">
+          {{ range hugo.Sites }}
+            {{ $translation := index (where $.Translations "Language.Lang" .Language.Lang) 0 }}
+            {{ $href := .Home.RelPermalink }}
+            {{ if eq $.Site.Language.Lang .Language.Lang }}
+              {{ $href = $.RelPermalink }}
+            {{ else if $translation }}
+              {{ $href = $translation.RelPermalink }}
+            {{ end }}
+            {{ $languageCode := .Language.LanguageCode | default .Language.Lang }}
+            <a href="{{ $href }}"
+               hreflang="{{ $languageCode }}"
+               lang="{{ $languageCode }}"
+               class="language-option {{ if eq $.Site.Language.Lang .Language.Lang }}is-active{{ end }}"
+               {{ if eq $.Site.Language.Lang .Language.Lang }}aria-current="true"{{ end }}>
+              <img class="language-flag"
+                   src="{{ printf "images/flags/%s.svg" .Language.Lang | relURL }}"
+                   alt="">
+              <span class="language-name">{{ .Language.LanguageName }}</span>
+            </a>
+          {{ end }}
+        </nav>
+      </details>
+    </div>
   </div>
 </header>
