@@ -1,11 +1,37 @@
 <!doctype html>
 <html lang="fr">
 <head>
+  {{ $title := cond .IsHome .Site.Title (printf "%s | Ocean Tech" .Title) }}
+  {{ $description := .Description | default .Site.Params.description }}
+  {{ $socialImage := .Params.socialImage | default .Site.Params.socialImage }}
+  {{ $socialImageAlt := .Params.socialImageAlt | default .Site.Params.socialImageAlt }}
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <meta name="description" content="{{ block "description" . }}{{ .Site.Params.description }}{{ end }}">
-  <meta name="keywords" content="{{ block "keywords" . }}{{ .Site.Params.keywords }}{{ end }}">
-  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ $description }}">
+  <meta name="keywords" content="{{ .Site.Params.keywords }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Ocean Tech">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ $description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ with $socialImage }}
+  <meta property="og:image" content="{{ . | absURL }}">
+  {{ end }}
+  {{ with $socialImageAlt }}
+  <meta property="og:image:alt" content="{{ . }}">
+  {{ end }}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ $description }}">
+  {{ with $socialImage }}
+  <meta name="twitter:image" content="{{ . | absURL }}">
+  {{ end }}
+  {{ with $socialImageAlt }}
+  <meta name="twitter:image:alt" content="{{ . }}">
+  {{ end }}
+  <title>{{ $title }}</title>
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">

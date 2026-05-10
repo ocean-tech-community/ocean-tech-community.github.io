@@ -1,5 +1,6 @@
 ---
 title: "On se retrouve pour parler tech & produit sur la côte basco-landaise ?"
+description: "Rejoins Ocean Tech pour suivre les prochains apéros, soirées, talks et appels à sujets de la communauté tech et produit basco-landaise."
 aliases:
   - rejoins-nous.html
 ---
