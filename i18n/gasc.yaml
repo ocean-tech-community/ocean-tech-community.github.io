@@ -3,8 +3,12 @@ buttons:
   meetup: Inscriu-te au pròche rendetz-vos
   cfp: Prepausa un subjècte
 footer:
-  tagline: Ocean Tech, la comunautat tech e produit
-  location: Còsta bascolandesa
+  brand:
+    name: Ocean Tech
+    tagline: La comunautat tech e produit de la còsta bascolandesa.
+    location: País Basco e Lanas
+  social:
+    ariaLabel: Hialats sociaus
 languages:
   label: Càmbia de lenga
 home:
@@ -35,7 +39,7 @@ home:
         * desvolopar un hialat locau,
         * e subertot passar un bon moment e rencontrar monde nau.
 
-        La comunautat que compta **dejà mei de 100 personas inscriutas** e l'iniciativa qu'ei estada **relayada dens la premsa locau**.
+        La comunautat que compta **dejà mei de 250 personas inscriutas** e l'iniciativa qu'ei estada **relayada dens la premsa locau**.
       imageAlt: Article de premsa paregut dens lo jornau Placéco
     action:
       title: Tribalhas dens la tech o lo produit suu BAB ?

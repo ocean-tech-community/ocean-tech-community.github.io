@@ -3,8 +3,12 @@ buttons:
   meetup: Eman izena hurrengo hitzorduan
   cfp: Proposatu gai bat
 footer:
-  tagline: Ocean Tech, teknologia eta produktu komunitatea
-  location: Euskal-landesetako kostaldea
+  brand:
+    name: Ocean Tech
+    tagline: Euskal-landesetako kostaldeko teknologia eta produktu komunitatea.
+    location: Euskal Herria eta Landak
+  social:
+    ariaLabel: Sare sozialak
 languages:
   label: Aldatu hizkuntza
 home:
@@ -35,7 +39,7 @@ home:
         * tokiko sarea garatzeko,
         * eta batez ere une on bat pasatzeko eta jende berria ezagutzeko.
 
-        Komunitateak **dagoeneko 100 pertsona baino gehiago ditu izena emanda**, eta ekimena **tokiko prentsan zabaldu da**.
+        Komunitateak **dagoeneko 250 pertsona baino gehiago ditu izena emanda**, eta ekimena **tokiko prentsan zabaldu da**.
       imageAlt: Placéco egunkarian argitaratutako prentsa artikulua
     action:
       title: Teknologian edo produktuan lan egiten duzu BAB inguruan ?
