@@ -9,10 +9,11 @@ languages:
   label: Càmbia de lenga
 home:
   hero:
-    title: "Ocean Tech : <br> La comunautat tech e produit"
+    title: "Ocean Tech : <br> La comunautat tech e produit bascolandesa"
     text: |
-      Ací, los actors deu logiciau son escampilhats : mei mauaisit de's crosar qu'a Bordèu o Tolosa.
-      Ocean Tech cambia la dinamica en prepausant un rendetz-vos regular entà apréner, escambiar, har hialat... e passar un bon moment, l'ocean pas luenh.
+      Ocean Tech que vòu amassar los actors deu logiciau sus la còsta basca e landesa e crear ua vertadèra comunautat en prepausant rendetz-vos regulars entà's rencontrar, escambiar, har hialat... e subertot passar un bon moment amassa.
+
+      Cada mes qu'organizam un Apèro Ocean Tech dens un bar (Bob's Beer...) e un còp per trimèstre, ua Serada Ocean Tech dab conferéncias organizadas dens ua enterpresa deu parçan.
   section:
     problem:
       title: Ací, la tech qu'i ei... mes cadun dens lo son canton
@@ -39,7 +40,7 @@ home:
     action:
       title: Tribalhas dens la tech o lo produit suu BAB ?
       text: Alavetz **Ocean Tech qu'ei hèit entà tu.**
-      sublink: Que'ns retrobam lèu a l'entorn d'un veire, enter monde deu logiciau
+      sublink: Que'ns retrobam lèu a l'entorn d'un veire, enter monde deu logiciau 🍻
     cfp:
       title: Vòs prepausar un subjècte ?
       text: |

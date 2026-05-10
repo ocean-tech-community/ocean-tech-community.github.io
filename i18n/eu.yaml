@@ -9,10 +9,11 @@ languages:
   label: Aldatu hizkuntza
 home:
   hero:
-    title: "Ocean Tech : <br> Teknologia eta produktu komunitatea"
+    title: "Ocean Tech : <br> Euskal-landesetako teknologia eta produktu komunitatea"
     text: |
-      Hemen, softwarearen inguruko eragileak sakabanatuta gaude: zailagoa da elkar topatzea Bordelen edo Tolosan baino.
-      Ocean Tech-ek dinamika aldatzen du, ikasteko, trukatzeko, sareak egiteko... eta ozeanoa gertu dugula une on bat pasatzeko ohiko hitzordu bat proposatuz.
+      Ocean Tech-ek Euskal Herriko eta Landetako kostaldeko software arloko eragileak bildu nahi ditu, eta benetako komunitate bat sortu, aldizkako hitzorduak proposatuz elkar ezagutzeko, trukatzeko, sareak egiteko... eta batez ere elkarrekin une on bat pasatzeko.
+
+      Hilero Ocean Tech aperitibo bat antolatzen dugu taberna batean (Bob's Beer...) eta hiru hilean behin Ocean Tech gaualdi bat, inguruko enpresa batean antolatutako hitzaldiekin.
   section:
     problem:
       title: Gurean teknologia badago... baina bakoitza bere aldetik
@@ -39,7 +40,7 @@ home:
     action:
       title: Teknologian edo produktuan lan egiten duzu BAB inguruan ?
       text: Orduan **Ocean Tech zuretzat da.**
-      sublink: Laster elkartuko gara zerbait hartzeko, software munduko jendearekin
+      sublink: Laster elkartuko gara zerbait hartzeko, software munduko jendearekin 🍻
     cfp:
       title: Gai bat proposatu nahi duzu ?
       text: |
