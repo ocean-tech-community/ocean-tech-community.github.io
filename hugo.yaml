@@ -5,3 +5,7 @@ params:
   keywords: "ocean tech, pays basque, landes, côte basco-landaise, communauté tech, communauté produit, meetups tech, conférences tech, ateliers produit, talks développeurs, startup pays basque, startup landes, Biarritz, Bayonne, Anglet, Hossegor, Capbreton"
   meetupUrl: ""
   cfpUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfp_rmx9DOQyo1ejs8w4496CuD8QlWmIuatBIKBf2vi--HF0Q/viewform"
+  socialMedia:
+    linkedin: "https://www.linkedin.com/company/oceantechcommunity"
+    instagram: "https://www.instagram.com/oceantechcommunity/"
+    bluesky: "https://bsky.app/profile/oceantechcommunity.bsky.social"
