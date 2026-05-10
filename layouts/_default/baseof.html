@@ -31,6 +31,55 @@
   {{ with $socialImageAlt }}
   <meta name="twitter:image:alt" content="{{ . }}">
   {{ end }}
+  {{ $sameAs := slice }}
+  {{ with .Site.Params.socialMedia.linkedin }}
+    {{ $sameAs = $sameAs | append . }}
+  {{ end }}
+  {{ with .Site.Params.socialMedia.instagram }}
+    {{ $sameAs = $sameAs | append . }}
+  {{ end }}
+  {{ with .Site.Params.socialMedia.bluesky }}
+    {{ $sameAs = $sameAs | append . }}
+  {{ end }}
+  {{ $organization := dict
+    "@type" "Organization"
+    "@id" (printf "%s#organization" .Site.BaseURL)
+    "name" "Ocean Tech"
+    "url" .Site.BaseURL
+    "logo" ("/images/logo.png" | absURL)
+    "image" ($socialImage | absURL)
+    "description" .Site.Params.description
+    "sameAs" $sameAs
+    "areaServed" (slice
+      (dict "@type" "Place" "name" "Pays Basque")
+      (dict "@type" "Place" "name" "Landes")
+      (dict "@type" "Place" "name" "Côte basco-landaise")
+    )
+    "knowsAbout" (slice "Tech" "Produit" "Logiciel" "Meetups tech" "Conférences tech")
+  }}
+  {{ $website := dict
+    "@type" "WebSite"
+    "@id" (printf "%s#website" .Site.BaseURL)
+    "url" .Site.BaseURL
+    "name" "Ocean Tech"
+    "description" .Site.Params.description
+    "publisher" (dict "@id" (printf "%s#organization" .Site.BaseURL))
+    "inLanguage" "fr-FR"
+  }}
+  {{ $webPage := dict
+    "@type" "WebPage"
+    "@id" (printf "%s#webpage" .Permalink)
+    "url" .Permalink
+    "name" $title
+    "description" $description
+    "isPartOf" (dict "@id" (printf "%s#website" .Site.BaseURL))
+    "about" (dict "@id" (printf "%s#organization" .Site.BaseURL))
+    "inLanguage" "fr-FR"
+  }}
+  {{ $schema := dict "@context" "https://schema.org" "@graph" (slice $organization $website $webPage) }}
+  <script type="application/ld+json">
+    {{ $schema | jsonify (dict "indent" "  ") | safeJS }}
+  </script>
   <title>{{ $title }}</title>
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
