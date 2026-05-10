@@ -1,10 +1,15 @@
 <!-- Footer -->
 <footer class="site-footer">
-  <div class="container text-center">
-    <div>Ocean Tech, la communauté tech & produit</div>
-    <div>Côte basco-landaise</div>
+  <div class="container footer-content">
+    <div class="footer-brand">
+      <strong>{{ i18n "footer.brand.name" }}</strong>
+      <p>{{ i18n "footer.brand.tagline" }}</p>
+      <p class="footer-location">{{ i18n "footer.brand.location" }}</p>
+    </div>
+
+    <div class="footer-actions">
     {{ with .Site.Params.socialMedia }}
-      <nav class="social-links" aria-label="Réseaux sociaux">
+      <nav class="social-links" aria-label="{{ i18n "footer.social.ariaLabel" }}">
         {{ with .linkedin }}
           <a href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -28,5 +33,6 @@
         {{ end }}
       </nav>
     {{ end }}
+    </div>
   </div>
 </footer>

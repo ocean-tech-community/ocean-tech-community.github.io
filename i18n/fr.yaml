@@ -2,6 +2,13 @@ buttons:
   join: Rejoins la communauté
   meetup: Inscris-toi au prochain rendez-vous
   cfp: Propose un sujet
+footer:
+  brand:
+    name: Ocean Tech
+    tagline: La communauté tech & produit de la côte basco-landaise.
+    location: Pays Basque & Landes
+  social:
+    ariaLabel: Réseaux sociaux
 home:
   hero:
     title: "Ocean Tech : <br> La communauté tech & produit basco-landaise"
