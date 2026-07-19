@@ -1,6 +1,31 @@
 defaultContentLanguage: fr
 baseURL: "https://www.oceantech.community/"
 title: "Ocean Tech, la communauté tech & produit sur la côte basco-landaise"
+languages:
+  fr:
+    languageCode: fr-FR
+    languageName: Français
+    title: "Ocean Tech, la communauté tech & produit sur la côte basco-landaise"
+    weight: 1
+    params:
+      description: "Ocean Tech rassemble la communauté tech & produit de la côte basco-landaise. Meetups, talks et ateliers pour partager, apprendre et créer du lien entre passionné·es de la tech et du produit, au Pays Basque et dans les Landes."
+      keywords: "ocean tech, pays basque, landes, côte basco-landaise, communauté tech, communauté produit, meetups tech, conférences tech, ateliers produit, talks développeurs, startup pays basque, startup landes, Biarritz, Bayonne, Anglet, Hossegor, Capbreton"
+  gasc:
+    languageCode: oc
+    languageName: Gascon
+    title: "Ocean Tech, la comunautat tech e produit sus la còsta bascolandesa"
+    weight: 2
+    params:
+      description: "Ocean Tech amassa la comunautat tech e produit de la còsta bascolandesa. Meetups, talks e talhèrs entà partatjar, apréner e crear ligams enter passionats de tech e de produit, en País Basco e dens las Lanas."
+      keywords: "ocean tech, país basco, lanas, còsta bascolandesa, comunautat tech, comunautat produit, meetups tech, conferéncias tech, talhèrs produit, talks desvolopaires, startup país basco, startup lanas, Biarritz, Baiona, Anglet, Hossegor, Capbreton"
+  eu:
+    languageCode: eu
+    languageName: Euskara
+    title: "Ocean Tech, euskal-landesetako kostaldeko teknologia eta produktu komunitatea"
+    weight: 3
+    params:
+      description: "Ocean Tech euskal-landesetako kostaldeko teknologia eta produktu komunitatea biltzen du. Meetupak, hitzaldiak eta tailerrak partekatzeko, ikasteko eta teknologia zein produktu zaleen artean loturak sortzeko, Euskal Herrian eta Landetan."
+      keywords: "ocean tech, euskal herria, landak, euskal-landesetako kostaldea, teknologia komunitatea, produktu komunitatea, tech meetupak, tech hitzaldiak, produktu tailerrak, garatzaile hitzaldiak, startup euskal herria, startup landak, Biarritz, Baiona, Angelu, Hossegor, Capbreton"
 params:
   description: "Ocean Tech rassemble la communauté tech & produit de la côte basco-landaise. Meetups, talks et ateliers pour partager, apprendre et créer du lien entre passionné·es de la tech et du produit, au Pays Basque et dans les Landes."
   keywords: "ocean tech, pays basque, landes, côte basco-landaise, communauté tech, communauté produit, meetups tech, conférences tech, ateliers produit, talks développeurs, startup pays basque, startup landes, Biarritz, Bayonne, Anglet, Hossegor, Capbreton"

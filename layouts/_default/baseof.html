@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="{{ .Site.Language.LanguageCode | default .Site.Language.Lang }}">
 <head>
   {{ $title := cond .IsHome .Site.Title (printf "%s | Ocean Tech" .Title) }}
   {{ $description := .Description | default .Site.Params.description }}
@@ -88,7 +88,7 @@
   <link rel="manifest" href="/site.webmanifest">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700&display=swap"
         rel="stylesheet">
-  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="{{ "css/main.css" | relURL }}?v=4" />
   {{ if hugo.IsProduction }}
   <script defer src="https://cloud.umami.is/script.js" data-website-id="89df8b6b-5775-4150-88d7-c8c101d471c7"></script>
   {{ end }}

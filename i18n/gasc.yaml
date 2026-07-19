@@ -1,0 +1,54 @@
+buttons:
+  join: Junh-te a la comunautat
+  meetup: Inscriu-te au pròche rendetz-vos
+  cfp: Prepausa un subjècte
+footer:
+  brand:
+    name: Ocean Tech
+    tagline: La comunautat tech e produit de la còsta bascolandesa.
+    location: País Basco e Lanas
+  social:
+    ariaLabel: Hialats sociaus
+languages:
+  label: Càmbia de lenga
+home:
+  hero:
+    title: "Ocean Tech : <br> La comunautat tech e produit bascolandesa"
+    text: |
+      Ocean Tech que vòu amassar los actors deu logiciau sus la còsta basca e landesa e crear ua vertadèra comunautat en prepausant rendetz-vos regulars entà's rencontrar, escambiar, har hialat... e subertot passar un bon moment amassa.
+
+      Cada mes qu'organizam un Apèro Ocean Tech dens un bar (Bob's Beer...) e un còp per trimèstre, ua Serada Ocean Tech dab conferéncias organizadas dens ua enterpresa deu parçan.
+  section:
+    problem:
+      title: Ací, la tech qu'i ei... mes cadun dens lo son canton
+      text: |
+        Que sèm nombrós a tribalhar dens la tech e lo produit suu BAB e alentorns : freelances, salariats, en teletrabalh o en presenciau.
+
+        Mes escampilhats, qu'ei mauaisit de's amassar. Que i a hèra pòcs eveniments o rendetz-vos regulars entà's retrobar dehòra deu tribalh e partatjar enter pars.
+
+        Qu'ei frustrant. Subertot quan se viu e tribalha dens un endret tan agradiu.
+    solution:
+      title: Ocean Tech, qu'ei la solucion
+      text: |
+        Ocean Tech, qu'ei un rendetz-vos mesadèr entà las personas de la tech e deu produit sus la còsta.
+        Un moment simple e obèrt entà :
+
+        * se rencontrar enter pros de la tech e deu produit,
+        * escambiar sus las nostas practicas, los nostes projèctes, las nostas dificultats,
+        * apréner dab talks, retorns d'experiéncia o discussions informaus,
+        * desvolopar un hialat locau,
+        * e subertot passar un bon moment e rencontrar monde nau.
+
+        La comunautat que compta **dejà mei de 250 personas inscriutas** e l'iniciativa qu'ei estada **relayada dens la premsa locau**.
+      imageAlt: Article de premsa paregut dens lo jornau Placéco
+    action:
+      title: Tribalhas dens la tech o lo produit suu BAB ?
+      text: Alavetz **Ocean Tech qu'ei hèit entà tu.**
+      sublink: Que'ns retrobam lèu a l'entorn d'un veire, enter monde deu logiciau 🍻
+    cfp:
+      title: Vòs prepausar un subjècte ?
+      text: |
+        Ocean Tech, aquò n'ei pas sonque meetups classics.
+
+        Formats especiaus que son tanben organizats : talks, retorns d'experiéncia, discussions tematicas...
+      sublink: (lo ligam qu'ei obèrt a totas e tots qui vòlen partatjar)

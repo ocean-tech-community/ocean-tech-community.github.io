@@ -1,0 +1,54 @@
+buttons:
+  join: Batu komunitatera
+  meetup: Eman izena hurrengo hitzorduan
+  cfp: Proposatu gai bat
+footer:
+  brand:
+    name: Ocean Tech
+    tagline: Euskal-landesetako kostaldeko teknologia eta produktu komunitatea.
+    location: Euskal Herria eta Landak
+  social:
+    ariaLabel: Sare sozialak
+languages:
+  label: Aldatu hizkuntza
+home:
+  hero:
+    title: "Ocean Tech : <br> Euskal-landesetako teknologia eta produktu komunitatea"
+    text: |
+      Ocean Tech-ek Euskal Herriko eta Landetako kostaldeko software arloko eragileak bildu nahi ditu, eta benetako komunitate bat sortu, aldizkako hitzorduak proposatuz elkar ezagutzeko, trukatzeko, sareak egiteko... eta batez ere elkarrekin une on bat pasatzeko.
+
+      Hilero Ocean Tech aperitibo bat antolatzen dugu taberna batean (Bob's Beer...) eta hiru hilean behin Ocean Tech gaualdi bat, inguruko enpresa batean antolatutako hitzaldiekin.
+  section:
+    problem:
+      title: Gurean teknologia badago... baina bakoitza bere aldetik
+      text: |
+        Asko gara BAB inguruan teknologian eta produktuan lanean ari garenak: freelanceak, soldatapekoak, urrunetik edo aurrez aurre.
+
+        Baina sakabanatuta, zaila da elkartzea. Oso ekitaldi edo ohiko hitzordu gutxi daude lanetik kanpo elkar ikusteko eta parekoekin partekatzeko.
+
+        Frustragarria da. Are gehiago hain leku atseginean bizi eta lan egiten dugunean.
+    solution:
+      title: Ocean Tech da erantzuna
+      text: |
+        Ocean Tech kostaldeko teknologia eta produktu arloko pertsonentzako hileroko hitzordua da.
+        Une xume eta irekia, honetarako:
+
+        * teknologia eta produktu arloko profesionalekin elkartzeko,
+        * gure praktikak, proiektuak eta zailtasunak partekatzeko,
+        * hitzaldien, esperientzia partekatzeen edo solasaldi informalen bidez ikasteko,
+        * tokiko sarea garatzeko,
+        * eta batez ere une on bat pasatzeko eta jende berria ezagutzeko.
+
+        Komunitateak **dagoeneko 250 pertsona baino gehiago ditu izena emanda**, eta ekimena **tokiko prentsan zabaldu da**.
+      imageAlt: Placéco egunkarian argitaratutako prentsa artikulua
+    action:
+      title: Teknologian edo produktuan lan egiten duzu BAB inguruan ?
+      text: Orduan **Ocean Tech zuretzat da.**
+      sublink: Laster elkartuko gara zerbait hartzeko, software munduko jendearekin 🍻
+    cfp:
+      title: Gai bat proposatu nahi duzu ?
+      text: |
+        Ocean Tech ez da meetup klasikoak bakarrik.
+
+        Formatu bereziak ere antolatzen dira: hitzaldiak, esperientzia partekatzeak, solasaldi tematikoak...
+      sublink: (esteka partekatu nahi duen ororentzat dago zabalik)
