@@ -1,6 +1,19 @@
 defaultContentLanguage: fr
 baseURL: "https://www.oceantech.community/"
 title: "Ocean Tech, la communauté tech & produit sur la côte basco-landaise"
+menus:
+  main:
+    - name: "Les événements"
+      pageRef: "/evenements"
+      weight: 10
+    - name: "L’équipe"
+      pageRef: "/equipe"
+      weight: 20
+    - name: "Rejoindre la communauté"
+      pageRef: "/rejoins-nous"
+      weight: 30
+      params:
+        class: "btn btn-primary"
 params:
   description: "Ocean Tech rassemble la communauté tech & produit de la côte basco-landaise. Meetups, talks et ateliers pour partager, apprendre et créer du lien entre passionné·es de la tech et du produit, au Pays Basque et dans les Landes."
   keywords: "ocean tech, pays basque, landes, côte basco-landaise, communauté tech, communauté produit, meetups tech, conférences tech, ateliers produit, talks développeurs, startup pays basque, startup landes, Biarritz, Bayonne, Anglet, Hossegor, Capbreton"
