@@ -5,7 +5,7 @@ type: "team"
 members:
   - name: "Arnaud Langlade"
     role: "Software Engineer"
-    image: "/images/team/arnaud-langlade.webp"
+    image: "https://github.com/arnolanglade.png?size=200"
     initials: "AL"
     socials:
       - name: "LinkedIn"
@@ -19,7 +19,7 @@ members:
         url: "https://bsky.app/profile/arnolanglade.bsky.social"
   - name: "Laure Brosseau"
     role: "Senior Product Marketing Manager"
-    image: "/images/team/laure-brosseau.webp"
+    image: "https://github.com/LaureBrosseau.png?size=200"
     initials: "LB"
     socials:
       - name: "LinkedIn"
