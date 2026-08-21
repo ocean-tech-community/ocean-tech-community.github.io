@@ -23,5 +23,4 @@ Tu as une expérience à partager, un projet qui t’a appris quelque chose ou u
 
 {{< cfp-button >}}
 
-{{< soirees-list >}}
-
+{{< evenements-list >}}

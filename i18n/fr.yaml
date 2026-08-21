@@ -2,6 +2,43 @@ buttons:
   join: Rejoins la communauté
   meetup: Inscris-toi au prochain rendez-vous
   cfp: Propose un sujet
+events:
+  types:
+    ariaLabel: "Les deux formats d’événements Ocean Tech"
+    evenings:
+      heading: "Les soirées"
+      text: "Une soirée par trimestre : talks, entreprise locale et échanges pour apprendre ensemble."
+    apero:
+      heading: "Les apéros"
+      text: "Un rendez-vous mensuel au Bob’s Beer pour créer des connexions locales."
+  program:
+    label: "Au programme"
+  sponsoredBy: "Pizzas et boissons offertes par"
+  list:
+    wikicampers:
+      date:
+        ariaLabel: "Jeudi 25 juin 2026"
+        weekday: "JEU."
+        month: "JUIN"
+      kicker: "Soirée talks"
+      heading: "Soirée chez Wikicampers"
+      text: "Wikicampers nous a accueillis dans ses bureaux à la Technopole Izarbel, à Bidart, pour une soirée de partages et de rencontres ouverte à toute la communauté tech locale."
+      program:
+        first: "Introduction à l’UX Writing et son rôle dans un produit ou service digital, Emma Larragueta"
+        second: "Du brief à l’app : retour d’expérience sur le Spec Driven Development, Pascal Marzo"
+      link: "Voir l’événement sur Luma"
+    docorga:
+      date:
+        ariaLabel: "Mardi 24 mars 2026"
+        weekday: "MAR."
+        month: "MARS"
+      kicker: "Soirée talks"
+      heading: "Soirée chez Docorga"
+      text: "Ocean Tech lançait un nouveau format : deux talks, suivis d’un moment convivial autour de pizzas et de boissons offertes par Seyos. Cette première soirée était accueillie par Docorga, à Bayonne."
+      program:
+        first: "Comment faire du produit dans un environnement projet ?, Eve-Marie Guidier"
+        second: "Pourquoi et comment commencer à contribuer à des projets Open Source, Thibault Le Ouay-Ducasse"
+      link: "Voir l’événement sur Mobilizon"
 footer:
   brand:
     name: Ocean Tech
