@@ -7,7 +7,9 @@
       </a>
     </div>
     <nav class="nav-links">
-      {{ partial "join-link" . }}
+      {{ range site.Menus.main }}
+        <a class="{{ .Params.class | default "nav-link" }}" href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
     </nav>
   </div>
 </header>
