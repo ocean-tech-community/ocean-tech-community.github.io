@@ -6,10 +6,20 @@
         <img src="/images/logo.png" alt="Ocean Tech" height="50">
       </a>
     </div>
-    <nav class="nav-links">
+    <nav class="nav-links" aria-label="Navigation principale">
       {{ range site.Menus.main }}
         <a class="{{ .Params.class | default "nav-link" }}" href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
     </nav>
+    <details class="mobile-menu">
+      <summary aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </summary>
+      <nav class="mobile-menu-panel" aria-label="Navigation mobile">
+        <a class="mobile-nav-link" href="{{ "/evenements/" | relURL }}">Les événements</a>
+        <a class="mobile-nav-link" href="{{ "/evenements/#les-soirées" | relURL }}">Les soirées</a>
+        {{ partial "join-link" . }}
+      </nav>
+    </details>
   </div>
 </header>
