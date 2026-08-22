@@ -101,9 +101,11 @@ a {
 }
 
 .mobile-menu summary {
-  position: relative;
+  display: grid;
   width: 2.5rem;
   height: 2.5rem;
+  place-content: center;
+  gap: 0.3rem;
   list-style: none;
   cursor: pointer;
   border-radius: 8px;
@@ -114,32 +116,16 @@ a {
 }
 
 .mobile-menu summary span {
-  position: absolute;
-  left: 50%;
-  width: 1.25rem;
+  display: block;
+  width: 1.2rem;
   height: 2px;
   background: var(--white);
   border-radius: 2px;
-  transform: translateX(-50%);
-  transform-origin: center;
-  transition: top 0.18s ease, transform 0.18s ease, opacity 0.18s ease;
-}
-
-.mobile-menu summary span:first-child {
-  top: calc(50% - 0.45rem);
-}
-
-.mobile-menu summary span:nth-child(2) {
-  top: 50%;
-}
-
-.mobile-menu summary span:last-child {
-  top: calc(50% + 0.45rem);
+  transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
 .mobile-menu[open] summary span:first-child {
-  top: 50%;
-  transform: translateX(-50%) rotate(45deg);
+  transform: translateY(0.5rem) rotate(45deg);
 }
 
 .mobile-menu[open] summary span:nth-child(2) {
@@ -147,8 +133,7 @@ a {
 }
 
 .mobile-menu[open] summary span:last-child {
-  top: 50%;
-  transform: translateX(-50%) rotate(-45deg);
+  transform: translateY(-0.5rem) rotate(-45deg);
 }
 
 .mobile-menu-panel {

@@ -22,10 +22,18 @@ events:
         month: "JUIN"
       kicker: "Soirée talks"
       heading: "Soirée chez Wikicampers"
-      text: "Wikicampers nous a accueillis dans ses bureaux à la Technopole Izarbel, à Bidart, pour une soirée de partages et de rencontres ouverte à toute la communauté tech locale."
+      website: "https://www.wikicampers.fr/"
+      host: "Wikicampers"
+      text: "nous a accueillis dans ses bureaux à la Technopole Izarbel, à Bidart, pour une soirée de partages et de rencontres."
       program:
-        first: "Introduction à l’UX Writing et son rôle dans un produit ou service digital, Emma Larragueta"
-        second: "Du brief à l’app : retour d’expérience sur le Spec Driven Development, Pascal Marzo"
+        first:
+          topic: "Introduction à l’UX Writing et son rôle dans un produit ou service digital"
+          speaker: "Emma Larragueta"
+          linkedin: "https://www.linkedin.com/in/emma-larragueta/"
+        second:
+          topic: "Du brief à l’app : retour d’expérience sur le Spec Driven Development"
+          speaker: "Pascal Marzo"
+          linkedin: "https://www.linkedin.com/in/pascal-m-dev-web/"
       link: "Voir l’événement sur Luma"
     docorga:
       date:
@@ -34,10 +42,18 @@ events:
         month: "MARS"
       kicker: "Soirée talks"
       heading: "Soirée chez Docorga"
-      text: "Ocean Tech lançait un nouveau format : deux talks, suivis d’un moment convivial autour de pizzas et de boissons offertes par Seyos. Cette première soirée était accueillie par Docorga, à Bayonne."
+      website: "https://www.docorga.com/"
+      host: "Docorga"
+      text: "nous a accueillis dans ses bureaux à Bayonne, pour une soirée de partages et de rencontres."
       program:
-        first: "Comment faire du produit dans un environnement projet ?, Eve-Marie Guidier"
-        second: "Pourquoi et comment commencer à contribuer à des projets Open Source, Thibault Le Ouay-Ducasse"
+        first:
+          topic: "Comment faire du produit dans un environnement projet ?"
+          speaker: "Eve-Marie Guidier"
+          linkedin: "https://www.linkedin.com/in/eve-marie-guidier-product/"
+        second:
+          topic: "Pourquoi et comment commencer à contribuer à des projets Open Source"
+          speaker: "Thibault Le Ouay-Ducasse"
+          linkedin: "https://www.linkedin.com/in/thibault-le-ouay-ducasse/"
       link: "Voir l’événement sur Mobilizon"
 footer:
   brand:

@@ -18,7 +18,7 @@ members:
         icon: "bluesky"
         url: "https://bsky.app/profile/arnolanglade.bsky.social"
   - name: "Laure Brosseau"
-    role: "Senior Product Marketing Manager"
+    role: "Product Marketing Manager"
     image: "https://github.com/LaureBrosseau.png?size=200"
     initials: "LB"
     socials:
