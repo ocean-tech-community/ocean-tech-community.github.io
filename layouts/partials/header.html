@@ -29,11 +29,8 @@
       <nav class="mobile-menu-panel" aria-label="Navigation mobile">
         <a class="mobile-nav-link" href="{{ "/evenements/" | relURL }}">Les événements</a>
         <a class="mobile-nav-link" href="{{ "/equipe/" | relURL }}">L’équipe</a>
-        <details class="mobile-help-menu">
-          <summary>Contribuer</summary>
-          <a class="mobile-nav-link" href="{{ "/devenir-speaker/" | relURL }}">Devenir speaker</a>
-          <a class="mobile-nav-link" href="{{ "/partenaires/" | relURL }}">Devenir partenaire</a>
-        </details>
+        <a class="mobile-nav-link" href="{{ "/devenir-speaker/" | relURL }}">Devenir speaker</a>
+        <a class="mobile-nav-link" href="{{ "/partenaires/" | relURL }}">Devenir partenaire</a>
         {{ partial "join-link" . }}
       </nav>
     </details>
