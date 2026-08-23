@@ -5,7 +5,7 @@
     <div class="hero-content">
       <div>
         <h1>{{ i18n "home.hero.title" | safeHTML }}</h1>
-        <p>{{ i18n "home.hero.text" | markdownify }}</p>
+        {{ i18n "home.hero.text" | markdownify }}
         <div class="hero-actions">
           {{ partial "join-link" . }}
           {{ partial "meetup-link" (dict "ctx" . "class" "btn-ghost") }}
@@ -46,9 +46,15 @@
       {{ i18n "home.section.solution.text" | markdownify }}
     </div>
     <div class="solution-media">
-      <img src="/images/presse.jpg"
-           alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
-           loading="lazy">
+      <picture>
+        <source srcset="/images/presse.webp" type="image/webp">
+        <img src="/images/presse.jpg"
+             width="1176"
+             height="1200"
+             alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
+             loading="lazy"
+             decoding="async">
+      </picture>
     </div>
   </div>
 </section>
@@ -57,12 +63,12 @@
 <section class="action">
   <div class="container">
     <h2 class="section-title">{{ i18n "home.section.action.title" | markdownify }}</h2>
-    <p>{{ i18n "home.section.action.text" | markdownify }}</p>
+    {{ i18n "home.section.action.text" | markdownify }}
     <div class="button">
       {{ partial "join-link" . }}
       {{ partial "meetup-link" (dict "ctx" .)  }}
     </div>
-    <p>{{ i18n "home.section.action.sublink" | markdownify }}</p>
+    {{ i18n "home.section.action.sublink" | markdownify }}
   </div>
 </section>
 

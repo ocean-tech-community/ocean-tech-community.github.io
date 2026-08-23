@@ -260,6 +260,252 @@ a {
   margin-top: 0.35rem;
 }
 
+/* ---- Pages événement ---- */
+.event-page .page-content a {
+  color: var(--blue);
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: var(--teal);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.event-page .page-content a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.event-page .page-content a:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.event-introduction {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.event-introduction > p {
+  margin-bottom: 0;
+}
+
+.event-talks h2,
+.event-gallery h2 {
+  margin: 0 0 0.65rem;
+  color: var(--blue-deep);
+  font-family: Poppins, Inter, sans-serif;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  line-height: 1.2;
+}
+
+.event-talks {
+  margin: 0;
+  padding: 0.75rem 0 1.5rem;
+}
+
+.talks-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.talk-card {
+  padding: 1.4rem 1.5rem;
+  border: 1px solid #dbe5e8;
+  border-radius: 14px;
+  background: var(--white);
+  box-shadow: 0 8px 20px #09263a0b;
+}
+
+.talk-card h3 {
+  margin: 0;
+  color: var(--blue-deep);
+  font-family: Poppins, Inter, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.32;
+}
+
+.talk-card p:last-child {
+  margin-bottom: 0;
+  white-space: pre-line;
+}
+
+.talk-speaker {
+  margin: 0.45rem 0 0.85rem !important;
+  color: var(--muted);
+}
+
+.event-gallery {
+  margin: 0;
+  padding: 0.75rem 0 0;
+}
+
+.event-carousel {
+  margin: 0;
+}
+
+.event-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.event-thumbnail {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 14px;
+  background: var(--white);
+  cursor: pointer;
+}
+
+.event-thumbnail img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.event-thumbnail:hover img,
+.event-thumbnail:focus-visible img {
+  transform: scale(1.03);
+}
+
+.event-thumbnail:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.event-lightbox {
+  position: fixed;
+  inset: 0;
+  width: min(1000px, calc(100vw - 2rem));
+  max-width: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0 24px 60px #041d2ccc;
+}
+
+.event-lightbox::backdrop {
+  background: #041d2cb8;
+}
+
+.event-lightbox-viewport {
+  background: #041d2c;
+}
+
+.event-carousel-slide {
+  margin: 0;
+}
+
+.event-carousel-slide img {
+  display: block;
+  width: 100%;
+  max-height: min(72vh, 700px);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.event-carousel-controls {
+  position: absolute;
+  inset: 0;
+  color: var(--blue-deep);
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.event-carousel-controls p {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 50%;
+  min-width: 3.25rem;
+  margin: 0;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: #ffffffeb;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.event-carousel-button {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  border: 1px solid #dbe5e8;
+  border-radius: 50%;
+  color: var(--blue-deep);
+  background: var(--white);
+  cursor: pointer;
+  font: inherit;
+  box-shadow: 0 2px 8px #041d2c33;
+  pointer-events: auto;
+  transform: translateY(-50%);
+}
+
+.event-carousel-button svg {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+}
+
+.event-carousel-button[data-gallery-previous] {
+  left: 0.85rem;
+}
+
+.event-carousel-button[data-gallery-next] {
+  right: 0.85rem;
+}
+
+.event-carousel-button:hover,
+.event-carousel-button:focus-visible {
+  color: var(--white);
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
+.event-lightbox-close {
+  position: absolute;
+  z-index: 1;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: grid;
+  width: 2.4rem;
+  height: 2.4rem;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  color: var(--white);
+  background: #041d2ccc;
+  cursor: pointer;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.event-lightbox-close:hover,
+.event-lightbox-close:focus-visible {
+  background: var(--accent);
+}
+
+@media (max-width: 560px) {
+  .event-thumbnails {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- Soirées ---- */
 .events-list {
   display: grid;
@@ -296,7 +542,8 @@ a {
 
 .event-content { padding: 1.75rem; }
 .event-content p { margin: 0 0 1rem; }
-.event-content h2 { margin: 0 0 0.7rem; color: var(--blue-deep); font-family: Poppins, Inter, sans-serif; font-size: 1.4rem; line-height: 1.25; }
+.event-content h2,
+.event-content h3 { margin: 0 0 0.7rem; color: var(--blue-deep); font-family: Poppins, Inter, sans-serif; font-size: 1.4rem; line-height: 1.25; }
 .event-kicker { color: var(--blue); font-size: 0.83rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
 .event-program { margin: 1.1rem 0; padding: 1rem 1.15rem; border-left: 3px solid var(--teal); background: #eef9fa; }
 .event-program p { margin-bottom: 0.35rem; }

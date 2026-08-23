@@ -8,7 +8,6 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <meta name="description" content="{{ $description }}">
-  <meta name="keywords" content="{{ .Site.Params.keywords }}">
   <link rel="canonical" href="{{ .Permalink }}">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:site_name" content="Ocean Tech">
@@ -76,7 +75,31 @@
     "about" (dict "@id" (printf "%s#organization" .Site.BaseURL))
     "inLanguage" "fr-FR"
   }}
-  {{ $schema := dict "@context" "https://schema.org" "@graph" (slice $organization $website $webPage) }}
+  {{ $schemaGraph := slice $organization $website $webPage }}
+  {{ $siteBaseURL := .Site.BaseURL }}
+  {{ with .Params.event }}
+    {{ $event := dict
+      "@type" "Event"
+      "name" .name
+      "description" .description
+      "startDate" .startDate
+      "eventAttendanceMode" "https://schema.org/OfflineEventAttendanceMode"
+      "location" (dict
+        "@type" "Place"
+        "name" .locationName
+        "address" (dict
+          "@type" "PostalAddress"
+          "streetAddress" (.streetAddress | default "")
+          "addressLocality" .addressLocality
+          "addressCountry" .addressCountry
+        )
+      )
+      "organizer" (dict "@id" (printf "%s#organization" $siteBaseURL))
+      "url" .url
+    }}
+    {{ $schemaGraph = $schemaGraph | append $event }}
+  {{ end }}
+  {{ $schema := dict "@context" "https://schema.org" "@graph" $schemaGraph }}
   <script type="application/ld+json">
     {{ $schema | jsonify (dict "indent" "  ") | safeJS }}
   </script>
