@@ -12,6 +12,17 @@ menus:
     - name: "L’équipe"
       pageRef: "/equipe"
       weight: 20
+    - name: "Contribuer"
+      identifier: "nous-aider"
+      weight: 25
+    - name: "Devenir speaker"
+      parent: "nous-aider"
+      pageRef: "/devenir-speaker"
+      weight: 10
+    - name: "Devenir partenaire"
+      parent: "nous-aider"
+      pageRef: "/partenaires"
+      weight: 20
     - name: "Rejoindre la communauté"
       pageRef: "/rejoins-nous"
       weight: 30

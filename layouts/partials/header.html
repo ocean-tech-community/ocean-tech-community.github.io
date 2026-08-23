@@ -8,7 +8,18 @@
     </div>
     <nav class="nav-links" aria-label="Navigation principale">
       {{ range site.Menus.main }}
-        <a class="{{ .Params.class | default "nav-link" }}" href="{{ .URL }}">{{ .Name }}</a>
+        {{ if .HasChildren }}
+          <details class="nav-help-menu">
+            <summary class="nav-link">{{ .Name }} <svg class="nav-help-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="m1 1 5 5 5-5"/></svg></summary>
+            <div class="nav-help-panel">
+              {{ range .Children }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              {{ end }}
+            </div>
+          </details>
+        {{ else }}
+          <a class="{{ .Params.class | default "nav-link" }}" href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
       {{ end }}
     </nav>
     <details class="mobile-menu">
@@ -18,6 +29,11 @@
       <nav class="mobile-menu-panel" aria-label="Navigation mobile">
         <a class="mobile-nav-link" href="{{ "/evenements/" | relURL }}">Les événements</a>
         <a class="mobile-nav-link" href="{{ "/equipe/" | relURL }}">L’équipe</a>
+        <details class="mobile-help-menu">
+          <summary>Contribuer</summary>
+          <a class="mobile-nav-link" href="{{ "/devenir-speaker/" | relURL }}">Devenir speaker</a>
+          <a class="mobile-nav-link" href="{{ "/partenaires/" | relURL }}">Devenir partenaire</a>
+        </details>
         {{ partial "join-link" . }}
       </nav>
     </details>

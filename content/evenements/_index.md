@@ -23,4 +23,10 @@ Tu as une expérience à partager, un projet qui t’a appris quelque chose ou u
 
 {{< cfp-button >}}
 
+Tu veux en savoir plus avant de proposer ? Consulte la page [Devenir speaker](/devenir-speaker/).
+
 {{< evenements-list >}}
+
+## Questions pratiques
+
+Retrouve les réponses aux questions les plus fréquentes sur la page [Questions fréquentes](/faq/).
