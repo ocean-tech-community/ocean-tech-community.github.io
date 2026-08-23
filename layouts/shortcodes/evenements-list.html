@@ -1,17 +1,15 @@
 <div class="events-list">
-  {{ $weekdays := dict "Monday" "LUN." "Tuesday" "MAR." "Wednesday" "MER." "Thursday" "JEU." "Friday" "VEN." "Saturday" "SAM." "Sunday" "DIM." }}
-  {{ $months := dict "January" "JAN." "February" "FÉV." "March" "MARS" "April" "AVR." "May" "MAI" "June" "JUIN" "July" "JUIL." "August" "AOÛT" "September" "SEPT." "October" "OCT." "November" "NOV." "December" "DÉC." }}
   {{ range .Page.RegularPages.ByDate.Reverse }}
     <article class="event-card">
       <time class="event-date" datetime="{{ .Date.Format "2006-01-02" }}">
-        <span>{{ index $weekdays (.Date.Format "Monday") }}</span>
+        <span>{{ i18n (printf "events.list.weekdays.%s" (.Date.Format "Monday")) }}</span>
         <strong>{{ .Date.Format "02" }}</strong>
-        <span>{{ index $months (.Date.Format "January") }}</span>
+        <span>{{ i18n (printf "events.list.months.%s" (.Date.Format "January")) }}</span>
       </time>
       <div class="event-content">
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         <p>{{ .Description }}</p>
-        <a class="event-link" href="{{ .RelPermalink }}">Voir le programme et le retour</a>
+        <a class="event-link" href="{{ .RelPermalink }}">{{ i18n "events.list.link" }}</a>
       </div>
     </article>
   {{ end }}

@@ -7,23 +7,28 @@ taxonomies: {}
 menus:
   main:
     - name: "Les événements"
+      identifier: "navigation.events"
       pageRef: "/evenements"
       weight: 10
     - name: "L’équipe"
+      identifier: "navigation.team"
       pageRef: "/equipe"
       weight: 20
     - name: "Contribuer"
-      identifier: "nous-aider"
+      identifier: "navigation.contribute"
       weight: 25
     - name: "Devenir speaker"
-      parent: "nous-aider"
+      identifier: "navigation.speaker"
+      parent: "navigation.contribute"
       pageRef: "/devenir-speaker"
       weight: 10
     - name: "Devenir partenaire"
-      parent: "nous-aider"
+      identifier: "navigation.partner"
+      parent: "navigation.contribute"
       pageRef: "/partenaires"
       weight: 20
     - name: "Rejoindre la communauté"
+      identifier: "buttons.join"
       pageRef: "/rejoins-nous"
       weight: 30
       params:
