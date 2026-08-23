@@ -1,6 +1,9 @@
 defaultContentLanguage: fr
 baseURL: "https://www.oceantech.community/"
 title: "Ocean Tech, la communauté tech & produit sur la côte basco-landaise"
+# Le site n'utilise pas de taxonomies : ne pas publier ni indexer les pages
+# génériques /categories/ et /tags/.
+taxonomies: {}
 menus:
   main:
     - name: "Les événements"
