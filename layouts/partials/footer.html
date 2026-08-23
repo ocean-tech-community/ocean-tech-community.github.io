@@ -5,16 +5,23 @@
       <strong>{{ i18n "footer.brand.name" }}</strong>
       <p>{{ i18n "footer.brand.tagline" }}</p>
       <p class="footer-location">{{ i18n "footer.brand.location" }}</p>
-      <nav class="footer-pages" aria-label="Liens utiles">
+    </div>
+
+    <nav class="footer-pages" aria-label="Liens utiles">
+      <section class="footer-links-group" aria-labelledby="footer-decouvrir">
+        <h2 id="footer-decouvrir">Découvrir</h2>
         <a href="{{ "/" | relURL }}">Accueil</a>
         <a href="{{ "/evenements/" | relURL }}">Les événements</a>
         <a href="{{ "/equipe/" | relURL }}">L’équipe</a>
-        <a href="{{ "/rejoins-nous/" | relURL }}">Rejoindre la communauté</a>
         <a href="{{ "/faq/" | relURL }}">FAQ</a>
+      </section>
+      <section class="footer-links-group" aria-labelledby="footer-contribuer">
+        <h2 id="footer-contribuer">Contribuer</h2>
+        <a href="{{ "/rejoins-nous/" | relURL }}">Rejoindre la communauté</a>
         <a href="{{ "/devenir-speaker/" | relURL }}">Devenir speaker</a>
         <a href="{{ "/partenaires/" | relURL }}">Devenir partenaire</a>
-      </nav>
-    </div>
+      </section>
+    </nav>
 
     <div class="footer-actions">
     {{ with .Site.Params.socialMedia }}
