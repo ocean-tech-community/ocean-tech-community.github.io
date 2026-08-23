@@ -16,7 +16,7 @@
             {{ range . }}
               <article class="talk-card">
                 <h3>{{ .title }}</h3>
-                <p class="talk-speaker">Par <a href="{{ .speakerUrl }}" target="_blank" rel="noopener noreferrer">{{ .speaker }} <span aria-hidden="true">↗</span></a></p>
+                <p class="talk-speaker">Par <a href="{{ .speakerUrl }}" target="_blank" rel="noopener noreferrer">{{ .speaker }}</a></p>
                 <p>{{ .abstract }}</p>
               </article>
             {{ end }}

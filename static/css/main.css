@@ -727,7 +727,7 @@ a {
   font-size: 1.25rem;
 }
 
-.event-type h2 {
+.single-page:not(.team-page) .page-content .event-type h2 {
   margin: 0 0 0.2rem;
   color: var(--blue-deep);
   font-family: Poppins, Inter, sans-serif;
