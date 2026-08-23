@@ -7,19 +7,34 @@ taxonomies: {}
 menus:
   main:
     - name: "Les événements"
+      identifier: "navigation.events"
       pageRef: "/evenements"
       weight: 10
     - name: "L’équipe"
+      identifier: "navigation.team"
       pageRef: "/equipe"
       weight: 20
+    - name: "Contribuer"
+      identifier: "navigation.contribute"
+      weight: 25
+    - name: "Devenir speaker"
+      identifier: "navigation.speaker"
+      parent: "navigation.contribute"
+      pageRef: "/devenir-speaker"
+      weight: 10
+    - name: "Devenir partenaire"
+      identifier: "navigation.partner"
+      parent: "navigation.contribute"
+      pageRef: "/partenaires"
+      weight: 20
     - name: "Rejoindre la communauté"
+      identifier: "buttons.join"
       pageRef: "/rejoins-nous"
       weight: 30
       params:
         class: "btn btn-primary"
 params:
   description: "Ocean Tech rassemble la communauté tech & produit de la côte basco-landaise. Meetups, talks et ateliers pour partager, apprendre et créer du lien entre passionné·es de la tech et du produit, au Pays Basque et dans les Landes."
-  keywords: "ocean tech, pays basque, landes, côte basco-landaise, communauté tech, communauté produit, meetups tech, conférences tech, ateliers produit, talks développeurs, startup pays basque, startup landes, Biarritz, Bayonne, Anglet, Hossegor, Capbreton"
   socialImage: "/images/social-card.png"
   socialImageAlt: "Ocean Tech, la communauté tech et produit basco-landaise"
   meetupUrl: "https://luma.com/k6tqgk9d"

@@ -5,7 +5,7 @@
     <div class="hero-content">
       <div>
         <h1>{{ i18n "home.hero.title" | safeHTML }}</h1>
-        <p>{{ i18n "home.hero.text" | markdownify }}</p>
+        {{ i18n "home.hero.text" | markdownify }}
         <div class="hero-actions">
           {{ partial "join-link" . }}
           {{ partial "meetup-link" (dict "ctx" . "class" "btn-ghost") }}
@@ -46,9 +46,30 @@
       {{ i18n "home.section.solution.text" | markdownify }}
     </div>
     <div class="solution-media">
-      <img src="/images/presse.jpg"
-           alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
-           loading="lazy">
+      <button class="home-photo-trigger" type="button" data-home-photo-open aria-label="Agrandir l’article de presse">
+        <picture>
+          <source srcset="/images/presse.webp" type="image/webp">
+          <img src="/images/presse.jpg"
+               width="1176"
+               height="1200"
+               alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
+               loading="lazy"
+               decoding="async">
+        </picture>
+      </button>
+      <dialog class="event-lightbox home-photo-lightbox" data-home-photo-dialog aria-label="Article de presse">
+        <button type="button" class="event-lightbox-close" data-home-photo-close aria-label="Fermer l’image">×</button>
+        <div class="event-lightbox-viewport">
+          <picture>
+            <source srcset="/images/presse.webp" type="image/webp">
+            <img src="/images/presse.jpg"
+                 width="1176"
+                 height="1200"
+                 alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
+                 decoding="async">
+          </picture>
+        </div>
+      </dialog>
     </div>
   </div>
 </section>
@@ -57,13 +78,22 @@
 <section class="action">
   <div class="container">
     <h2 class="section-title">{{ i18n "home.section.action.title" | markdownify }}</h2>
-    <p>{{ i18n "home.section.action.text" | markdownify }}</p>
+    {{ i18n "home.section.action.text" | markdownify }}
     <div class="button">
       {{ partial "join-link" . }}
       {{ partial "meetup-link" (dict "ctx" .)  }}
     </div>
-    <p>{{ i18n "home.section.action.sublink" | markdownify }}</p>
+    {{ i18n "home.section.action.sublink" | markdownify }}
   </div>
 </section>
 
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+  const homePhotoDialog = document.querySelector('[data-home-photo-dialog]');
+  document.querySelector('[data-home-photo-open]').addEventListener('click', () => homePhotoDialog.showModal());
+  document.querySelector('[data-home-photo-close]').addEventListener('click', () => homePhotoDialog.close());
+  homePhotoDialog.addEventListener('click', (event) => { if (event.target === homePhotoDialog) homePhotoDialog.close(); });
+</script>
 {{ end }}

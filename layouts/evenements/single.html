@@ -1,0 +1,82 @@
+{{ define "main" }}
+<article class="single-page event-page">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+  </div>
+  <div class="container">
+    <div class="page-content">
+      <div class="event-introduction">
+        {{ .Content }}
+      </div>
+
+      {{ with .Params.talks }}
+        <section class="event-talks" aria-labelledby="talks-title">
+          <h2 id="talks-title">{{ i18n "events.talks" }}</h2>
+          <div class="talks-grid">
+            {{ range . }}
+              <article class="talk-card">
+                <h3>{{ .title }}</h3>
+                <p class="talk-speaker">{{ i18n "events.by" }} <a href="{{ .speakerUrl }}" target="_blank" rel="noopener noreferrer">{{ .speaker }}</a></p>
+                <p>{{ .abstract }}</p>
+              </article>
+            {{ end }}
+          </div>
+        </section>
+      {{ end }}
+
+      {{ with .Params.gallery }}
+        <section class="event-gallery" aria-labelledby="gallery-title">
+          <h2 id="gallery-title">{{ i18n "events.gallery" }}</h2>
+          <div class="event-carousel" data-gallery>
+            <div class="event-thumbnails">
+            {{ range $index, $photo := . }}
+              <button class="event-thumbnail" type="button" data-gallery-open="{{ $index }}" aria-label="{{ i18n "events.galleryOpen" (dict "number" (add $index 1)) }}">
+                <img src="{{ $photo.image }}" alt="{{ $photo.alt }}" loading="lazy" decoding="async">
+              </button>
+            {{ end }}
+            </div>
+            <dialog class="event-lightbox" data-gallery-dialog aria-label="{{ i18n "events.galleryLabel" }}">
+              <button type="button" class="event-lightbox-close" data-gallery-close aria-label="{{ i18n "events.galleryClose" }}">×</button>
+              <div class="event-lightbox-viewport">
+              {{ range $index, $photo := . }}
+                <figure class="event-carousel-slide" {{ if ne $index 0 }}hidden{{ end }}>
+                  <img src="{{ $photo.image }}" alt="{{ $photo.alt }}" decoding="async">
+                </figure>
+              {{ end }}
+              </div>
+              <div class="event-carousel-controls">
+                <button type="button" class="event-carousel-button" data-gallery-previous aria-label="{{ i18n "events.galleryPrevious" }}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14 6-6 6 6 6"/></svg></button>
+                <p aria-live="polite"><span data-gallery-current>1</span> / {{ len . }}</p>
+                <button type="button" class="event-carousel-button" data-gallery-next aria-label="{{ i18n "events.galleryNext" }}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m10 6 6 6-6 6"/></svg></button>
+              </div>
+            </dialog>
+          </div>
+        </section>
+      {{ end }}
+    </div>
+  </div>
+</article>
+<script>
+  document.querySelectorAll('[data-gallery]').forEach((gallery) => {
+    const dialog = gallery.querySelector('[data-gallery-dialog]');
+    const slides = Array.from(gallery.querySelectorAll('.event-carousel-slide'));
+    const current = gallery.querySelector('[data-gallery-current]');
+    let index = 0;
+    const show = (nextIndex) => {
+      index = (nextIndex + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => { slide.hidden = slideIndex !== index; });
+      current.textContent = index + 1;
+    };
+    gallery.querySelectorAll('[data-gallery-open]').forEach((thumbnail) => {
+      thumbnail.addEventListener('click', () => {
+        show(Number(thumbnail.dataset.galleryOpen));
+        dialog.showModal();
+      });
+    });
+    gallery.querySelector('[data-gallery-previous]').addEventListener('click', () => show(index - 1));
+    gallery.querySelector('[data-gallery-next]').addEventListener('click', () => show(index + 1));
+    gallery.querySelector('[data-gallery-close]').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+  });
+</script>
+{{ end }}

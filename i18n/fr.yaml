@@ -2,6 +2,51 @@ buttons:
   join: Rejoins la communauté
   meetup: Inscris-toi au prochain rendez-vous
   cfp: Propose un sujet
+  partner: Devenir partenaire
+navigation:
+  main: Navigation principale
+  mobile: Navigation mobile
+  open: Ouvrir le menu
+  events: Les événements
+  team: L’équipe
+  contribute: Contribuer
+  speaker: Devenir speaker
+  partner: Devenir partenaire
+footer:
+  links: Liens utiles
+  discover: Découvrir
+  home: Accueil
+  events: Les événements
+  team: L’équipe
+  faq: FAQ
+  contribute: Contribuer
+  join: Rejoindre la communauté
+  speaker: Devenir speaker
+  partner: Devenir partenaire
+  brand:
+    name: Ocean Tech
+    tagline: La communauté tech & produit de la côte basco-landaise.
+    location: Pays Basque & Landes
+  social:
+    ariaLabel: Réseaux sociaux
+faq:
+  alone:
+    question: Puis-je venir seul·e ?
+    answer: Oui, bien sûr. La plupart des personnes viennent justement pour rencontrer du monde. Les apéros sont pensés pour permettre des échanges informels, même si tu ne connais encore personne.
+  level:
+    question: Quel niveau faut-il ?
+    answer: Il n’y a aucun prérequis. La communauté rassemble des profils techniques, produit, design, étudiants, freelances, salarié·es et personnes simplement curieuses. L’envie d’échanger suffit.
+  propose:
+    question: Puis-je proposer un sujet ?
+    beforeLink: Oui. Les retours d’expérience, les découvertes, les échecs utiles et les sujets autour du logiciel, du produit, du design, de la data, de l’architecture ou de l’IA sont les bienvenus. Découvre
+    link: comment devenir speaker
+  free:
+    question: Est-ce payant ?
+    answer: La participation aux rendez-vous Ocean Tech est gratuite, mais l’inscription est obligatoire. Elle nous aide énormément à anticiper le nombre de personnes, l’accueil et l’organisation de chaque événement.
+  partner:
+    question: Mon entreprise peut-elle devenir partenaire, accueillir ou sponsoriser une soirée ?
+    beforeLink: Oui. Une entreprise ou une organisation locale peut accueillir une soirée, soutenir le moment convivial, partager une expertise ou aider à faire connaître la communauté. Découvre les différentes possibilités sur la page
+    link: Partenaires
 events:
   types:
     ariaLabel: "Les deux formats d’événements Ocean Tech"
@@ -13,8 +58,38 @@ events:
       text: "Un rendez-vous mensuel au Bob’s Beer pour créer des connexions locales."
   program:
     label: "Au programme"
+  talks: Les talks
+  gallery: En images
+  galleryOpen: Ouvrir la photo {{ .number }}
+  galleryLabel: Photos de l’événement
+  galleryClose: Fermer le diaporama
+  galleryPrevious: Photo précédente
+  galleryNext: Photo suivante
+  by: Par
   sponsoredBy: "Pizzas et boissons offertes par"
   list:
+    link: Voir le programme et le retour
+    weekdays:
+      Monday: LUN.
+      Tuesday: MAR.
+      Wednesday: MER.
+      Thursday: JEU.
+      Friday: VEN.
+      Saturday: SAM.
+      Sunday: DIM.
+    months:
+      January: JAN.
+      February: FÉV.
+      March: MARS
+      April: AVR.
+      May: MAI
+      June: JUIN
+      July: JUIL.
+      August: AOÛT
+      September: SEPT.
+      October: OCT.
+      November: NOV.
+      December: DÉC.
     wikicampers:
       date:
         ariaLabel: "Jeudi 25 juin 2026"
@@ -55,13 +130,6 @@ events:
           speaker: "Thibault Le Ouay-Ducasse"
           linkedin: "https://www.linkedin.com/in/thibault-le-ouay-ducasse/"
       link: "Voir l’événement sur Mobilizon"
-footer:
-  brand:
-    name: Ocean Tech
-    tagline: La communauté tech & produit de la côte basco-landaise.
-    location: Pays Basque & Landes
-  social:
-    ariaLabel: Réseaux sociaux
 home:
   hero:
     title: "Ocean Tech : <br> La communauté tech & produit basco-landaise"

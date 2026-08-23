@@ -1,45 +1,16 @@
 <div class="events-list">
-  <article class="event-card">
-    <div class="event-date" aria-label="{{ i18n "events.list.wikicampers.date.ariaLabel" }}">
-      <span>{{ i18n "events.list.wikicampers.date.weekday" }}</span>
-      <strong>25</strong>
-      <span>{{ i18n "events.list.wikicampers.date.month" }}</span>
-    </div>
-    <div class="event-content">
-      <p class="event-kicker">{{ i18n "events.list.wikicampers.kicker" }}</p>
-      <h2>{{ i18n "events.list.wikicampers.heading" }}</h2>
-      <p><a class="event-link event-host-link" style="text-decoration: underline 2px var(--teal); text-underline-offset: 0.2em;" href="{{ i18n "events.list.wikicampers.website" }}" target="_blank" rel="noopener noreferrer">{{ i18n "events.list.wikicampers.host" }}</a> {{ i18n "events.list.wikicampers.text" }}</p>
-      <div class="event-program">
-      <p><strong>{{ i18n "events.program.label" }}</strong></p>
-        <ul>
-          <li>{{ i18n "events.list.wikicampers.program.first.topic" }} — <a class="event-link event-host-link" style="text-decoration: underline 2px var(--teal); text-underline-offset: 0.2em;" href="{{ i18n "events.list.wikicampers.program.first.linkedin" }}" target="_blank" rel="noopener noreferrer">{{ i18n "events.list.wikicampers.program.first.speaker" }}</a></li>
-          <li>{{ i18n "events.list.wikicampers.program.second.topic" }} — <a class="event-link event-host-link" style="text-decoration: underline 2px var(--teal); text-underline-offset: 0.2em;" href="{{ i18n "events.list.wikicampers.program.second.linkedin" }}" target="_blank" rel="noopener noreferrer">{{ i18n "events.list.wikicampers.program.second.speaker" }}</a></li>
-        </ul>
+  {{ range .Page.RegularPages.ByDate.Reverse }}
+    <article class="event-card">
+      <time class="event-date" datetime="{{ .Date.Format "2006-01-02" }}">
+        <span>{{ i18n (printf "events.list.weekdays.%s" (.Date.Format "Monday")) }}</span>
+        <strong>{{ .Date.Format "02" }}</strong>
+        <span>{{ i18n (printf "events.list.months.%s" (.Date.Format "January")) }}</span>
+      </time>
+      <div class="event-content">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Description }}</p>
+        <a class="event-link" href="{{ .RelPermalink }}">{{ i18n "events.list.link" }}</a>
       </div>
-      <p class="event-details">{{ i18n "events.sponsoredBy" }} <a href="https://www.seyos.fr/" target="_blank" rel="noreferrer">Seyos</a></p>
-      <a class="event-link" href="https://luma.com/7n5a3rm3" target="_blank" rel="noreferrer">{{ i18n "events.list.wikicampers.link" }} <span aria-hidden="true">↗</span></a>
-    </div>
-  </article>
-
-  <article class="event-card">
-    <div class="event-date" aria-label="{{ i18n "events.list.docorga.date.ariaLabel" }}">
-      <span>{{ i18n "events.list.docorga.date.weekday" }}</span>
-      <strong>24</strong>
-      <span>{{ i18n "events.list.docorga.date.month" }}</span>
-    </div>
-    <div class="event-content">
-      <p class="event-kicker">{{ i18n "events.list.docorga.kicker" }}</p>
-      <h2>{{ i18n "events.list.docorga.heading" }}</h2>
-      <p><a class="event-link event-host-link" style="text-decoration: underline 2px var(--teal); text-underline-offset: 0.2em;" href="{{ i18n "events.list.docorga.website" }}" target="_blank" rel="noopener noreferrer">{{ i18n "events.list.docorga.host" }}</a> {{ i18n "events.list.docorga.text" }}</p>
-      <div class="event-program">
-      <p><strong>{{ i18n "events.program.label" }}</strong></p>
-        <ul>
-          <li>{{ i18n "events.list.docorga.program.first.topic" }} — <a class="event-link event-host-link" style="text-decoration: underline 2px var(--teal); text-underline-offset: 0.2em;" href="{{ i18n "events.list.docorga.program.first.linkedin" }}" target="_blank" rel="noopener noreferrer">{{ i18n "events.list.docorga.program.first.speaker" }}</a></li>
-          <li>{{ i18n "events.list.docorga.program.second.topic" }} — <a class="event-link event-host-link" style="text-decoration: underline 2px var(--teal); text-underline-offset: 0.2em;" href="{{ i18n "events.list.docorga.program.second.linkedin" }}" target="_blank" rel="noopener noreferrer">{{ i18n "events.list.docorga.program.second.speaker" }}</a></li>
-        </ul>
-      </div>
-      <p class="event-details">{{ i18n "events.sponsoredBy" }} <a href="https://www.seyos.fr/" target="_blank" rel="noreferrer">Seyos</a></p>
-      <a class="event-link" href="https://mobilizon.fr/events/3a6de320-cef4-4bef-ae84-347017d3ec0e" target="_blank" rel="noreferrer">{{ i18n "events.list.docorga.link" }} <span aria-hidden="true">↗</span></a>
-    </div>
-  </article>
+    </article>
+  {{ end }}
 </div>

@@ -7,6 +7,22 @@
       <p class="footer-location">{{ i18n "footer.brand.location" }}</p>
     </div>
 
+    <nav class="footer-pages" aria-label="{{ i18n "footer.links" }}">
+      <section class="footer-links-group" aria-labelledby="footer-decouvrir">
+        <h2 id="footer-decouvrir">{{ i18n "footer.discover" }}</h2>
+        <a href="{{ "/" | relURL }}">{{ i18n "footer.home" }}</a>
+        <a href="{{ "/evenements/" | relURL }}">{{ i18n "footer.events" }}</a>
+        <a href="{{ "/equipe/" | relURL }}">{{ i18n "footer.team" }}</a>
+        <a href="{{ "/faq/" | relURL }}">{{ i18n "footer.faq" }}</a>
+      </section>
+      <section class="footer-links-group" aria-labelledby="footer-contribuer">
+        <h2 id="footer-contribuer">{{ i18n "footer.contribute" }}</h2>
+        <a href="{{ "/rejoins-nous/" | relURL }}">{{ i18n "footer.join" }}</a>
+        <a href="{{ "/devenir-speaker/" | relURL }}">{{ i18n "footer.speaker" }}</a>
+        <a href="{{ "/partenaires/" | relURL }}">{{ i18n "footer.partner" }}</a>
+      </section>
+    </nav>
+
     <div class="footer-actions">
     {{ with .Site.Params.socialMedia }}
       <nav class="social-links" aria-label="{{ i18n "footer.social.ariaLabel" }}">
