@@ -46,15 +46,30 @@
       {{ i18n "home.section.solution.text" | markdownify }}
     </div>
     <div class="solution-media">
-      <picture>
-        <source srcset="/images/presse.webp" type="image/webp">
-        <img src="/images/presse.jpg"
-             width="1176"
-             height="1200"
-             alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
-             loading="lazy"
-             decoding="async">
-      </picture>
+      <button class="home-photo-trigger" type="button" data-home-photo-open aria-label="Agrandir l’article de presse">
+        <picture>
+          <source srcset="/images/presse.webp" type="image/webp">
+          <img src="/images/presse.jpg"
+               width="1176"
+               height="1200"
+               alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
+               loading="lazy"
+               decoding="async">
+        </picture>
+      </button>
+      <dialog class="event-lightbox home-photo-lightbox" data-home-photo-dialog aria-label="Article de presse">
+        <button type="button" class="event-lightbox-close" data-home-photo-close aria-label="Fermer l’image">×</button>
+        <div class="event-lightbox-viewport">
+          <picture>
+            <source srcset="/images/presse.webp" type="image/webp">
+            <img src="/images/presse.jpg"
+                 width="1176"
+                 height="1200"
+                 alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
+                 decoding="async">
+          </picture>
+        </div>
+      </dialog>
     </div>
   </div>
 </section>
@@ -72,4 +87,13 @@
   </div>
 </section>
 
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+  const homePhotoDialog = document.querySelector('[data-home-photo-dialog]');
+  document.querySelector('[data-home-photo-open]').addEventListener('click', () => homePhotoDialog.showModal());
+  document.querySelector('[data-home-photo-close]').addEventListener('click', () => homePhotoDialog.close());
+  homePhotoDialog.addEventListener('click', (event) => { if (event.target === homePhotoDialog) homePhotoDialog.close(); });
+</script>
 {{ end }}
