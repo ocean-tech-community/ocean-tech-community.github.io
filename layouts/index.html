@@ -1,6 +1,8 @@
 {{ define "main" }}
 {{ $nextEvent := site.Params.nextEvent }}
 {{ $hasNextEvent := and $nextEvent $nextEvent.weekday $nextEvent.day $nextEvent.month $nextEvent.title $nextEvent.url }}
+{{ $eventImage := $nextEvent.image | default site.Params.eventPlaceholderImage }}
+{{ $eventImageAlt := $nextEvent.imageAlt | default site.Params.eventPlaceholderImageAlt | default $nextEvent.title }}
 
 <section class="home-hero">
   <div class="container home-hero-content">
@@ -8,10 +10,10 @@
       <p class="home-eyebrow">Pays Basque &amp; Landes</p>
       <h1>{{ i18n "home.hero.title" | safeHTML }}</h1>
       <p class="home-lead">{{ i18n "home.hero.text" }}</p>
-      <a class="btn btn-primary" href="{{ relref . "communaute" }}">En savoir plus</a>
     </div>
     <div class="home-hero-illustration">
-      <img src="/images/hero.webp" width="400" height="539" alt="Illustration de la communauté Ocean Tech">
+      <div class="home-hero-photo-main"><img src="/images/events/docorga-communaute.webp" width="1600" height="900" alt="Des personnes réunies lors d’une soirée Ocean Tech"></div>
+      <div class="home-hero-photo-secondary"><img src="/images/events/wikicampers-ux-writing.webp" width="1600" height="900" alt="Une intervenante présente un talk Ocean Tech"></div>
     </div>
   </div>
 </section>
@@ -19,31 +21,51 @@
 {{ if $hasNextEvent }}
 <section class="home-next-event" id="prochain-rendez-vous" aria-labelledby="next-event-title">
   <div class="container">
-    <article class="next-event-card">
-      <time class="next-event-date"><span>{{ $nextEvent.weekday }}</span><strong>{{ $nextEvent.day }}</strong><span>{{ $nextEvent.month }}</span></time>
-      <div>
-        <p class="next-event-kicker">Prochain rendez-vous</p>
-        <h2 id="next-event-title">{{ $nextEvent.title }}</h2>
-        <p>{{ $nextEvent.time }}{{ with $nextEvent.location }} · {{ . }}{{ end }}<br>Gratuit sur inscription</p>
+    <article class="next-event-card next-event-card-has-image">
+      <div class="next-event-details">
+        <time class="next-event-date"><span>{{ $nextEvent.weekday }}</span><strong>{{ $nextEvent.day }}</strong><span>{{ $nextEvent.month }}</span><b class="next-event-time">{{ $nextEvent.time }}</b></time>
+        <div>
+          <p class="next-event-kicker">Prochain rendez-vous</p>
+          <h2 id="next-event-title">{{ $nextEvent.title }}</h2>
+          {{ with $nextEvent.location }}<p class="next-event-location">{{ . }}</p>{{ end }}
+          <p class="next-event-free">Gratuit sur inscription</p>
+        </div>
+        <a class="next-event-link" href="{{ $nextEvent.url }}" target="_blank" rel="noopener">Voir le programme et s’inscrire</a>
       </div>
-      <a class="next-event-link" href="{{ $nextEvent.url }}" target="_blank" rel="noopener">Voir le programme et s’inscrire <span aria-hidden="true">→</span></a>
+      <div class="next-event-aside">
+        <img class="next-event-image" src="{{ $eventImage }}" width="1600" height="900" alt="{{ $eventImageAlt }}" loading="lazy" decoding="async">
+      </div>
     </article>
   </div>
 </section>
 {{ end }}
 
-<section class="home-problem">
-  <div class="container home-problem-grid">
-    <h2>{{ i18n "home.section.problem.title" }}</h2>
-    <div>{{ i18n "home.section.problem.text" | markdownify }}</div>
+<section class="home-arguments">
+  <div class="container">
+    <div class="home-arguments-layout">
+      <div>
+        <h2>Chez nous, la tech est là…<br>mais chacun·e dans son coin.</h2>
+        <p>Nous sommes nombreux à travailler dans la tech et le produit sur le BAB et ses alentours : en freelance, en remote ou en présentiel.</p>
+      </div>
+      <div class="home-solution">
+        <p class="home-solution-kicker">Ocean Tech, c’est un rendez-vous simple et ouvert pour</p>
+        <ul>
+          <li>se rencontrer entre personnes de la tech et du produit ;</li>
+          <li>échanger sur nos pratiques, nos projets et nos galères ;</li>
+          <li>apprendre avec des talks, des retours d’expérience ou des discussions informelles ;</li>
+          <li>et surtout passer un bon moment ensemble.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="home-arguments-link"><a class="btn btn-secondary" href="{{ relref . "communaute" }}">Découvrir la communauté</a></p>
   </div>
 </section>
 
 <section class="home-formats">
   <div class="container">
     <div class="home-section-heading">
-      <h2>Deux façons de se retrouver</h2>
-      <p>Des rendez-vous réguliers pour créer des liens et nourrir les pratiques locales.</p>
+      <h2>Nos rendez-vous</h2>
+      <p>Chaque mois, on se retrouve autour d’un apéro au Bob’s Beer. Une fois par trimestre, le rendez-vous quitte le bar pour une soirée dans une entreprise locale : talks, partages de pratiques, ateliers et échanges.</p>
     </div>
     <div class="format-grid">
       <article class="format-card">
@@ -51,7 +73,7 @@
         <div class="format-card-content">
           <p class="format-frequency">Chaque mois</p>
           <h3>Les apéros</h3>
-          <p>Un moment détendu pour croiser des profils tech, produit et design autour d’un verre.</p>
+          <p>Chaque mois, on se retrouve au Bob’s Beer, à Anglet, pour un apéro sans programme. Viens comme tu es, pour discuter de ce qui t’intéresse et rencontrer les gens du coin.</p>
         </div>
       </article>
       <article class="format-card">
@@ -59,22 +81,9 @@
         <div class="format-card-content">
           <p class="format-frequency">Chaque trimestre</p>
           <h3>Les soirées talks</h3>
-          <p>Des retours d’expérience concrets, puis le temps de continuer la conversation.</p>
+          <p>Une fois par trimestre, une entreprise locale ouvre ses portes pour des talks, retours d’expérience, ateliers et discussions. Pizzas et boissons sont là pour continuer à échanger.</p>
         </div>
       </article>
-    </div>
-  </div>
-</section>
-
-<section class="home-talks">
-  <div class="container">
-    <div class="home-talks-heading">
-      <h2>Des talks, des échanges, et bien plus encore</h2>
-      <a href="{{ "/evenements/" | relURL }}">Découvrir les événements →</a>
-    </div>
-    <div class="home-talks-grid">
-      <img src="/images/events/docorga-produit.webp" width="1600" height="900" alt="Un talk présenté lors d’une soirée Ocean Tech chez Docorga" loading="lazy" decoding="async">
-      <img src="/images/events/wikicampers-spec-driven-development.webp" width="1600" height="900" alt="Un intervenant présente son retour d’expérience lors d’une soirée Ocean Tech" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -86,8 +95,8 @@
       <p class="home-stat-label">personnes déjà inscrites<br>dans la communauté</p>
     </div>
     <div>
-      <h2>La tech locale mérite ses propres rendez-vous.</h2>
-      <p>Pas besoin d’aller à Bordeaux ou à Paris pour rencontrer des personnes qui partagent tes enjeux, tes idées et tes galères.</p>
+      <h2>Un endroit pour se retrouver entre gens du logiciel.</h2>
+      <p>Pour rencontrer des gens de la tech et du produit, pas besoin de monter à Bordeaux ou de filer à Paris. On se retrouve ici, autour d’un verre ou d’un talk.</p>
       <p class="home-proof-note">Une communauté ouverte aux salarié·es, freelances, étudiant·es et curieux·ses du numérique.</p>
     </div>
   </div>
