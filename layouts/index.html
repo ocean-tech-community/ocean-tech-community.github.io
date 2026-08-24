@@ -1,99 +1,103 @@
 {{ define "main" }}
-<!-- Hero -->
-<section class="hero">
+{{ $nextEvent := site.Params.nextEvent }}
+{{ $hasNextEvent := and $nextEvent $nextEvent.weekday $nextEvent.day $nextEvent.month $nextEvent.title $nextEvent.url }}
+
+<section class="home-hero">
+  <div class="container home-hero-content">
+    <div class="home-hero-copy">
+      <p class="home-eyebrow">Pays Basque &amp; Landes</p>
+      <h1>{{ i18n "home.hero.title" | safeHTML }}</h1>
+      <p class="home-lead">{{ i18n "home.hero.text" }}</p>
+      <a class="btn btn-primary" href="{{ relref . "communaute" }}">En savoir plus</a>
+    </div>
+    <div class="home-hero-illustration">
+      <img src="/images/hero.webp" width="400" height="539" alt="Illustration de la communauté Ocean Tech">
+    </div>
+  </div>
+</section>
+
+{{ if $hasNextEvent }}
+<section class="home-next-event" id="prochain-rendez-vous" aria-labelledby="next-event-title">
   <div class="container">
-    <div class="hero-content">
+    <article class="next-event-card">
+      <time class="next-event-date"><span>{{ $nextEvent.weekday }}</span><strong>{{ $nextEvent.day }}</strong><span>{{ $nextEvent.month }}</span></time>
       <div>
-        <h1>{{ i18n "home.hero.title" | safeHTML }}</h1>
-        {{ i18n "home.hero.text" | markdownify }}
-        <div class="hero-actions">
-          {{ partial "join-link" . }}
-          {{ partial "meetup-link" (dict "ctx" . "class" "btn-ghost") }}
-        </div>
+        <p class="next-event-kicker">Prochain rendez-vous</p>
+        <h2 id="next-event-title">{{ $nextEvent.title }}</h2>
+        <p>{{ $nextEvent.time }}{{ with $nextEvent.location }} · {{ . }}{{ end }}<br>Gratuit sur inscription</p>
       </div>
-      <img src="/images/hero.webp" width="400" alt="" loading="lazy">
-    </div>
-  </div>
-
-  <!-- Vague -->
-  <svg class="wave" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
-    <defs>
-      <linearGradient id="w" x1="0" x2="1">
-        <stop offset="0" stop-color="#19B5C8"/>
-        <stop offset="1" stop-color="#0F5E7E"/>
-      </linearGradient>
-    </defs>
-    <path fill="url(#w)" d="M0,80 C220,30 420,120 720,100 C1060,78 1200,20 1440,60 L1440,140 L0,140 Z"/>
-  </svg>
-
-</section>
-
-<!-- Problem -->
-<section>
-  <div class="container">
-    <h2 class="section-title">{{ i18n "home.section.problem.title" | markdownify }}</h2>
-    {{ i18n "home.section.problem.text" | markdownify }}
+      <a class="next-event-link" href="{{ $nextEvent.url }}" target="_blank" rel="noopener">Voir le programme et s’inscrire <span aria-hidden="true">→</span></a>
+    </article>
   </div>
 </section>
-
-<!-- Solution -->
-<section class="solution">
-  <div class="container solution-grid">
-    <div class="solution-text">
-      <h2 class="section-title">
-        {{ i18n "home.section.solution.title" | markdownify }}
-      </h2>
-      {{ i18n "home.section.solution.text" | markdownify }}
-    </div>
-    <div class="solution-media">
-      <button class="home-photo-trigger" type="button" data-home-photo-open aria-label="Agrandir l’article de presse">
-        <picture>
-          <source srcset="/images/presse.webp" type="image/webp">
-          <img src="/images/presse.jpg"
-               width="1176"
-               height="1200"
-               alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
-               loading="lazy"
-               decoding="async">
-        </picture>
-      </button>
-      <dialog class="event-lightbox home-photo-lightbox" data-home-photo-dialog aria-label="Article de presse">
-        <button type="button" class="event-lightbox-close" data-home-photo-close aria-label="Fermer l’image">×</button>
-        <div class="event-lightbox-viewport">
-          <picture>
-            <source srcset="/images/presse.webp" type="image/webp">
-            <img src="/images/presse.jpg"
-                 width="1176"
-                 height="1200"
-                 alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
-                 decoding="async">
-          </picture>
-        </div>
-      </dialog>
-    </div>
-  </div>
-</section>
-
-<!-- Action -->
-<section class="action">
-  <div class="container">
-    <h2 class="section-title">{{ i18n "home.section.action.title" | markdownify }}</h2>
-    {{ i18n "home.section.action.text" | markdownify }}
-    <div class="button">
-      {{ partial "join-link" . }}
-      {{ partial "meetup-link" (dict "ctx" .)  }}
-    </div>
-    {{ i18n "home.section.action.sublink" | markdownify }}
-  </div>
-</section>
-
 {{ end }}
 
-{{ define "scripts" }}
-<script>
-  const homePhotoDialog = document.querySelector('[data-home-photo-dialog]');
-  document.querySelector('[data-home-photo-open]').addEventListener('click', () => homePhotoDialog.showModal());
-  document.querySelector('[data-home-photo-close]').addEventListener('click', () => homePhotoDialog.close());
-  homePhotoDialog.addEventListener('click', (event) => { if (event.target === homePhotoDialog) homePhotoDialog.close(); });
-</script>
+<section class="home-problem">
+  <div class="container home-problem-grid">
+    <h2>{{ i18n "home.section.problem.title" }}</h2>
+    <div>{{ i18n "home.section.problem.text" | markdownify }}</div>
+  </div>
+</section>
+
+<section class="home-formats">
+  <div class="container">
+    <div class="home-section-heading">
+      <h2>Deux façons de se retrouver</h2>
+      <p>Des rendez-vous réguliers pour créer des liens et nourrir les pratiques locales.</p>
+    </div>
+    <div class="format-grid">
+      <article class="format-card">
+        <img src="/images/events/docorga-communaute.webp" width="1600" height="900" alt="Des membres de la communauté Ocean Tech réunis lors d’une soirée" loading="lazy" decoding="async">
+        <div class="format-card-content">
+          <p class="format-frequency">Chaque mois</p>
+          <h3>Les apéros</h3>
+          <p>Un moment détendu pour croiser des profils tech, produit et design autour d’un verre.</p>
+        </div>
+      </article>
+      <article class="format-card">
+        <img src="/images/events/wikicampers-ux-writing.webp" width="1600" height="900" alt="Une intervenante présente un talk lors d’une soirée Ocean Tech" loading="lazy" decoding="async">
+        <div class="format-card-content">
+          <p class="format-frequency">Chaque trimestre</p>
+          <h3>Les soirées talks</h3>
+          <p>Des retours d’expérience concrets, puis le temps de continuer la conversation.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="home-talks">
+  <div class="container">
+    <div class="home-talks-heading">
+      <h2>Des talks, des échanges, et bien plus encore</h2>
+      <a href="{{ "/evenements/" | relURL }}">Découvrir les événements →</a>
+    </div>
+    <div class="home-talks-grid">
+      <img src="/images/events/docorga-produit.webp" width="1600" height="900" alt="Un talk présenté lors d’une soirée Ocean Tech chez Docorga" loading="lazy" decoding="async">
+      <img src="/images/events/wikicampers-spec-driven-development.webp" width="1600" height="900" alt="Un intervenant présente son retour d’expérience lors d’une soirée Ocean Tech" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<section class="home-proof">
+  <div class="container home-proof-grid">
+    <div>
+      <p class="home-stat">250+</p>
+      <p class="home-stat-label">personnes déjà inscrites<br>dans la communauté</p>
+    </div>
+    <div>
+      <h2>La tech locale mérite ses propres rendez-vous.</h2>
+      <p>Pas besoin d’aller à Bordeaux ou à Paris pour rencontrer des personnes qui partagent tes enjeux, tes idées et tes galères.</p>
+      <p class="home-proof-note">Une communauté ouverte aux salarié·es, freelances, étudiant·es et curieux·ses du numérique.</p>
+    </div>
+  </div>
+</section>
+
+<section class="home-cta">
+  <div class="container">
+    <h2>Le prochain verre est peut-être le début d’une belle rencontre.</h2>
+    <p>Inscris-toi pour recevoir les prochaines dates et rejoindre Ocean Tech.</p>
+    {{ partial "join-link" . }}
+  </div>
+</section>
 {{ end }}
