@@ -1,0 +1,44 @@
+{{ define "main" }}
+<article class="single-page community-page">
+  <div class="container"><h1>La communauté Ocean Tech</h1></div>
+  <div class="container"><div class="page-content">
+    <p>Sur la côte basco-landaise, nous sommes nombreux·ses à travailler dans la tech, le produit et le design. Ocean Tech crée des occasions simples de se rencontrer, d’apprendre et de créer des liens.</p>
+    <h2>Pourquoi Ocean Tech&nbsp;?</h2>
+    <p>Les personnes de la communauté travaillent un peu partout sur le BAB et ses alentours, en présentiel ou à distance. Il n’est pas toujours facile de se rencontrer et d’échanger.</p>
+    <p>Ocean Tech est né pour créer un rendez-vous local, ouvert et régulier&nbsp;: un espace où l’on peut parler de ses projets, poser ses questions, rencontrer des pairs et simplement passer un bon moment.</p>
+    <h2>Des rencontres qui comptent</h2>
+    <div class="community-gallery" data-community-gallery aria-label="Photos de rencontres Ocean Tech">
+      <button type="button" data-community-photo-open="0" aria-label="Agrandir la photo de la communauté chez Docorga"><img src="/images/events/docorga-communaute.webp" alt="Les participant·es à une soirée Ocean Tech chez Docorga" loading="lazy" decoding="async"></button>
+      <button type="button" data-community-photo-open="1" aria-label="Agrandir la photo d’un talk chez Docorga"><img src="/images/events/docorga-produit.webp" alt="Un talk présenté lors d’une soirée Ocean Tech chez Docorga" loading="lazy" decoding="async"></button>
+      <button type="button" data-community-photo-open="2" aria-label="Agrandir la photo d’un talk chez Wikicampers"><img src="/images/events/wikicampers-ux-writing.webp" alt="Une intervenante présente un talk lors d’une soirée Ocean Tech chez Wikicampers" loading="lazy" decoding="async"></button>
+    </div>
+    <p class="community-gallery-caption">Quelques moments partagés lors des soirées Ocean Tech.</p>
+    <p>Chaque mois, on se retrouve autour d’un apéro au Bob’s Beer. Une fois par trimestre, le rendez-vous quitte le bar pour une soirée dans une entreprise locale&nbsp;: talks, partages de pratiques, ateliers et échanges.</p>
+    <h2>À qui s’adresse la communauté&nbsp;?</h2>
+    <p>Aux développeur·ses, designers, product managers, freelances, fondateur·ices, étudiant·es, personnes en reconversion et à toutes celles et ceux qui s’intéressent au numérique.</p>
+    <p>Il n’y a pas de niveau requis. L’envie d’échanger suffit.</p>
+    <h2>Dans la presse</h2>
+    <p>La naissance d’Ocean Tech et son ambition de rassembler les professionnel·les du numérique ont aussi été racontées dans la presse locale.</p>
+    <figure class="community-media community-press-media"><button type="button" data-community-photo-open="3" aria-label="Agrandir l’article de presse"><picture><source srcset="/images/presse.webp" type="image/webp"><img src="/images/presse.jpg" alt="Article de presse paru dans le journal Placéco au sujet d’Ocean Tech" loading="lazy" decoding="async"></picture></button><figcaption>Article paru dans Placéco.</figcaption></figure>
+    <div class="community-join"><h2>Envie d’en faire partie&nbsp;?</h2><p>Inscris-toi pour recevoir les prochaines dates Ocean Tech.</p>{{ partial "join-link" . }}</div>
+  </div></div>
+  <dialog class="event-lightbox community-lightbox" data-community-photo-dialog aria-label="Agrandissement d’image"><button type="button" class="event-lightbox-close" data-community-photo-close aria-label="Fermer l’image">×</button><div class="event-lightbox-viewport" data-community-slides></div><div class="event-carousel-controls"><button type="button" class="event-carousel-button" data-community-previous aria-label="Photo précédente">‹</button><p aria-live="polite"><span data-community-current>1</span> / <span data-community-total>1</span></p><button type="button" class="event-carousel-button" data-community-next aria-label="Photo suivante">›</button></div></dialog>
+</article>
+{{ end }}
+{{ define "scripts" }}
+<script>
+  const communityDialog = document.querySelector('[data-community-photo-dialog]');
+  const communitySlidesViewport = communityDialog.querySelector('[data-community-slides]');
+  const communityImages = Array.from(document.querySelectorAll('[data-community-photo-open] img'));
+  const communitySlides = communityImages.map((image, index) => { const slide = document.createElement('figure'); slide.className = 'event-carousel-slide'; slide.hidden = index !== 0; const fullImage = document.createElement('img'); fullImage.src = image.currentSrc || image.src; fullImage.alt = image.alt; slide.appendChild(fullImage); communitySlidesViewport.appendChild(slide); return slide; });
+  const communityCurrent = communityDialog.querySelector('[data-community-current]');
+  communityDialog.querySelector('[data-community-total]').textContent = communitySlides.length;
+  let communityIndex = 0;
+  const showCommunitySlide = (nextIndex) => { communityIndex = (nextIndex + communitySlides.length) % communitySlides.length; communitySlides.forEach((slide, index) => { slide.hidden = index !== communityIndex; }); communityCurrent.textContent = communityIndex + 1; };
+  document.querySelectorAll('[data-community-photo-open]').forEach((button) => { button.addEventListener('click', () => { showCommunitySlide(Number(button.dataset.communityPhotoOpen)); communityDialog.showModal(); }); });
+  communityDialog.querySelector('[data-community-photo-close]').addEventListener('click', () => communityDialog.close());
+  communityDialog.addEventListener('click', (event) => { if (event.target === communityDialog) communityDialog.close(); });
+  communityDialog.querySelector('[data-community-previous]').addEventListener('click', () => showCommunitySlide(communityIndex - 1));
+  communityDialog.querySelector('[data-community-next]').addEventListener('click', () => showCommunitySlide(communityIndex + 1));
+</script>
+{{ end }}
