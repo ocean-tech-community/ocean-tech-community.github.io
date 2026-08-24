@@ -1,99 +1,85 @@
 {{ define "main" }}
-<!-- Hero -->
-<section class="hero">
+{{ $nextEvent := site.Params.nextEvent }}
+
+<section class="home-hero">
   <div class="container">
-    <div class="hero-content">
-      <div>
-        <h1>{{ i18n "home.hero.title" | safeHTML }}</h1>
-        {{ i18n "home.hero.text" | markdownify }}
-        <div class="hero-actions">
+    <div class="home-hero-content">
+      <div class="home-hero-copy">
+        <p class="home-eyebrow">Pays Basque &amp; Landes</p>
+        <h1>La communauté tech &amp; produit qui se retrouve près de chez toi.</h1>
+        <p class="home-lead">Apéros, talks et rencontres pour apprendre, échanger et créer du lien entre les personnes qui font le logiciel localement.</p>
+        <div class="home-hero-actions">
           {{ partial "join-link" . }}
-          {{ partial "meetup-link" (dict "ctx" . "class" "btn-ghost") }}
+          <a class="btn btn-ghost" href="{{ relref . "communaute" }}">Découvrir la communauté</a>
         </div>
       </div>
-      <img src="/images/hero.webp" width="400" alt="" loading="lazy">
+      <aside class="next-event-card" id="prochain-rendez-vous" aria-labelledby="next-event-title">
+        {{ if and $nextEvent $nextEvent.weekday $nextEvent.day $nextEvent.month $nextEvent.title $nextEvent.url }}
+          <p class="next-event-kicker">Prochain rendez-vous</p>
+          <div class="next-event-summary">
+            <time class="next-event-date"><span>{{ $nextEvent.weekday }}</span><strong>{{ $nextEvent.day }}</strong><span>{{ $nextEvent.month }}</span></time>
+            <div>
+              <h2 id="next-event-title">{{ $nextEvent.title }}</h2>
+              <p>{{ $nextEvent.time }}{{ with $nextEvent.location }} · {{ . }}{{ end }}<br>Gratuit sur inscription</p>
+            </div>
+          </div>
+          <a class="next-event-link" href="{{ $nextEvent.url }}" target="_blank" rel="noopener">Voir le programme et s’inscrire</a>
+        {{ else }}
+          <p class="next-event-kicker">Prochain rendez-vous</p>
+          <h2 id="next-event-title">Les prochaines dates arrivent bientôt.</h2>
+          <p>Inscris-toi à la communauté pour être prévenu·e en premier.</p>
+          {{ partial "meetup-link" (dict "ctx" . "class" "next-event-link") }}
+        {{ end }}
+      </aside>
     </div>
   </div>
-
-  <!-- Vague -->
-  <svg class="wave" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
-    <defs>
-      <linearGradient id="w" x1="0" x2="1">
-        <stop offset="0" stop-color="#19B5C8"/>
-        <stop offset="1" stop-color="#0F5E7E"/>
-      </linearGradient>
-    </defs>
-    <path fill="url(#w)" d="M0,80 C220,30 420,120 720,100 C1060,78 1200,20 1440,60 L1440,140 L0,140 Z"/>
-  </svg>
-
 </section>
 
-<!-- Problem -->
-<section>
+<section class="home-formats" id="formats">
   <div class="container">
-    <h2 class="section-title">{{ i18n "home.section.problem.title" | markdownify }}</h2>
-    {{ i18n "home.section.problem.text" | markdownify }}
-  </div>
-</section>
-
-<!-- Solution -->
-<section class="solution">
-  <div class="container solution-grid">
-    <div class="solution-text">
-      <h2 class="section-title">
-        {{ i18n "home.section.solution.title" | markdownify }}
-      </h2>
-      {{ i18n "home.section.solution.text" | markdownify }}
+    <div class="home-section-heading">
+      <h2>Deux façons simples de faire partie du mouvement</h2>
+      <p>Que tu veuilles rencontrer du monde ou nourrir ta pratique, il y a un rendez-vous pour toi.</p>
     </div>
-    <div class="solution-media">
-      <button class="home-photo-trigger" type="button" data-home-photo-open aria-label="Agrandir l’article de presse">
-        <picture>
-          <source srcset="/images/presse.webp" type="image/webp">
-          <img src="/images/presse.jpg"
-               width="1176"
-               height="1200"
-               alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
-               loading="lazy"
-               decoding="async">
-        </picture>
-      </button>
-      <dialog class="event-lightbox home-photo-lightbox" data-home-photo-dialog aria-label="Article de presse">
-        <button type="button" class="event-lightbox-close" data-home-photo-close aria-label="Fermer l’image">×</button>
-        <div class="event-lightbox-viewport">
-          <picture>
-            <source srcset="/images/presse.webp" type="image/webp">
-            <img src="/images/presse.jpg"
-                 width="1176"
-                 height="1200"
-                 alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
-                 decoding="async">
-          </picture>
+    <div class="format-grid">
+      <article class="format-card">
+        <img src="/images/events/docorga-communaute.webp" alt="Des membres de la communauté Ocean Tech réunis lors d’une soirée" loading="lazy" decoding="async">
+        <div class="format-card-content">
+        <p class="format-frequency">Chaque mois</p>
+        <h3>Les apéros</h3>
+        <p>Un moment détendu pour croiser des profils tech, produit et design autour d’un verre.</p>
         </div>
-      </dialog>
+      </article>
+      <article class="format-card">
+        <img src="/images/events/wikicampers-ux-writing.webp" alt="Une intervenante présente un talk lors d’une soirée Ocean Tech" loading="lazy" decoding="async">
+        <div class="format-card-content">
+        <p class="format-frequency">Chaque trimestre</p>
+        <h3>Les soirées talks</h3>
+        <p>Des talks, ateliers et partages de pratiques pour découvrir de nouvelles idées, apprendre et se laisser challenger.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- Action -->
-<section class="action">
+<section class="home-proof">
+  <div class="container home-proof-grid">
+    <div>
+      <p class="home-stat">250+</p>
+      <p class="home-stat-label">personnes déjà inscrites<br>dans la communauté</p>
+    </div>
+    <div>
+      <blockquote>« Un endroit pour rencontrer les gens qui construisent la tech ici, sans avoir besoin de partir à Bordeaux ou Paris. »</blockquote>
+      <p class="home-proof-note">Une communauté ouverte aux salarié·es, freelances, étudiant·es et curieux·ses du numérique.</p>
+    </div>
+  </div>
+</section>
+
+<section class="home-cta">
   <div class="container">
-    <h2 class="section-title">{{ i18n "home.section.action.title" | markdownify }}</h2>
-    {{ i18n "home.section.action.text" | markdownify }}
-    <div class="button">
-      {{ partial "join-link" . }}
-      {{ partial "meetup-link" (dict "ctx" .)  }}
-    </div>
-    {{ i18n "home.section.action.sublink" | markdownify }}
+    <h2>Le prochain verre est peut-être le début d’une belle rencontre.</h2>
+    <p>Inscris-toi pour recevoir les prochaines dates et rejoindre Ocean Tech.</p>
+    {{ partial "join-link" . }}
   </div>
 </section>
-
-{{ end }}
-
-{{ define "scripts" }}
-<script>
-  const homePhotoDialog = document.querySelector('[data-home-photo-dialog]');
-  document.querySelector('[data-home-photo-open]').addEventListener('click', () => homePhotoDialog.showModal());
-  document.querySelector('[data-home-photo-close]').addEventListener('click', () => homePhotoDialog.close());
-  homePhotoDialog.addEventListener('click', (event) => { if (event.target === homePhotoDialog) homePhotoDialog.close(); });
-</script>
 {{ end }}

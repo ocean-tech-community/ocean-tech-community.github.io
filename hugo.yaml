@@ -38,6 +38,14 @@ params:
   socialImage: "/images/social-card.png"
   socialImageAlt: "Ocean Tech, la communauté tech et produit basco-landaise"
   meetupUrl: "https://luma.com/k6tqgk9d"
+  nextEvent:
+    weekday: "JEU."
+    day: "18"
+    month: "SEPT."
+    time: "19 h"
+    title: "Apéro Ocean Tech"
+    location: "Bob's Beer, Anglet"
+    url: "https://luma.com/k6tqgk9d"
   cfpUrl: "https://alder-art-bc7.notion.site/bc77aa935f42485697520feff67d2bbd?pvs=105"
   socialMedia:
     linkedin: "https://www.linkedin.com/company/oceantechcommunity"
