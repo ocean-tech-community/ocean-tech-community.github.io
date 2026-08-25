@@ -12,6 +12,7 @@
       <p class="home-lead">{{ i18n "home.hero.text" }}</p>
     </div>
     <div class="home-hero-illustration">
+      <div class="home-hero-photo-shapes" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
       <div class="home-hero-photo-main"><img src="/images/events/docorga-communaute.webp" width="1600" height="900" alt="Des personnes réunies lors d’une soirée Ocean Tech"></div>
       <div class="home-hero-photo-secondary"><img src="/images/events/wikicampers-ux-writing.webp" width="1600" height="900" alt="Une intervenante présente un talk Ocean Tech"></div>
     </div>
@@ -43,7 +44,7 @@
 <section class="home-arguments">
   <div class="container">
     <div class="home-arguments-layout">
-      <div>
+      <div class="home-problem-statement">
         <h2>Chez nous, la tech est là…<br>mais chacun·e dans son coin.</h2>
         <p>Nous sommes nombreux à travailler dans la tech et le produit sur le BAB et ses alentours : en freelance, en remote ou en présentiel.</p>
       </div>
@@ -55,9 +56,9 @@
           <li>apprendre avec des talks, des retours d’expérience ou des discussions informelles ;</li>
           <li>et surtout passer un bon moment ensemble.</li>
         </ul>
+        <p class="home-arguments-link"><a class="btn btn-secondary" href="{{ relref . "communaute" }}">Découvrir la communauté</a></p>
       </div>
     </div>
-    <p class="home-arguments-link"><a class="btn btn-secondary" href="{{ relref . "communaute" }}">Découvrir la communauté</a></p>
   </div>
 </section>
 
