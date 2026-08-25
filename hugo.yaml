@@ -10,6 +10,10 @@ menus:
       identifier: "navigation.events"
       pageRef: "/evenements"
       weight: 10
+    - name: "La communauté"
+      identifier: "navigation.community"
+      pageRef: "/communaute"
+      weight: 5
     - name: "L’équipe"
       identifier: "navigation.team"
       pageRef: "/equipe"
