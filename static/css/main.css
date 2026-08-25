@@ -1231,8 +1231,9 @@ section {
   align-content: center;
   align-self: center;
   grid-row: 1 / span 2;
-  min-width: 7.2rem;
-  min-height: 8.1rem;
+  width: 7.7rem;
+  min-width: 7.7rem;
+  min-height: 7.7rem;
   padding: 0.65rem 0.6rem;
   border-radius: 0.8rem;
   color: var(--white);
@@ -1419,6 +1420,8 @@ section {
 }
 
 .home-arguments-link {
+  display: flex;
+  justify-content: center;
   margin: 1.5rem 0 0;
   text-align: center;
 }
@@ -1435,7 +1438,7 @@ section {
   .home-solution {
     border-top: 0;
     border-left: 0;
-    border-radius: 0.75rem;
+    border-radius: 0 0 0.75rem 0.75rem;
   }
 }
 
