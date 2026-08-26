@@ -160,7 +160,7 @@ home:
       title: Nos rendez-vous
       text: "Chaque mois, on se retrouve autour d’un apéro au Bob’s Beer. Une fois par trimestre, le rendez-vous quitte le bar pour une soirée dans une entreprise locale : talks, partages de pratiques, ateliers et échanges."
       apero:
-        imageAlt: Des membres de la communauté Ocean Tech réunis lors d’une soirée
+        imageAlt: Des membres de la communauté Ocean Tech réunis au Bob’s Beer à Anglet
         frequency: Chaque mois
         title: Les apéros
         text: Chaque mois, on se retrouve au Bob’s Beer, à Anglet, pour un apéro sans programme. Viens comme tu es, pour discuter de ce qui t’intéresse et rencontrer les gens du coin.
@@ -238,8 +238,8 @@ community:
     title: Dans la presse
     text: La naissance d’Ocean Tech et son ambition de rassembler les professionnel·les du numérique ont aussi été racontées dans la presse locale.
     open: Agrandir l’article de presse
-    imageAlt: Article de presse paru dans le journal Placéco au sujet d’Ocean Tech
-    caption: Article paru dans Placéco.
+    imageAlt: Article « Fédérer la communauté numérique du BAB » paru dans Éco & Entreprises
+    caption: Article paru dans Éco & Entreprises.
   join:
     title: Envie d’en faire partie ?
     text: Inscris-toi pour recevoir les prochaines dates Ocean Tech.
