@@ -7,14 +7,14 @@
 <section class="home-hero">
   <div class="container home-hero-content">
     <div class="home-hero-copy">
-      <p class="home-eyebrow">Pays Basque &amp; Landes</p>
+      <p class="home-eyebrow">{{ i18n "home.homepage.eyebrow" }}</p>
       <h1>{{ i18n "home.hero.title" | safeHTML }}</h1>
       <p class="home-lead">{{ i18n "home.hero.text" }}</p>
     </div>
     <div class="home-hero-illustration">
       <div class="home-hero-photo-shapes" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="home-hero-photo-main"><img src="/images/events/docorga-communaute.webp" width="1600" height="900" alt="Des personnes réunies lors d’une soirée Ocean Tech"></div>
-      <div class="home-hero-photo-secondary"><img src="/images/events/wikicampers-ux-writing.webp" width="1600" height="900" alt="Une intervenante présente un talk Ocean Tech"></div>
+      <div class="home-hero-photo-main"><img src="/images/events/docorga-communaute.webp" width="1600" height="900" alt="{{ i18n "home.homepage.images.mainAlt" }}"></div>
+      <div class="home-hero-photo-secondary"><img src="/images/events/wikicampers-ux-writing.webp" width="1600" height="900" alt="{{ i18n "home.homepage.images.secondaryAlt" }}"></div>
     </div>
   </div>
 </section>
@@ -26,12 +26,12 @@
       <div class="next-event-details">
         <time class="next-event-date"><span>{{ $nextEvent.weekday }}</span><strong>{{ $nextEvent.day }}</strong><span>{{ $nextEvent.month }}</span><b class="next-event-time">{{ $nextEvent.time }}</b></time>
         <div>
-          <p class="next-event-kicker">Prochain rendez-vous</p>
+          <p class="next-event-kicker">{{ i18n "home.homepage.nextEvent.kicker" }}</p>
           <h2 id="next-event-title">{{ $nextEvent.title }}</h2>
           {{ with $nextEvent.location }}<p class="next-event-location">{{ . }}</p>{{ end }}
-          <p class="next-event-free">Gratuit sur inscription</p>
+          <p class="next-event-free">{{ i18n "home.homepage.nextEvent.free" }}</p>
         </div>
-        <a class="next-event-link" href="{{ $nextEvent.url }}" target="_blank" rel="noopener">Voir le programme et s’inscrire</a>
+        <a class="next-event-link" href="{{ $nextEvent.url }}" target="_blank" rel="noopener">{{ i18n "home.homepage.nextEvent.link" }}</a>
       </div>
       <div class="next-event-aside">
         <img class="next-event-image" src="{{ $eventImage }}" width="1600" height="900" alt="{{ $eventImageAlt }}" loading="lazy" decoding="async">
@@ -45,18 +45,18 @@
   <div class="container">
     <div class="home-arguments-layout">
       <div class="home-problem-statement">
-        <h2>Chez nous, la tech est là…<br>mais chacun·e dans son coin.</h2>
-        <p>Nous sommes nombreux à travailler dans la tech et le produit sur le BAB et ses alentours : en freelance, en remote ou en présentiel.</p>
+        <h2>{{ i18n "home.homepage.arguments.title" | safeHTML }}</h2>
+        <p>{{ i18n "home.homepage.arguments.text" }}</p>
       </div>
       <div class="home-solution">
-        <p class="home-solution-kicker">Ocean Tech, c’est un rendez-vous simple et ouvert pour</p>
+        <p class="home-solution-kicker">{{ i18n "home.homepage.solution.kicker" }}</p>
         <ul>
-          <li>se rencontrer entre personnes de la tech et du produit ;</li>
-          <li>échanger sur nos pratiques, nos projets et nos galères ;</li>
-          <li>apprendre avec des talks, des retours d’expérience ou des discussions informelles ;</li>
-          <li>et surtout passer un bon moment ensemble.</li>
+          <li>{{ i18n "home.homepage.solution.item1" }}</li>
+          <li>{{ i18n "home.homepage.solution.item2" }}</li>
+          <li>{{ i18n "home.homepage.solution.item3" }}</li>
+          <li>{{ i18n "home.homepage.solution.item4" }}</li>
         </ul>
-        <p class="home-arguments-link"><a class="btn btn-secondary" href="{{ relref . "communaute" }}">Découvrir la communauté</a></p>
+        <p class="home-arguments-link"><a class="btn btn-secondary" href="{{ relref . "communaute" }}">{{ i18n "home.homepage.solution.link" }}</a></p>
       </div>
     </div>
   </div>
@@ -65,24 +65,24 @@
 <section class="home-formats">
   <div class="container">
     <div class="home-section-heading">
-      <h2>Nos rendez-vous</h2>
-      <p>Chaque mois, on se retrouve autour d’un apéro au Bob’s Beer. Une fois par trimestre, le rendez-vous quitte le bar pour une soirée dans une entreprise locale : talks, partages de pratiques, ateliers et échanges.</p>
+      <h2>{{ i18n "home.homepage.formats.title" }}</h2>
+      <p>{{ i18n "home.homepage.formats.text" }}</p>
     </div>
     <div class="format-grid">
       <article class="format-card">
-        <img src="/images/events/docorga-communaute.webp" width="1600" height="900" alt="Des membres de la communauté Ocean Tech réunis lors d’une soirée" loading="lazy" decoding="async">
+        <img src="/images/events/docorga-communaute.webp" width="1600" height="900" alt="{{ i18n "home.homepage.formats.apero.imageAlt" }}" loading="lazy" decoding="async">
         <div class="format-card-content">
-          <p class="format-frequency">Chaque mois</p>
-          <h3>Les apéros</h3>
-          <p>Chaque mois, on se retrouve au Bob’s Beer, à Anglet, pour un apéro sans programme. Viens comme tu es, pour discuter de ce qui t’intéresse et rencontrer les gens du coin.</p>
+          <p class="format-frequency">{{ i18n "home.homepage.formats.apero.frequency" }}</p>
+          <h3>{{ i18n "home.homepage.formats.apero.title" }}</h3>
+          <p>{{ i18n "home.homepage.formats.apero.text" }}</p>
         </div>
       </article>
       <article class="format-card">
-        <img src="/images/events/wikicampers-ux-writing.webp" width="1600" height="900" alt="Une intervenante présente un talk lors d’une soirée Ocean Tech" loading="lazy" decoding="async">
+        <img src="/images/events/wikicampers-ux-writing.webp" width="1600" height="900" alt="{{ i18n "home.homepage.formats.talks.imageAlt" }}" loading="lazy" decoding="async">
         <div class="format-card-content">
-          <p class="format-frequency">Chaque trimestre</p>
-          <h3>Les soirées talks</h3>
-          <p>Une fois par trimestre, une entreprise locale ouvre ses portes pour des talks, retours d’expérience, ateliers et discussions. Pizzas et boissons sont là pour continuer à échanger.</p>
+          <p class="format-frequency">{{ i18n "home.homepage.formats.talks.frequency" }}</p>
+          <h3>{{ i18n "home.homepage.formats.talks.title" }}</h3>
+          <p>{{ i18n "home.homepage.formats.talks.text" }}</p>
         </div>
       </article>
     </div>
@@ -93,20 +93,20 @@
   <div class="container home-proof-grid">
     <div>
       <p class="home-stat">250+</p>
-      <p class="home-stat-label">personnes déjà inscrites<br>dans la communauté</p>
+      <p class="home-stat-label">{{ i18n "home.homepage.proof.statLabel" | safeHTML }}</p>
     </div>
     <div>
-      <h2>Un endroit pour se retrouver entre gens du logiciel.</h2>
-      <p>Pour rencontrer des gens de la tech et du produit, pas besoin de monter à Bordeaux ou de filer à Paris. On se retrouve ici, autour d’un verre ou d’un talk.</p>
-      <p class="home-proof-note">Une communauté ouverte aux salarié·es, freelances, étudiant·es et curieux·ses du numérique.</p>
+      <h2>{{ i18n "home.homepage.proof.title" }}</h2>
+      <p>{{ i18n "home.homepage.proof.text" }}</p>
+      <p class="home-proof-note">{{ i18n "home.homepage.proof.note" }}</p>
     </div>
   </div>
 </section>
 
 <section class="home-cta">
   <div class="container">
-    <h2>Le prochain verre est peut-être le début d’une belle rencontre.</h2>
-    <p>Inscris-toi pour recevoir les prochaines dates et rejoindre Ocean Tech.</p>
+    <h2>{{ i18n "home.homepage.cta.title" }}</h2>
+    <p>{{ i18n "home.homepage.cta.text" }}</p>
     {{ partial "join-link" . }}
   </div>
 </section>
