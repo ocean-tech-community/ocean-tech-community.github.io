@@ -1,8 +1,14 @@
 {{ define "main" }}
 {{ $nextEvent := site.Params.nextEvent }}
 {{ $hasNextEvent := and $nextEvent $nextEvent.weekday $nextEvent.day $nextEvent.month $nextEvent.title $nextEvent.url }}
-{{ $eventImage := $nextEvent.image | default site.Params.eventPlaceholderImage }}
-{{ $eventImageAlt := $nextEvent.imageAlt | default site.Params.eventPlaceholderImageAlt | default $nextEvent.title }}
+{{ $eventImage := site.Params.eventPlaceholderImage }}
+{{ $eventImageAlt := site.Params.eventPlaceholderImageAlt | default $nextEvent.title }}
+{{ with index site.Params.eventTypeImages ($nextEvent.type | default "apero") }}
+  {{ $eventImage = .image | default $eventImage }}
+  {{ $eventImageAlt = .imageAlt | default $eventImageAlt }}
+{{ end }}
+{{ with $nextEvent.image }}{{ $eventImage = . }}{{ end }}
+{{ with $nextEvent.imageAlt }}{{ $eventImageAlt = . }}{{ end }}
 
 <section class="home-hero">
   <div class="container home-hero-content">

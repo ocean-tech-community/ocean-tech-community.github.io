@@ -44,15 +44,27 @@ params:
   meetupUrl: "https://luma.com/k6tqgk9d"
   eventPlaceholderImage: "/images/events/docorga-communaute.webp"
   eventPlaceholderImageAlt: "Des personnes réunies lors d’une soirée Ocean Tech"
+  # Photos sélectionnées automatiquement selon le type du prochain rendez-vous.
+  # Une image définie directement dans nextEvent reste prioritaire.
+  eventTypeImages:
+    apero:
+      image: "/images/events/apero-bobs-beer.jpg"
+      imageAlt: "Des membres de la communauté Ocean Tech réunis au Bob’s Beer à Anglet"
+    talk:
+      image: "/images/events/wikicampers-ux-writing.webp"
+      imageAlt: "Une intervenante présente un talk lors d’une soirée Ocean Tech chez Wikicampers"
   # Ce bloc pilote la carte « Prochain rendez-vous » de l’accueil.
   # Supprime-le ou laisse un champ obligatoire vide pour masquer la carte.
   nextEvent:
+    # Choix possibles : apero ou talk.
+    type: "talk"
     weekday: "JEU."
     day: "18"
     month: "SEPT."
     time: "19 h"
     title: "Apéro Ocean Tech"
     location: "Bob's Beer, Anglet"
+    # Pour une image spécifique à cet événement, décommente ces deux lignes :
     # image: "/images/events/un-prochain-apero.webp"
     # imageAlt: "Des participant·es lors d’un apéro Ocean Tech"
     url: "https://luma.com/k6tqgk9d"
