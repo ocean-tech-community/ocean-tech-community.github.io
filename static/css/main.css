@@ -592,11 +592,13 @@ a {
   stroke-width: 2.5;
 }
 
-.event-carousel-button[data-gallery-previous] {
+.event-carousel-button[data-gallery-previous],
+.event-carousel-button[data-community-previous] {
   left: 0.85rem;
 }
 
-.event-carousel-button[data-gallery-next] {
+.event-carousel-button[data-gallery-next],
+.event-carousel-button[data-community-next] {
   right: 0.85rem;
 }
 
@@ -1718,6 +1720,18 @@ section {
   width: 100%;
   max-height: 78vh;
   object-fit: contain;
+}
+
+.community-lightbox .community-carousel-controls {
+  z-index: 2;
+}
+
+.community-lightbox .community-carousel-previous {
+  left: 0.85rem;
+}
+
+.community-lightbox .community-carousel-next {
+  right: 0.85rem;
 }
 
 .community-lightbox .event-carousel-slide img {
