@@ -150,11 +150,11 @@ home:
       title: "Chez nous, la tech est là…<br>mais chacun·e dans son coin."
       text: "Nous sommes nombreux à travailler dans la tech et le produit sur le BAB et ses alentours : en freelance, en remote ou en présentiel."
     solution:
-      kicker: Ocean Tech, c’est un rendez-vous simple et ouvert pour
-      item1: se rencontrer entre personnes de la tech et du produit ;
-      item2: échanger sur nos pratiques, nos projets et nos galères ;
-      item3: apprendre avec des talks, des retours d’expérience ou des discussions informelles ;
-      item4: et surtout passer un bon moment ensemble.
+      kicker: "Ocean Tech, c’est un rendez-vous simple et ouvert pour :"
+      item1: Se rencontrer entre personnes de la tech et du produit
+      item2: Echanger sur nos pratiques, nos projets et nos galères
+      item3: Apprendre avec des talks, des retours d’expérience ou des discussions informelles
+      item4: Et surtout passer un bon moment ensemble
       link: Découvrir la communauté
     formats:
       title: Nos rendez-vous
