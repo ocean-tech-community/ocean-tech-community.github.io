@@ -738,6 +738,12 @@ a {
 
 .event-type p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
 
+@media (min-width: 880px) {
+  .event-types-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 560px) {
   .event-types { grid-template-columns: 1fr; }
 }
@@ -1502,6 +1508,23 @@ section {
 .format-card p:last-child {
   margin: 0.55rem 0 0;
   color: var(--muted);
+}
+
+.format-card .format-card-link {
+  margin-top: 1rem;
+}
+
+.format-card-link a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--teal);
+  text-underline-offset: 0.18em;
+}
+
+.format-card-link a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .home-proof {

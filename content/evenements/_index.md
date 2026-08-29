@@ -1,9 +1,9 @@
 ---
 title: "Les événements"
-description: "Les soirées et apéros Ocean Tech pour la communauté tech et produit de la côte basco-landaise."
+description: "Les soirées, apéros et Labs Ocean Tech pour la communauté tech et produit de la côte basco-landaise."
 ---
 
-Ocean Tech réunit la communauté tech & produit de la côte basco-landaise autour de deux formats complémentaires : un apéro chaque mois pour se rencontrer et une soirée par trimestre. Que tu sois dev, designer, PM, en freelance, salarié·e, étudiant·e ou simplement curieux·se, tu es le bienvenu.
+Ocean Tech réunit la communauté tech & produit de la côte basco-landaise autour de trois formats complémentaires : des apéros pour se rencontrer, des soirées pour découvrir des retours d’expérience et des Labs pour pratiquer ensemble. Que tu sois dev, designer, PM, en freelance, salarié·e, étudiant·e ou simplement curieux·se, tu es le bienvenu.
 
 {{< event-types >}}
 
@@ -24,6 +24,14 @@ Tu as une expérience à partager, un projet qui t’a appris quelque chose ou u
 {{< cfp-button >}}
 
 Tu veux en savoir plus avant de proposer ? Consulte la page [Devenir speaker](/devenir-speaker/).
+
+## Les Labs Ocean Tech
+
+Les Labs sont des rencontres en petit comité pour coder, expérimenter, apprendre et s’amuser ensemble autour de la tech. Pas de talk ni de cours : une personne peut proposer un sujet, une expérience ou un exercice, puis le groupe l’explore entre pairs, en binômes, en petits groupes ou en mob.
+
+Coding kata, TDD, découverte d’un langage, IA, outils, architecture ou nouvelles pratiques de développement : le sujet et la forme peuvent changer à chaque Lab. La jauge des premières éditions est limitée à 15 personnes pour préserver la qualité des échanges.
+
+[Découvrir les Labs Ocean Tech](/labs-ocean-tech/).
 
 {{< evenements-list >}}
 

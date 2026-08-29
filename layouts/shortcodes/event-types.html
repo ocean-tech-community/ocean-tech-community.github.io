@@ -1,4 +1,4 @@
-<div class="event-types" aria-label="{{ i18n "events.types.ariaLabel" }}">
+<div class="event-types event-types-three" aria-label="{{ i18n "events.types.ariaLabel" }}">
   <article class="event-type">
     <span class="event-type-icon" aria-hidden="true">🎙</span>
     <div>
@@ -11,6 +11,13 @@
     <div>
       <h2>{{ i18n "events.types.apero.heading" }}</h2>
       <p>{{ i18n "events.types.apero.text" }}</p>
+    </div>
+  </article>
+  <article class="event-type">
+    <span class="event-type-icon" aria-hidden="true">🧪</span>
+    <div>
+      <h2>{{ i18n "events.types.labs.heading" }}</h2>
+      <p>{{ i18n "events.types.labs.text" }} <a href="{{ relref .Page "labs-ocean-tech" }}">{{ i18n "events.types.labs.link" }}</a></p>
     </div>
   </article>
 </div>
