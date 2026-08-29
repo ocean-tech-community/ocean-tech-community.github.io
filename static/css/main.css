@@ -702,7 +702,7 @@ a {
 
 .event-types {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   margin: 2rem 0 3.25rem;
 }
@@ -738,10 +738,19 @@ a {
 
 .event-type p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
 
-@media (min-width: 880px) {
-  .event-types-three {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+.event-page .event-introduction blockquote {
+  margin: -0.15rem 0 1.5rem;
+  padding: 0.7rem 1rem;
+  color: var(--blue);
+  border-left: 3px solid var(--teal);
+  background: #eef9fa;
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.event-page .event-introduction blockquote p {
+  margin: 0;
 }
 
 @media (max-width: 560px) {
@@ -1510,21 +1519,10 @@ section {
   color: var(--muted);
 }
 
-.format-card .format-card-link {
-  margin-top: 1rem;
-}
-
-.format-card-link a {
-  color: var(--blue);
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--teal);
-  text-underline-offset: 0.18em;
-}
-
-.format-card-link a:hover {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
+.home-formats-link {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 0;
 }
 
 .home-proof {
