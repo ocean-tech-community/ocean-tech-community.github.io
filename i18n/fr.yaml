@@ -47,18 +47,21 @@ faq:
     question: Est-ce payant ?
     answer: La participation aux rendez-vous Ocean Tech est gratuite, mais l’inscription est obligatoire. Elle nous aide énormément à anticiper le nombre de personnes, l’accueil et l’organisation de chaque événement.
   partner:
-    question: Mon entreprise peut-elle devenir partenaire, accueillir ou sponsoriser une soirée ?
-    beforeLink: Oui. Une entreprise ou une organisation locale peut accueillir une soirée, soutenir le moment convivial, partager une expertise ou aider à faire connaître la communauté. Découvre les différentes possibilités sur la page
+    question: Mon entreprise peut-elle devenir partenaire, accueillir ou sponsoriser un rendez-vous ?
+    beforeLink: Oui. Une entreprise ou une organisation locale peut accueillir une soirée ou un Lab, soutenir le moment convivial, partager une expertise ou aider à faire connaître la communauté. Découvre les différentes possibilités sur la page
     link: Partenaires
 events:
   types:
-    ariaLabel: "Les deux formats d’événements Ocean Tech"
+    ariaLabel: "Les trois formats d’événements Ocean Tech"
     evenings:
       heading: "Les soirées"
-      text: "Une soirée par trimestre : talks, entreprise locale et échanges pour apprendre ensemble."
+      text: "Une soirée par trimestre chez une entreprise locale : talks, retours d’expérience, pizzas et échanges."
     apero:
       heading: "Les apéros"
-      text: "Un rendez-vous mensuel au Bob’s Beer pour créer des connexions locales."
+      text: "Un rendez-vous mensuel au Bob’s Beer, sans programme, pour discuter et créer des connexions locales."
+    labs:
+      heading: "Les Labs"
+      text: "Des rencontres en petit comité pour coder, expérimenter et apprendre entre pairs, avec ou sans ordinateur."
   program:
     label: "Au programme"
   talks: Les talks
@@ -136,7 +139,7 @@ events:
 home:
   hero:
     title: "Ocean Tech : <br> La communauté tech & produit basco-landaise"
-    text: "Sur la côte basco-landaise, trouver des meetups peut être plus compliqué que dans les grandes villes. Ocean Tech rassemble la communauté locale autour d’apéros, de talks et de rencontres régulières."
+    text: "Sur la côte basco-landaise, trouver des meetups peut être plus compliqué que dans les grandes villes. Ocean Tech rassemble la communauté locale autour d’apéros, de talks, de labs et de rencontres régulières."
   homepage:
     eyebrow: Pays Basque & Landes
     images:
@@ -158,7 +161,8 @@ home:
       link: Découvrir la communauté
     formats:
       title: Nos rendez-vous
-      text: "Chaque mois, on se retrouve autour d’un apéro au Bob’s Beer. Une fois par trimestre, le rendez-vous quitte le bar pour une soirée dans une entreprise locale : talks, partages de pratiques, ateliers et échanges."
+      text: "Apéros pour se rencontrer, soirées pour découvrir des retours d’expérience, Labs pour pratiquer : Ocean Tech propose plusieurs façons de se retrouver et d’apprendre ensemble."
+      link: En savoir plus sur les événements
       apero:
         imageAlt: Des membres de la communauté Ocean Tech réunis au Bob’s Beer à Anglet
         frequency: Chaque mois
@@ -169,6 +173,11 @@ home:
         frequency: Chaque trimestre
         title: Les soirées talks
         text: Une fois par trimestre, une entreprise locale ouvre ses portes pour des talks, retours d’expérience, ateliers et discussions. Pizzas et boissons sont là pour continuer à échanger.
+      labs:
+        imageAlt: Des membres de la communauté Ocean Tech réunis pour échanger
+        frequency: En petit comité
+        title: Les Labs Ocean Tech
+        text: "Des rencontres hands-on pour coder, expérimenter et apprendre entre pairs. Le sujet et le format changent à chaque Lab : kata, TDD, IA, découverte d’outils ou de langages…"
     proof:
       statLabel: "personnes déjà inscrites<br>dans la communauté"
       title: Un endroit pour se retrouver entre gens du logiciel.
@@ -220,7 +229,7 @@ community:
     text2: "Ocean Tech est né pour créer un rendez-vous local, ouvert et régulier : un espace où l’on peut parler de ses projets, poser ses questions, rencontrer des pairs et simplement passer un bon moment."
   meetings:
     title: Des rencontres qui comptent
-    text: "Chaque mois, on se retrouve autour d’un apéro au Bob’s Beer. Une fois par trimestre, le rendez-vous quitte le bar pour une soirée dans une entreprise locale : talks, partages de pratiques, ateliers et échanges."
+    text: "On se retrouve autour d’apéros, de soirées avec des talks et de Labs en petit comité pour pratiquer, expérimenter et apprendre entre pairs."
   gallery:
     label: Photos de rencontres Ocean Tech
     caption: Quelques moments partagés lors des soirées Ocean Tech.

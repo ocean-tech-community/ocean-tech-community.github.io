@@ -702,7 +702,7 @@ a {
 
 .event-types {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   margin: 2rem 0 3.25rem;
 }
@@ -737,6 +737,21 @@ a {
 }
 
 .event-type p { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+
+.event-page .event-introduction blockquote {
+  margin: -0.15rem 0 1.5rem;
+  padding: 0.7rem 1rem;
+  color: var(--blue);
+  border-left: 3px solid var(--teal);
+  background: #eef9fa;
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.event-page .event-introduction blockquote p {
+  margin: 0;
+}
 
 @media (max-width: 560px) {
   .event-types { grid-template-columns: 1fr; }
@@ -1502,6 +1517,12 @@ section {
 .format-card p:last-child {
   margin: 0.55rem 0 0;
   color: var(--muted);
+}
+
+.home-formats-link {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 0;
 }
 
 .home-proof {
