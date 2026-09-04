@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $nextEvent := site.Params.nextEvent }}
-{{ $hasNextEvent := and $nextEvent $nextEvent.weekday $nextEvent.day $nextEvent.month $nextEvent.title $nextEvent.url }}
+{{ $hasNextEvent := and $nextEvent $nextEvent.weekday $nextEvent.day $nextEvent.month $nextEvent.title }}
 {{ $eventImage := site.Params.eventPlaceholderImage }}
 {{ $eventImageAlt := site.Params.eventPlaceholderImageAlt | default $nextEvent.title }}
 {{ with index site.Params.eventTypeImages ($nextEvent.type | default "apero") }}
@@ -37,7 +37,7 @@
           {{ with $nextEvent.location }}<p class="next-event-location">{{ . }}</p>{{ end }}
           <p class="next-event-free">{{ i18n "home.homepage.nextEvent.free" }}</p>
         </div>
-        <a class="next-event-link" href="{{ $nextEvent.url }}" target="_blank" rel="noopener">{{ i18n "home.homepage.nextEvent.link" }}</a>
+        {{ with $nextEvent.url }}<a class="next-event-link" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "home.homepage.nextEvent.link" }}</a>{{ end }}
       </div>
       <div class="next-event-aside">
         <img class="next-event-image" src="{{ $eventImage }}" width="1600" height="900" alt="{{ $eventImageAlt }}" loading="lazy" decoding="async">
