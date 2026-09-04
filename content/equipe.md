@@ -28,6 +28,14 @@ members:
       - name: "GitHub"
         icon: "github"
         url: "https://github.com/LaureBrosseau"
+  - name: "Clémence Fernandez"
+    role: "Développeuse"
+    image: "/images/clemence-fernandez.jpeg"
+    initials: "CF"
+    socials:
+      - name: "LinkedIn"
+        icon: "linkedin"
+        url: "https://www.linkedin.com/in/clemencefernandez/"
 ---
 
 Ocean Tech est porté par une équipe de bénévoles, réunie par l’envie de faire se rencontrer les personnes qui font la tech et le produit sur la côte basco-landaise.
