@@ -55,19 +55,20 @@ params:
       imageAlt: "Une intervenante présente un talk lors d’une soirée Ocean Tech chez Wikicampers"
   # Ce bloc pilote la carte « Prochain rendez-vous » de l’accueil.
   # Supprime-le ou laisse un champ obligatoire vide pour masquer la carte.
+  # L’URL est facultative : le lien d’inscription s’affiche seulement si elle est renseignée.
   nextEvent:
     # Choix possibles : apero ou talk.
     type: "talk"
-    weekday: "JEU."
-    day: "18"
+    weekday: "MAR."
+    day: "22"
     month: "SEPT."
-    time: "19 h"
-    title: "Apéro Ocean Tech"
-    location: "Bob's Beer, Anglet"
+    time: "18:30"
+    title: "Soirée Ocean Tech chez Docorga"
+    location: "6 Chem. de la Marouette, Bayonne"
     # Pour une image spécifique à cet événement, décommente ces deux lignes :
     # image: "/images/events/un-prochain-apero.webp"
     # imageAlt: "Des participant·es lors d’un apéro Ocean Tech"
-    url: "https://luma.com/k6tqgk9d"
+    url: "https://luma.com/yr1zyygr"
   cfpUrl: "https://alder-art-bc7.notion.site/bc77aa935f42485697520feff67d2bbd?pvs=105"
   socialMedia:
     linkedin: "https://www.linkedin.com/company/oceantechcommunity"
