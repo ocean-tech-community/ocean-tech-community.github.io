@@ -1,99 +1,119 @@
 {{ define "main" }}
-<!-- Hero -->
-<section class="hero">
+{{ $nextEvent := site.Params.nextEvent }}
+{{ $hasNextEvent := and $nextEvent $nextEvent.weekday $nextEvent.day $nextEvent.month $nextEvent.title }}
+{{ $eventImage := site.Params.eventPlaceholderImage }}
+{{ $eventImageAlt := site.Params.eventPlaceholderImageAlt | default $nextEvent.title }}
+{{ with index site.Params.eventTypeImages ($nextEvent.type | default "apero") }}
+  {{ $eventImage = .image | default $eventImage }}
+  {{ $eventImageAlt = .imageAlt | default $eventImageAlt }}
+{{ end }}
+{{ with $nextEvent.image }}{{ $eventImage = . }}{{ end }}
+{{ with $nextEvent.imageAlt }}{{ $eventImageAlt = . }}{{ end }}
+
+<section class="home-hero">
+  <div class="container home-hero-content">
+    <div class="home-hero-copy">
+      <p class="home-eyebrow">{{ i18n "home.homepage.eyebrow" }}</p>
+      <h1>{{ i18n "home.hero.title" | safeHTML }}</h1>
+      <p class="home-lead">{{ i18n "home.hero.text" }}</p>
+    </div>
+    <div class="home-hero-illustration">
+      <div class="home-hero-photo-shapes" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="home-hero-photo-main"><img src="/images/events/docorga-communaute.webp" width="1600" height="900" alt="{{ i18n "home.homepage.images.mainAlt" }}"></div>
+      <div class="home-hero-photo-secondary"><img src="/images/events/docorga-produit.webp" width="1600" height="900" alt="{{ i18n "home.homepage.images.secondaryAlt" }}"></div>
+    </div>
+  </div>
+</section>
+
+{{ if $hasNextEvent }}
+<section class="home-next-event" id="prochain-rendez-vous" aria-labelledby="next-event-title">
   <div class="container">
-    <div class="hero-content">
-      <div>
-        <h1>{{ i18n "home.hero.title" | safeHTML }}</h1>
-        {{ i18n "home.hero.text" | markdownify }}
-        <div class="hero-actions">
-          {{ partial "join-link" . }}
-          {{ partial "meetup-link" (dict "ctx" . "class" "btn-ghost") }}
+    <article class="next-event-card next-event-card-has-image">
+      <div class="next-event-details">
+        <time class="next-event-date"><span>{{ $nextEvent.weekday }}</span><strong>{{ $nextEvent.day }}</strong><span>{{ $nextEvent.month }}</span><b class="next-event-time">{{ $nextEvent.time }}</b></time>
+        <div>
+          <p class="next-event-kicker">{{ i18n "home.homepage.nextEvent.kicker" }}</p>
+          <h2 id="next-event-title">{{ $nextEvent.title }}</h2>
+          {{ with $nextEvent.location }}<p class="next-event-location">{{ . }}</p>{{ end }}
+          <p class="next-event-free">{{ i18n "home.homepage.nextEvent.free" }}</p>
         </div>
+        {{ with $nextEvent.url }}<a class="next-event-link" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "home.homepage.nextEvent.link" }}</a>{{ end }}
       </div>
-      <img src="/images/hero.webp" width="400" alt="" loading="lazy">
-    </div>
-  </div>
-
-  <!-- Vague -->
-  <svg class="wave" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
-    <defs>
-      <linearGradient id="w" x1="0" x2="1">
-        <stop offset="0" stop-color="#19B5C8"/>
-        <stop offset="1" stop-color="#0F5E7E"/>
-      </linearGradient>
-    </defs>
-    <path fill="url(#w)" d="M0,80 C220,30 420,120 720,100 C1060,78 1200,20 1440,60 L1440,140 L0,140 Z"/>
-  </svg>
-
-</section>
-
-<!-- Problem -->
-<section>
-  <div class="container">
-    <h2 class="section-title">{{ i18n "home.section.problem.title" | markdownify }}</h2>
-    {{ i18n "home.section.problem.text" | markdownify }}
+      <div class="next-event-aside">
+        <img class="next-event-image" src="{{ $eventImage }}" width="1600" height="900" alt="{{ $eventImageAlt }}" loading="lazy" decoding="async">
+      </div>
+    </article>
   </div>
 </section>
-
-<!-- Solution -->
-<section class="solution">
-  <div class="container solution-grid">
-    <div class="solution-text">
-      <h2 class="section-title">
-        {{ i18n "home.section.solution.title" | markdownify }}
-      </h2>
-      {{ i18n "home.section.solution.text" | markdownify }}
-    </div>
-    <div class="solution-media">
-      <button class="home-photo-trigger" type="button" data-home-photo-open aria-label="Agrandir l’article de presse">
-        <picture>
-          <source srcset="/images/presse.webp" type="image/webp">
-          <img src="/images/presse.jpg"
-               width="1176"
-               height="1200"
-               alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
-               loading="lazy"
-               decoding="async">
-        </picture>
-      </button>
-      <dialog class="event-lightbox home-photo-lightbox" data-home-photo-dialog aria-label="Article de presse">
-        <button type="button" class="event-lightbox-close" data-home-photo-close aria-label="Fermer l’image">×</button>
-        <div class="event-lightbox-viewport">
-          <picture>
-            <source srcset="/images/presse.webp" type="image/webp">
-            <img src="/images/presse.jpg"
-                 width="1176"
-                 height="1200"
-                 alt="{{ i18n "home.section.solution.imageAlt" | markdownify }}"
-                 decoding="async">
-          </picture>
-        </div>
-      </dialog>
-    </div>
-  </div>
-</section>
-
-<!-- Action -->
-<section class="action">
-  <div class="container">
-    <h2 class="section-title">{{ i18n "home.section.action.title" | markdownify }}</h2>
-    {{ i18n "home.section.action.text" | markdownify }}
-    <div class="button">
-      {{ partial "join-link" . }}
-      {{ partial "meetup-link" (dict "ctx" .)  }}
-    </div>
-    {{ i18n "home.section.action.sublink" | markdownify }}
-  </div>
-</section>
-
 {{ end }}
 
-{{ define "scripts" }}
-<script>
-  const homePhotoDialog = document.querySelector('[data-home-photo-dialog]');
-  document.querySelector('[data-home-photo-open]').addEventListener('click', () => homePhotoDialog.showModal());
-  document.querySelector('[data-home-photo-close]').addEventListener('click', () => homePhotoDialog.close());
-  homePhotoDialog.addEventListener('click', (event) => { if (event.target === homePhotoDialog) homePhotoDialog.close(); });
-</script>
+<section class="home-arguments">
+  <div class="container">
+    <div class="home-arguments-layout">
+      <div class="home-problem-statement">
+        <h2>{{ i18n "home.homepage.arguments.title" | safeHTML }}</h2>
+        <p>{{ i18n "home.homepage.arguments.text" }}</p>
+      </div>
+      <div class="home-solution">
+        <p class="home-solution-kicker">{{ i18n "home.homepage.solution.kicker" }}</p>
+        <ul>
+          <li>{{ i18n "home.homepage.solution.item1" }}</li>
+          <li>{{ i18n "home.homepage.solution.item2" }}</li>
+          <li>{{ i18n "home.homepage.solution.item3" }}</li>
+          <li>{{ i18n "home.homepage.solution.item4" }}</li>
+        </ul>
+        <p class="home-arguments-link"><a class="btn btn-secondary" href="{{ relref . "communaute" }}">{{ i18n "home.homepage.solution.link" }}</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-formats">
+  <div class="container">
+    <div class="home-section-heading">
+      <h2>{{ i18n "home.homepage.formats.title" }}</h2>
+      <p>{{ i18n "home.homepage.formats.text" }}</p>
+    </div>
+    <div class="format-grid">
+      <article class="format-card">
+        <img src="/images/events/apero-bobs-beer.jpg" width="4032" height="2268" alt="{{ i18n "home.homepage.formats.apero.imageAlt" }}" loading="lazy" decoding="async">
+        <div class="format-card-content">
+          <p class="format-frequency">{{ i18n "home.homepage.formats.apero.frequency" }}</p>
+          <h3>{{ i18n "home.homepage.formats.apero.title" }}</h3>
+          <p>{{ i18n "home.homepage.formats.apero.text" }}</p>
+        </div>
+      </article>
+      <article class="format-card">
+        <img src="/images/events/wikicampers-ux-writing.webp" width="1600" height="900" alt="{{ i18n "home.homepage.formats.talks.imageAlt" }}" loading="lazy" decoding="async">
+        <div class="format-card-content">
+          <p class="format-frequency">{{ i18n "home.homepage.formats.talks.frequency" }}</p>
+          <h3>{{ i18n "home.homepage.formats.talks.title" }}</h3>
+          <p>{{ i18n "home.homepage.formats.talks.text" }}</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="home-proof">
+  <div class="container home-proof-grid">
+    <div>
+      <p class="home-stat">250+</p>
+      <p class="home-stat-label">{{ i18n "home.homepage.proof.statLabel" | safeHTML }}</p>
+    </div>
+    <div>
+      <h2>{{ i18n "home.homepage.proof.title" }}</h2>
+      <p>{{ i18n "home.homepage.proof.text" }}</p>
+      <p class="home-proof-note">{{ i18n "home.homepage.proof.note" }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="home-cta">
+  <div class="container">
+    <h2>{{ i18n "home.homepage.cta.title" }}</h2>
+    <p>{{ i18n "home.homepage.cta.text" }}</p>
+    {{ partial "join-link" . }}
+  </div>
+</section>
 {{ end }}

@@ -1,0 +1,44 @@
+{{ define "main" }}
+<article class="single-page community-page">
+  <div class="container"><h1>{{ i18n "community.title" }}</h1></div>
+  <div class="container"><div class="page-content">
+    <p>{{ i18n "community.intro" }}</p>
+    <h2>{{ i18n "community.why.title" }}</h2>
+    <p>{{ i18n "community.why.text1" }}</p>
+    <p>{{ i18n "community.why.text2" }}</p>
+    <h2>{{ i18n "community.meetings.title" }}</h2>
+    <div class="community-gallery" data-community-gallery aria-label="{{ i18n "community.gallery.label" }}">
+      <button type="button" data-community-photo-open="0" aria-label="{{ i18n "community.gallery.openDocorgaCommunity" }}"><img src="/images/events/docorga-communaute.webp" alt="{{ i18n "community.gallery.docorgaCommunityAlt" }}" loading="lazy" decoding="async"></button>
+      <button type="button" data-community-photo-open="1" aria-label="{{ i18n "community.gallery.openApero" }}"><img src="/images/events/apero-bobs-beer.jpg" alt="{{ i18n "community.gallery.aperoAlt" }}" loading="lazy" decoding="async"></button>
+      <button type="button" data-community-photo-open="2" aria-label="{{ i18n "community.gallery.openWikicampersTalk" }}"><img src="/images/events/wikicampers-ux-writing.webp" alt="{{ i18n "community.gallery.wikicampersTalkAlt" }}" loading="lazy" decoding="async"></button>
+    </div>
+    <p class="community-gallery-caption">{{ i18n "community.gallery.caption" }}</p>
+    <p>{{ i18n "community.meetings.text" }}</p>
+    <h2>{{ i18n "community.audience.title" }}</h2>
+    <p>{{ i18n "community.audience.text1" }}</p>
+    <p>{{ i18n "community.audience.text2" }}</p>
+    <h2>{{ i18n "community.press.title" }}</h2>
+    <p>{{ i18n "community.press.text" }}</p>
+    <figure class="community-media community-press-media"><button type="button" data-community-photo-open="3" aria-label="{{ i18n "community.press.open" }}"><img src="/images/presse-eco-entreprises.png" alt="{{ i18n "community.press.imageAlt" }}" loading="lazy" decoding="async"></button><figcaption>{{ i18n "community.press.caption" }}</figcaption></figure>
+    <div class="community-join"><h2>{{ i18n "community.join.title" }}</h2><p>{{ i18n "community.join.text" }}</p>{{ partial "join-link" . }}</div>
+  </div></div>
+  <dialog class="event-lightbox community-lightbox" data-community-photo-dialog aria-label="{{ i18n "community.lightbox.label" }}"><button type="button" class="event-lightbox-close" data-community-photo-close aria-label="{{ i18n "community.lightbox.close" }}">×</button><div class="event-lightbox-viewport" data-community-slides></div><div class="event-carousel-controls community-carousel-controls"><button type="button" class="event-carousel-button community-carousel-previous" data-community-previous aria-label="{{ i18n "community.lightbox.previous" }}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m14 6-6 6 6 6"/></svg></button><p aria-live="polite"><span data-community-current>1</span> / <span data-community-total>1</span></p><button type="button" class="event-carousel-button community-carousel-next" data-community-next aria-label="{{ i18n "community.lightbox.next" }}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m10 6 6 6-6 6"/></svg></button></div></dialog>
+</article>
+{{ end }}
+{{ define "scripts" }}
+<script>
+  const communityDialog = document.querySelector('[data-community-photo-dialog]');
+  const communitySlidesViewport = communityDialog.querySelector('[data-community-slides]');
+  const communityImages = Array.from(document.querySelectorAll('[data-community-photo-open] img'));
+  const communitySlides = communityImages.map((image, index) => { const slide = document.createElement('figure'); slide.className = 'event-carousel-slide'; slide.hidden = index !== 0; const fullImage = document.createElement('img'); fullImage.src = image.currentSrc || image.src; fullImage.alt = image.alt; slide.appendChild(fullImage); communitySlidesViewport.appendChild(slide); return slide; });
+  const communityCurrent = communityDialog.querySelector('[data-community-current]');
+  communityDialog.querySelector('[data-community-total]').textContent = communitySlides.length;
+  let communityIndex = 0;
+  const showCommunitySlide = (nextIndex) => { communityIndex = (nextIndex + communitySlides.length) % communitySlides.length; communitySlides.forEach((slide, index) => { slide.hidden = index !== communityIndex; }); communityCurrent.textContent = communityIndex + 1; };
+  document.querySelectorAll('[data-community-photo-open]').forEach((button) => { button.addEventListener('click', () => { showCommunitySlide(Number(button.dataset.communityPhotoOpen)); communityDialog.showModal(); }); });
+  communityDialog.querySelector('[data-community-photo-close]').addEventListener('click', () => communityDialog.close());
+  communityDialog.addEventListener('click', (event) => { if (event.target === communityDialog) communityDialog.close(); });
+  communityDialog.querySelector('[data-community-previous]').addEventListener('click', () => showCommunitySlide(communityIndex - 1));
+  communityDialog.querySelector('[data-community-next]').addEventListener('click', () => showCommunitySlide(communityIndex + 1));
+</script>
+{{ end }}

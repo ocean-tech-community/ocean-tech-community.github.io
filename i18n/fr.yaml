@@ -1,12 +1,14 @@
 buttons:
-  join: Rejoins la communauté
+  join: Rejoins-nous
   meetup: Inscris-toi au prochain rendez-vous
+  nextApero: Voir le prochain apéro
   cfp: Propose un sujet
   partner: Devenir partenaire
 navigation:
   main: Navigation principale
   mobile: Navigation mobile
   open: Ouvrir le menu
+  community: La communauté
   events: Les événements
   team: L’équipe
   contribute: Contribuer
@@ -16,6 +18,7 @@ footer:
   links: Liens utiles
   discover: Découvrir
   home: Accueil
+  community: La communauté
   events: Les événements
   team: L’équipe
   faq: FAQ
@@ -133,10 +136,47 @@ events:
 home:
   hero:
     title: "Ocean Tech : <br> La communauté tech & produit basco-landaise"
-    text: |
-      Ocean Tech souhaite rassembler les acteurs du logiciel sur la côte basque et landaise et créer une vraie communauté en proposant des rendez-vous réguliers pour se rencontrer, échanger, réseauter… et surtout passer un bon moment ensemble.
-
-      Tous les mois on organise un Apéro Ocean Tech dans un bar (Bob's Beer..) et une fois par trimestre, une Soirée Ocean Tech avec des conférences organisées dans une entreprise du coin. 
+    text: "Sur la côte basco-landaise, trouver des meetups peut être plus compliqué que dans les grandes villes. Ocean Tech rassemble la communauté locale autour d’apéros, de talks et de rencontres régulières."
+  homepage:
+    eyebrow: Pays Basque & Landes
+    images:
+      mainAlt: Des personnes réunies lors d’une soirée Ocean Tech
+      secondaryAlt: Eve-Marie Guidier présente son talk sur le produit lors de la soirée Ocean Tech chez Docorga
+    nextEvent:
+      kicker: Prochain rendez-vous
+      free: Gratuit sur inscription
+      link: Voir le programme et s’inscrire
+    arguments:
+      title: "Chez nous, la tech est là…<br>mais chacun·e dans son coin."
+      text: "Nous sommes nombreux à travailler dans la tech et le produit sur le BAB et ses alentours : en freelance, en remote ou en présentiel."
+    solution:
+      kicker: "Ocean Tech, c’est un rendez-vous simple et ouvert pour :"
+      item1: Se rencontrer entre personnes de la tech et du produit
+      item2: Echanger sur nos pratiques, nos projets et nos galères
+      item3: Apprendre avec des talks, des retours d’expérience ou des discussions informelles
+      item4: Et surtout passer un bon moment ensemble
+      link: Découvrir la communauté
+    formats:
+      title: Nos rendez-vous
+      text: "Chaque mois, on se retrouve autour d’un apéro au Bob’s Beer. Une fois par trimestre, le rendez-vous quitte le bar pour une soirée dans une entreprise locale : talks, partages de pratiques, ateliers et échanges."
+      apero:
+        imageAlt: Des membres de la communauté Ocean Tech réunis au Bob’s Beer à Anglet
+        frequency: Chaque mois
+        title: Les apéros
+        text: Chaque mois, on se retrouve au Bob’s Beer, à Anglet, pour un apéro sans programme. Viens comme tu es, pour discuter de ce qui t’intéresse et rencontrer les gens du coin.
+      talks:
+        imageAlt: Une intervenante présente un talk lors d’une soirée Ocean Tech
+        frequency: Chaque trimestre
+        title: Les soirées talks
+        text: Une fois par trimestre, une entreprise locale ouvre ses portes pour des talks, retours d’expérience, ateliers et discussions. Pizzas et boissons sont là pour continuer à échanger.
+    proof:
+      statLabel: "personnes déjà inscrites<br>dans la communauté"
+      title: Un endroit pour se retrouver entre gens du logiciel.
+      text: Pour rencontrer des gens de la tech et du produit, pas besoin de monter à Bordeaux ou de filer à Paris. On se retrouve ici, autour d’un verre ou d’un talk.
+      note: Une communauté ouverte aux salarié·es, freelances, étudiant·es et curieux·ses du numérique.
+    cta:
+      title: Le prochain verre est peut-être le début d’une belle rencontre.
+      text: Inscris-toi pour recevoir les prochaines dates et rejoindre Ocean Tech.
   section:
     problem:
       title: Chez nous, la tech est là… mais chacun·e dans son coin
@@ -171,3 +211,40 @@ home:
         
         Des formats "conférences" sont aussi organisés : talks, retours d’expérience, discussions thématiques...
       sublink: (le lien est ouvert à toutes celles et ceux qui souhaitent partager)
+community:
+  title: La communauté Ocean Tech
+  intro: Sur la côte basco-landaise, nous sommes nombreux·ses à travailler dans la tech, le produit et le design. Ocean Tech crée des occasions simples de se rencontrer, d’apprendre et de créer des liens.
+  why:
+    title: Pourquoi Ocean Tech ?
+    text1: Les personnes de la communauté travaillent un peu partout sur le BAB et ses alentours, en présentiel ou à distance. Il n’est pas toujours facile de se rencontrer et d’échanger.
+    text2: "Ocean Tech est né pour créer un rendez-vous local, ouvert et régulier : un espace où l’on peut parler de ses projets, poser ses questions, rencontrer des pairs et simplement passer un bon moment."
+  meetings:
+    title: Des rencontres qui comptent
+    text: "Chaque mois, on se retrouve autour d’un apéro au Bob’s Beer. Une fois par trimestre, le rendez-vous quitte le bar pour une soirée dans une entreprise locale : talks, partages de pratiques, ateliers et échanges."
+  gallery:
+    label: Photos de rencontres Ocean Tech
+    caption: Quelques moments partagés lors des soirées Ocean Tech.
+    openDocorgaCommunity: Agrandir la photo de la communauté chez Docorga
+    docorgaCommunityAlt: Les participant·es à une soirée Ocean Tech chez Docorga
+    openApero: Agrandir la photo d’un apéro Ocean Tech
+    aperoAlt: Des membres de la communauté Ocean Tech réunis au Bob’s Beer à Anglet
+    openWikicampersTalk: Agrandir la photo d’un talk chez Wikicampers
+    wikicampersTalkAlt: Une intervenante présente un talk lors d’une soirée Ocean Tech chez Wikicampers
+  audience:
+    title: À qui s’adresse la communauté ?
+    text1: Aux développeur·ses, designers, product managers, freelances, fondateur·ices, étudiant·es, personnes en reconversion et à toutes celles et ceux qui s’intéressent au numérique.
+    text2: Il n’y a pas de niveau requis. L’envie d’échanger suffit.
+  press:
+    title: Dans la presse
+    text: La naissance d’Ocean Tech et son ambition de rassembler les professionnel·les du numérique ont aussi été racontées dans la presse locale.
+    open: Agrandir l’article de presse
+    imageAlt: Article « Fédérer la communauté numérique du BAB » paru dans Éco & Entreprises
+    caption: Article paru dans Éco & Entreprises.
+  join:
+    title: Envie d’en faire partie ?
+    text: Inscris-toi pour recevoir les prochaines dates Ocean Tech.
+  lightbox:
+    label: Agrandissement d’image
+    close: Fermer l’image
+    previous: Photo précédente
+    next: Photo suivante

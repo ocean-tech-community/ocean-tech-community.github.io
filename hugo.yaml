@@ -10,6 +10,10 @@ menus:
       identifier: "navigation.events"
       pageRef: "/evenements"
       weight: 10
+    - name: "La communauté"
+      identifier: "navigation.community"
+      pageRef: "/communaute"
+      weight: 5
     - name: "L’équipe"
       identifier: "navigation.team"
       pageRef: "/equipe"
@@ -38,6 +42,33 @@ params:
   socialImage: "/images/social-card.png"
   socialImageAlt: "Ocean Tech, la communauté tech et produit basco-landaise"
   meetupUrl: "https://luma.com/yr1zyygr"
+  eventPlaceholderImage: "/images/events/docorga-communaute.webp"
+  eventPlaceholderImageAlt: "Des personnes réunies lors d’une soirée Ocean Tech"
+  # Photos sélectionnées automatiquement selon le type du prochain rendez-vous.
+  # Une image définie directement dans nextEvent reste prioritaire.
+  eventTypeImages:
+    apero:
+      image: "/images/events/apero-bobs-beer.jpg"
+      imageAlt: "Des membres de la communauté Ocean Tech réunis au Bob’s Beer à Anglet"
+    talk:
+      image: "/images/events/wikicampers-ux-writing.webp"
+      imageAlt: "Une intervenante présente un talk lors d’une soirée Ocean Tech chez Wikicampers"
+  # Ce bloc pilote la carte « Prochain rendez-vous » de l’accueil.
+  # Supprime-le ou laisse un champ obligatoire vide pour masquer la carte.
+  # L’URL est facultative : le lien d’inscription s’affiche seulement si elle est renseignée.
+  nextEvent:
+    # Choix possibles : apero ou talk.
+    type: "talk"
+    weekday: "MAR."
+    day: "22"
+    month: "SEPT."
+    time: "18:30"
+    title: "Soirée Ocean Tech chez Docorga"
+    location: "6 Chem. de la Marouette, Bayonne"
+    # Pour une image spécifique à cet événement, décommente ces deux lignes :
+    # image: "/images/events/un-prochain-apero.webp"
+    # imageAlt: "Des participant·es lors d’un apéro Ocean Tech"
+    url: "https://luma.com/yr1zyygr"
   cfpUrl: "https://alder-art-bc7.notion.site/bc77aa935f42485697520feff67d2bbd?pvs=105"
   socialMedia:
     linkedin: "https://www.linkedin.com/company/oceantechcommunity"
