@@ -41,7 +41,7 @@ params:
   description: "Ocean Tech rassemble la communauté tech & produit de la côte basco-landaise. Meetups, talks et ateliers pour partager, apprendre et créer du lien entre passionné·es de la tech et du produit, au Pays Basque et dans les Landes."
   socialImage: "/images/social-card.png"
   socialImageAlt: "Ocean Tech, la communauté tech et produit basco-landaise"
-  meetupUrl: "https://luma.com/yr1zyygr"
+  meetupUrl: "https://luma.com/3ojwbkib"
   eventPlaceholderImage: "/images/events/docorga-communaute.webp"
   eventPlaceholderImageAlt: "Des personnes réunies lors d’une soirée Ocean Tech"
   # Photos sélectionnées automatiquement selon le type du prochain rendez-vous.
@@ -58,17 +58,17 @@ params:
   # L’URL est facultative : le lien d’inscription s’affiche seulement si elle est renseignée.
   nextEvent:
     # Choix possibles : apero ou talk.
-    type: "talk"
-    weekday: "MAR."
-    day: "22"
-    month: "SEPT."
+    type: "apero"
+    weekday: "JEU."
+    day: "29"
+    month: "OCT."
     time: "18:30"
-    title: "Soirée Ocean Tech chez Docorga"
-    location: "6 Chem. de la Marouette, Bayonne"
+    title: "Apéro Ocean Tech"
+    location: "Bob’s Beer Brewpub, 18 rue des Barthes, 64600 Anglet"
     # Pour une image spécifique à cet événement, décommente ces deux lignes :
     # image: "/images/events/un-prochain-apero.webp"
     # imageAlt: "Des participant·es lors d’un apéro Ocean Tech"
-    url: "https://luma.com/yr1zyygr"
+    url: "https://luma.com/3ojwbkib"
   cfpUrl: "https://alder-art-bc7.notion.site/bc77aa935f42485697520feff67d2bbd?pvs=105"
   socialMedia:
     linkedin: "https://www.linkedin.com/company/oceantechcommunity"
