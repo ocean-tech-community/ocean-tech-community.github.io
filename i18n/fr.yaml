@@ -4,6 +4,7 @@ buttons:
   nextApero: Voir le prochain apéro
   cfp: Propose un sujet
   partner: Devenir partenaire
+  feedback: Donner mon avis
 navigation:
   main: Navigation principale
   mobile: Navigation mobile
@@ -14,6 +15,7 @@ navigation:
   contribute: Contribuer
   speaker: Devenir speaker
   partner: Devenir partenaire
+  conference: La conférence
 footer:
   links: Liens utiles
   discover: Découvrir
@@ -141,6 +143,12 @@ home:
     title: "Ocean Tech : <br> La communauté tech & produit basco-landaise"
     text: "Sur la côte basco-landaise, trouver des meetups peut être plus compliqué que dans les grandes villes. Ocean Tech rassemble la communauté locale autour d’apéros, de talks, de labs et de rencontres régulières."
   homepage:
+    conference:
+      kicker: Imaginons la suite ensemble
+      title: Et si on créait une conférence Tech & Produit au Pays basque ?
+      text: "Nos rencontres font vivre les échanges entre personnes de la tech et du produit. Aujourd’hui, on aimerait aller plus loin avec une conférence dédiée à celles et ceux qui font le logiciel. Avant de nous lancer, ton avis nous intéresse."
+      link: Découvrir le projet de conférence
+      note: "Le projet est à l’étude : aucune date, aucun lieu ni programme ne sont définis."
     eyebrow: Pays Basque & Landes
     images:
       mainAlt: Des personnes réunies lors d’une soirée Ocean Tech
@@ -184,7 +192,6 @@ home:
       text: Pour rencontrer des gens de la tech et du produit, pas besoin de monter à Bordeaux ou de filer à Paris. On se retrouve ici, autour d’un verre ou d’un talk.
       note: Une communauté ouverte aux salarié·es, freelances, étudiant·es et curieux·ses du numérique.
     cta:
-      title: Le prochain verre est peut-être le début d’une belle rencontre.
       text: Inscris-toi pour recevoir les prochaines dates et rejoindre Ocean Tech.
   section:
     problem:
