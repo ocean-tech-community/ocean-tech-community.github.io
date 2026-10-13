@@ -2,7 +2,6 @@
 title: "Et si on créait une conférence Tech & Produit au Pays basque ?"
 description: "Une conférence Tech & Produit au Pays basque est à l’étude. Partage tes attentes et les sujets qui te donneraient envie de venir avec Ocean Tech."
 type: conference
-# Le futur formulaire pourra être ajouté au bloc final d’invitation.
 ---
 
 {{< conference-section kind="intro" >}}
