@@ -8,33 +8,43 @@ menus:
   main:
     - name: "Les événements"
       identifier: "navigation.events"
+      weight: 10
+    - name: "Les formats"
+      identifier: "navigation.meetings"
+      parent: "navigation.events"
       pageRef: "/evenements"
       weight: 10
     - name: "La communauté"
       identifier: "navigation.community"
-      pageRef: "/communaute"
       weight: 5
+    - name: "Découvrir la communauté"
+      identifier: "navigation.discoverCommunity"
+      parent: "navigation.community"
+      pageRef: "/communaute"
+      weight: 10
     - name: "L’équipe"
       identifier: "navigation.team"
+      parent: "navigation.community"
       pageRef: "/equipe"
       weight: 20
-    - name: "Contribuer"
-      identifier: "navigation.contribute"
-      weight: 25
-    - name: "Devenir speaker"
+    - name: "Proposer un sujet"
       identifier: "navigation.speaker"
-      parent: "navigation.contribute"
+      parent: "navigation.events"
       pageRef: "/devenir-speaker"
-      weight: 10
+      weight: 20
     - name: "Devenir partenaire"
       identifier: "navigation.partner"
-      parent: "navigation.contribute"
+      parent: "navigation.community"
       pageRef: "/partenaires"
-      weight: 20
+      weight: 30
     - name: "La conférence"
       identifier: "navigation.conference"
       pageRef: "/conference"
       weight: 15
+    - name: "Le blog"
+      identifier: "navigation.blog"
+      pageRef: "/articles"
+      weight: 20
     - name: "Rejoindre la communauté"
       identifier: "buttons.join"
       pageRef: "/rejoins-nous"

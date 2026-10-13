@@ -13,9 +13,14 @@ navigation:
   events: Les événements
   team: L’équipe
   contribute: Contribuer
-  speaker: Devenir speaker
+  speaker: Proposer un sujet
   partner: Devenir partenaire
   conference: La conférence
+  discoverCommunity: Découvrir la communauté
+  meetings: Les formats
+  blog: Le blog
+articles:
+  all: Tous les articles
 footer:
   links: Liens utiles
   discover: Découvrir

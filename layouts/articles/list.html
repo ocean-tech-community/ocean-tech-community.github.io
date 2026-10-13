@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="single-page articles-page">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <div class="page-content">{{ .Content }}</div>
+    <div class="article-list">
+      {{ range .RegularPages.ByDate.Reverse }}
+        {{ partial "article-card" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
