@@ -21,13 +21,13 @@ Pour ce premier rendez-vous au Bob’s Beer, je m’étais fixé un objectif : r
 
 Finalement, nous étions plus de trente.
 
-On avait un petit espace réservé, des bières et beaucoup de choses à se raconter. On a parlé de nos métiers, de nos projets, de nos expériences, et aussi de tout et de rien. Ce premier apéro m’a donné envie de continuer : d’autres personnes avaient envie de ces rencontres.
+On avait réservé un coin au Bob’s Beer pour se retrouver autour d’un verre. On a parlé de nos métiers, de nos projets, de nos expériences, et aussi de tout et de rien. Ce premier apéro m’a donné envie de continuer : d’autres personnes avaient envie de ces rencontres.
 
 Depuis, Ocean Tech a pris plusieurs formes. Les apéros permettent de se retrouver simplement, sans programme. Les soirées avec des talks donnent l’occasion de découvrir des expériences concrètes, puis de prolonger les échanges autour d’un verre.
 
 Chez Docorga et Wikicampers, nous avons parlé de produit, d’open source, d’UX Writing ou encore de développement avec l’IA. Des sujets différents, avec la même envie de partager ce qu’on apprend dans nos métiers.
 
-Mais ce que je retiens surtout, ce sont les personnes. De nouvelles têtes arrivent, d’autres reviennent régulièrement. Les discussions reprennent d’un événement à l’autre. Certaines personnes proposent un sujet, une idée ou un coup de main. Petit à petit, une communauté prend forme.
+Mais ce que je retiens surtout, ce sont les personnes. De nouvelles têtes arrivent, d’autres reviennent régulièrement. Petit à petit, une communauté prend forme.
 
 ## Une aventure qui devient collective
 
@@ -51,9 +51,9 @@ Aujourd’hui, la participation et les personnes qui reviennent me donnent envie
 
 ## Et si on construisait une conférence ensemble ?
 
-J’ai déjà vécu les conférences comme speaker, puis participé à leur organisation avec Agile Pays Basque. Passer de l’autre côté m’a donné envie de renouveler l’expérience.
+J’ai assisté à des conférences, j’y ai aussi pris la parole comme speaker et j’ai participé à leur organisation avec Agile Pays Basque. Cette expérience m’a donné envie de recommencer.
 
-Avec Ocean Tech, j’aimerais explorer une conférence autour de la tech et du produit, avec des talks, des retours d’expérience et des ateliers. Elle viendrait enrichir les rendez-vous du territoire, aux côtés d’initiatives comme Shaka et Agile Pays Basque.
+Avec Ocean Tech, j’aimerais explorer une conférence autour de la tech et du produit, avec des talks et des ateliers pour partager des retours d’expérience et découvrir d’autres pratiques. Elle viendrait enrichir les rendez-vous du territoire, aux côtés d’initiatives comme Shaka et Agile Pays Basque.
 
 Ce projet reste à construire. Avant de nous lancer dans une organisation de cette ampleur, nous voulons comprendre ce qui donnerait envie aux personnes du coin de participer : les sujets, les formats, les choses qu’elles aimeraient apprendre et les conditions qui leur permettraient de venir.
 
