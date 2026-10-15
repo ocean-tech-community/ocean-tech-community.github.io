@@ -14,7 +14,7 @@ menus:
       parent: "navigation.events"
       pageRef: "/evenements"
       weight: 10
-    - name: "La communauté"
+    - name: "Le projet"
       identifier: "navigation.community"
       weight: 5
     - name: "Pourquoi Ocean Tech ?"
