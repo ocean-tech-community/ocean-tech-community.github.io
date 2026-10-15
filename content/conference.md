@@ -8,7 +8,7 @@ type: conference
 
 Depuis un an, Ocean Tech rassemble les passionné·es de Tech et de Produit autour de rencontres, de talks et de moments de partage.
 
-Aujourd’hui, on réfléchit à aller plus loin : **créer une conférence dédiée à celles et ceux qui conçoivent et construisent des logiciels.**
+Aujourd’hui, on réfléchit à aller plus loin : **créer une conférence pour tous ceux et celles qui travaillent dans le monde du logiciel.**
 
 Une conférence avec du fond, des sujets variés, des expériences concrètes et l’envie d’apprendre les uns des autres.
 
@@ -22,7 +22,7 @@ Une conférence avec du fond, des sujets variés, des expériences concrètes et
 
 Derrière chaque produit numérique, il y a des personnes qui cherchent à comprendre des besoins, imaginent des solutions, font des choix et les concrétisent.
 
-Développeur·ses, architectes, Product Managers, Product Designers et bien d’autres profils apportent chacun·e leurs compétences. C’est en travaillant ensemble qu’ils et elles parviennent à construire des produits utiles.
+Développeur·ses, architectes, SRE, administrateur·rices systèmes, Product Managers, Product Designers et bien d’autres profils apportent chacun·e leurs compétences. C’est en travaillant ensemble qu’ils et elles parviennent à construire des produits utiles.
 
 Avec Ocean Tech, on aimerait réunir ces différentes disciplines autour d’une même envie : **partager nos connaissances, découvrir d’autres pratiques et progresser dans nos métiers.**
 
@@ -37,7 +37,7 @@ On imagine un programme qui explore plusieurs facettes de la conception et de la
 - **Tech :** architecture, développement, qualité, infrastructure, performance et pratiques d’ingénierie.
 - **Produit :** compréhension des besoins, recherche utilisateur, stratégie, expérimentation et prise de décision.
 - **Tech × Produit :** collaboration, compréhension des problèmes, méthodes et pratiques pour mieux construire ensemble.
-- **Autour du produit :** entrepreneuriat, product marketing et autres sujets liés à la création et à la vie des produits numériques.
+- **Autour du produit :** entrepreneuriat, product marketing et le passage d’une idée à un produit.
 
 Des sujets accessibles pour découvrir de nouvelles approches, mais aussi des conférences plus pointues pour approfondir certains domaines.
 
@@ -63,7 +63,7 @@ On aimerait des interventions qui prennent le temps d’explorer les sujets, de 
 
 ## Et si on construisait la suite ensemble ?
 
-Pour le moment, cette conférence est une idée que nous commençons à explorer. Rien n’est encore décidé.
+On commence à réfléchir à la façon d’organiser cette conférence. Rien n’est encore décidé.
 
 Avant de nous lancer dans son organisation, on aimerait savoir ce que tu en penses.
 
