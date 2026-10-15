@@ -17,7 +17,7 @@ menus:
     - name: "La communauté"
       identifier: "navigation.community"
       weight: 5
-    - name: "Découvrir la communauté"
+    - name: "Pourquoi Ocean Tech ?"
       identifier: "navigation.discoverCommunity"
       parent: "navigation.community"
       pageRef: "/communaute"
