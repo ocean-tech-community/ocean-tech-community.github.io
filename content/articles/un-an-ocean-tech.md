@@ -27,7 +27,7 @@ Depuis, Ocean Tech a pris plusieurs formes. Les apéros permettent de se retrouv
 
 Chez Docorga et Wikicampers, nous avons parlé de produit, d’open source, d’UX Writing ou encore de développement avec l’IA. Des sujets différents, avec la même envie de partager ce qu’on apprend dans nos métiers.
 
-Mais ce que je retiens surtout, ce sont les personnes. De nouvelles têtes arrivent, d’autres reviennent régulièrement. Petit à petit, une communauté prend forme.
+Mais ce que je retiens surtout, ce sont les personnes rencontrées près de chez moi et le plaisir de se retrouver autour d’un verre ou d’un talk. Au fil des rencontres, la communauté grandit.
 
 ## Une aventure qui devient collective
 
@@ -66,3 +66,5 @@ Cette première année nous donne envie de continuer. Pour avancer, la prochaine
 **J’ai préparé un questionnaire pour recueillir tes attentes pour une conférence Ocean Tech.** Quels sujets t’intéressent ? Quels formats te donneraient envie de venir ? Qu’est-ce qui compterait dans ta décision de participer ? Tes réponses nous aideront à préciser le projet avant de nous lancer dans son organisation.
 
 {{< conference-feedback >}}
+
+*Arnaud*
