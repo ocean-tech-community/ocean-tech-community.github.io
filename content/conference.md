@@ -12,7 +12,7 @@ Aujourd’hui, on réfléchit à aller plus loin : **créer une conférence pour
 
 Une conférence avec du fond, des sujets variés, des expériences concrètes et l’envie d’apprendre les uns des autres.
 
-**Et avant d’aller plus loin, on aimerait avoir ton avis.**
+**Mais avant d’aller plus loin, on aimerait avoir ton avis.**
 
 {{< /conference-section >}}
 
