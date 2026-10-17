@@ -9,7 +9,7 @@
     <nav class="nav-links" aria-label="{{ i18n "navigation.main" }}">
       {{ range site.Menus.main }}
         {{ if .HasChildren }}
-          <details class="nav-help-menu">
+          <details class="nav-help-menu" name="desktop-navigation">
             <summary class="nav-link">{{ i18n .Identifier }} <svg class="nav-help-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="m1 1 5 5 5-5"/></svg></summary>
             <div class="nav-help-panel">
               {{ range .Children }}
@@ -27,12 +27,18 @@
         <span></span><span></span><span></span>
       </summary>
       <nav class="mobile-menu-panel" aria-label="{{ i18n "navigation.mobile" }}">
-        <a class="mobile-nav-link" href="{{ "/communaute/" | relURL }}">{{ i18n "navigation.community" }}</a>
-        <a class="mobile-nav-link" href="{{ "/evenements/" | relURL }}">{{ i18n "navigation.events" }}</a>
-        <a class="mobile-nav-link" href="{{ "/equipe/" | relURL }}">{{ i18n "navigation.team" }}</a>
-        <a class="mobile-nav-link" href="{{ "/devenir-speaker/" | relURL }}">{{ i18n "navigation.speaker" }}</a>
-        <a class="mobile-nav-link" href="{{ "/partenaires/" | relURL }}">{{ i18n "navigation.partner" }}</a>
-        {{ partial "join-link" . }}
+        {{ range site.Menus.main }}
+          {{ if .HasChildren }}
+            <details class="mobile-help-menu" name="mobile-navigation">
+              <summary>{{ i18n .Identifier }} <svg class="nav-help-chevron" viewBox="0 0 12 8" aria-hidden="true" focusable="false"><path d="m1 1 5 5 5-5"/></svg></summary>
+              {{ range .Children }}
+                <a class="mobile-nav-link" href="{{ .URL }}">{{ i18n .Identifier }}</a>
+              {{ end }}
+            </details>
+          {{ else }}
+            <a class="{{ .Params.class | default "mobile-nav-link" }}" href="{{ .URL }}">{{ i18n .Identifier }}</a>
+          {{ end }}
+        {{ end }}
       </nav>
     </details>
   </div>

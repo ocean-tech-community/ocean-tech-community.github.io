@@ -1,0 +1,10 @@
+<a class="article-card" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+  {{ with .Params.image }}
+  <img src="{{ . | relURL }}" alt="{{ $.Params.imageAlt }}" loading="lazy" decoding="async">
+  {{ end }}
+  <div class="article-card-copy">
+    <p class="article-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format ":date_long" }}</time>{{ with .Params.author }} · {{ . }}{{ end }}</p>
+    <h3>{{ .Title }}</h3>
+    <p>{{ .Description }}</p>
+  </div>
+</a>

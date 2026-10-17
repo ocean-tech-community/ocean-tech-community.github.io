@@ -1,0 +1,23 @@
+{{ $kind := .Get "kind" }}
+<section class="conference-section conference-{{ $kind }}"{{ if eq $kind "invitation" }} id="donner-mon-avis"{{ end }}>
+  <div class="container{{ if or (eq $kind "intro") (eq $kind "sharing") }} conference-split{{ end }}">
+    <div class="conference-copy">
+      {{ if eq $kind "intro" }}
+        <h1>{{ .Page.Title }}</h1>
+      {{ end }}
+      {{ .Inner | markdownify }}
+      {{ if or (eq $kind "intro") (eq $kind "invitation") }}
+        {{ partial "conference-feedback" . }}
+      {{ end }}
+    </div>
+    {{ if eq $kind "intro" }}
+      <figure class="conference-photo conference-intro-photo">
+        <img src="/images/events/docorga-communaute.webp" width="1600" height="900" alt="{{ i18n "home.homepage.images.mainAlt" }}" decoding="async">
+      </figure>
+    {{ else if eq $kind "sharing" }}
+      <figure class="conference-photo conference-sharing-photo">
+        <img src="/images/events/wikicampers-ux-writing.webp" width="1600" height="900" alt="{{ i18n "home.homepage.formats.talks.imageAlt" }}" loading="lazy" decoding="async">
+      </figure>
+    {{ end }}
+  </div>
+</section>

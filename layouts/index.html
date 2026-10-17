@@ -114,15 +114,21 @@
       <h2>{{ i18n "home.homepage.proof.title" }}</h2>
       <p>{{ i18n "home.homepage.proof.text" }}</p>
       <p class="home-proof-note">{{ i18n "home.homepage.proof.note" }}</p>
+      <div class="home-proof-join">
+        <p>{{ i18n "home.homepage.cta.text" }}</p>
+        {{ partial "join-link" . }}
+      </div>
     </div>
   </div>
 </section>
 
-<section class="home-cta">
+<section class="home-cta home-conference-cta" aria-labelledby="home-conference-title">
   <div class="container">
-    <h2>{{ i18n "home.homepage.cta.title" }}</h2>
-    <p>{{ i18n "home.homepage.cta.text" }}</p>
-    {{ partial "join-link" . }}
+    <p class="home-conference-eyebrow">{{ i18n "home.homepage.conference.kicker" }}</p>
+    <h2 id="home-conference-title">{{ i18n "home.homepage.conference.title" }}</h2>
+    <p>{{ i18n "home.homepage.conference.text" }}</p>
+    <a class="btn btn-secondary" href="{{ relref . "conference" }}">{{ i18n "home.homepage.conference.link" }}</a>
+    <p class="home-conference-status">{{ i18n "home.homepage.conference.note" }}</p>
   </div>
 </section>
 {{ end }}

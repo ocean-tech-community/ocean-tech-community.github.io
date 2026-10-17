@@ -8,28 +8,42 @@ menus:
   main:
     - name: "Les événements"
       identifier: "navigation.events"
+      weight: 10
+    - name: "Les formats"
+      identifier: "navigation.meetings"
+      parent: "navigation.events"
       pageRef: "/evenements"
       weight: 10
-    - name: "La communauté"
+    - name: "Le projet"
       identifier: "navigation.community"
-      pageRef: "/communaute"
       weight: 5
+    - name: "Pourquoi Ocean Tech ?"
+      identifier: "navigation.discoverCommunity"
+      parent: "navigation.community"
+      pageRef: "/communaute"
+      weight: 10
     - name: "L’équipe"
       identifier: "navigation.team"
+      parent: "navigation.community"
       pageRef: "/equipe"
       weight: 20
-    - name: "Contribuer"
-      identifier: "navigation.contribute"
-      weight: 25
-    - name: "Devenir speaker"
+    - name: "Proposer un sujet"
       identifier: "navigation.speaker"
-      parent: "navigation.contribute"
+      parent: "navigation.events"
       pageRef: "/devenir-speaker"
-      weight: 10
+      weight: 20
     - name: "Devenir partenaire"
       identifier: "navigation.partner"
-      parent: "navigation.contribute"
+      parent: "navigation.community"
       pageRef: "/partenaires"
+      weight: 30
+    - name: "La conférence"
+      identifier: "navigation.conference"
+      pageRef: "/conference"
+      weight: 15
+    - name: "Le blog"
+      identifier: "navigation.blog"
+      pageRef: "/articles"
       weight: 20
     - name: "Rejoindre la communauté"
       identifier: "buttons.join"
@@ -38,6 +52,7 @@ menus:
       params:
         class: "btn btn-primary"
 params:
+  conferenceFeedbackUrl: "https://docs.google.com/forms/d/e/1FAIpQLScJnuJe15aXWPgtZa4rDXo42fiio81MoftK3WsTgKnq1BpzTQ/viewform?usp=dialog"
   description: "Ocean Tech rassemble la communauté tech & produit de la côte basco-landaise. Apéros, talks et Labs pour partager, apprendre et créer du lien entre passionné·es de la tech et du produit, au Pays Basque et dans les Landes."
   socialImage: "/images/social-card.png"
   socialImageAlt: "Ocean Tech, la communauté tech et produit basco-landaise"
