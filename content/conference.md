@@ -20,7 +20,7 @@ Une conférence avec du fond, des sujets variés, des expériences concrètes et
 
 ## Une conférence pour celles et ceux qui font le logiciel
 
-Derrière chaque produit numérique, il y a des personnes qui cherchent à comprendre des besoins, imaginent des solutions, font des choix et les concrétisent.
+Derrière chaque produit, il y a des personnes qui cherchent à comprendre des besoins, imaginent des solutions, font des choix et les concrétisent.
 
 Développeur·ses, architectes, SRE, administrateur·rices systèmes, Product Managers, Product Designers et bien d’autres profils apportent chacun·e leurs compétences. C’est en travaillant ensemble qu’ils et elles parviennent à construire des produits utiles.
 
