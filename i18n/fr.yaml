@@ -45,7 +45,7 @@ faq:
     answer: Oui, bien sûr. La plupart des personnes viennent justement pour rencontrer du monde. Les apéros sont pensés pour permettre des échanges informels, même si tu ne connais encore personne.
   level:
     question: Quel niveau faut-il ?
-    answer: Il n’y a aucun prérequis. La communauté rassemble des profils techniques, produit, design, étudiants, freelances, salarié·es et personnes simplement curieuses. L’envie d’échanger suffit.
+    answer: "Les apéros et les soirées sont ouverts à toutes et tous, sans prérequis. Pour participer à un Lab, il faut déjà avoir quelques bases et savoir coder un minimum. Pas besoin d’être expert·e du sujet : on apprend ensemble en pratiquant."
   propose:
     question: Puis-je proposer un sujet ?
     beforeLink: Oui. Les retours d’expérience, les découvertes, les échecs utiles et les sujets autour du logiciel, du produit, du design, de la data, de l’architecture ou de l’IA sont les bienvenus. Découvre
@@ -68,7 +68,7 @@ events:
       text: "Un rendez-vous mensuel au Bob’s Beer, sans programme, pour discuter et créer des connexions locales."
     labs:
       heading: "Les Labs"
-      text: "Des rencontres en petit comité pour coder, expérimenter et apprendre entre pairs, avec ou sans ordinateur."
+      text: "Des rencontres en petit comité pour coder et apprendre entre pairs. Quelques bases en code suffisent ; ordinateur recommandé."
   program:
     label: "Au programme"
   talks: Les talks
