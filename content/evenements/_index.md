@@ -3,7 +3,7 @@ title: "Les événements"
 description: "Les soirées, apéros et Labs Ocean Tech pour la communauté tech et produit de la côte basco-landaise."
 ---
 
-Ocean Tech réunit la communauté tech & produit de la côte basco-landaise autour de trois formats complémentaires : des apéros pour se rencontrer, des soirées pour découvrir des retours d’expérience et des Labs pour pratiquer ensemble. Que tu sois dev, designer, PM, en freelance, salarié·e, étudiant·e ou simplement curieux·se, tu es le bienvenu.
+Ocean Tech réunit la communauté tech & produit de la côte basco-landaise autour de trois formats complémentaires : des apéros pour se rencontrer, des soirées pour découvrir des retours d’expérience et des Labs pour pratiquer ensemble. Que tu sois dev, designer, PM, en freelance, salarié·e, étudiant·e ou simplement curieux·se, tu es le bienvenu aux apéros et aux soirées. Pour les Labs, il faut quelques bases en code.
 
 {{< event-types >}}
 
@@ -37,13 +37,13 @@ Tu veux en savoir plus avant de proposer ? Consulte la page [Devenir speaker](/d
 
 Les Labs sont des rencontres en petit comité pour coder, expérimenter, apprendre et s’amuser ensemble autour de la tech. Ils complètent les apéros et les soirées avec un format centré sur la pratique et l’expérimentation collective.
 
-Contrairement aux soirées Ocean Tech, il ne s’agit pas d’écouter un ou plusieurs talks. Il n’y a pas de speaker qui vient donner un cours : quelqu’un peut proposer un sujet, une expérience ou un exercice, puis le groupe l’explore ensemble.
+Pas de talk, de cours ni de formation : le programme n’est pas préparé à l’avance. Au début de chaque Lab, chacun·e peut proposer un sujet, une expérience ou un exercice. Le groupe choisit ensuite ce qu’il a envie d’explorer pendant la séance.
 
-### Un format simple et ouvert
+### Pratiquer et apprendre entre pairs
 
-Le sujet et la manière de pratiquer peuvent changer à chaque Lab. On peut travailler en binômes, en petits groupes, en mob ou relever un challenge ensemble. Il est possible de venir avec son ordinateur pour participer activement, mais ce n’est pas obligatoire : on peut aussi observer, discuter, poser des questions et apprendre avec le groupe.
+Selon le sujet choisi, on peut pratiquer en binôme, en petit groupe, en mob ou relever un challenge ensemble. Apporte ton ordinateur si tu le peux : c’est recommandé pour coder et tester. Sans ordinateur, tu peux aussi pratiquer à plusieurs sur une même machine et prendre part aux échanges.
 
-Les Labs ne sont ni des cours ni des formations. Une personne peut faciliter ou proposer le point de départ, mais l’apprentissage vient surtout des échanges entre participant·es, des essais, des erreurs et des découvertes faites en chemin.
+Une personne peut faciliter la séance, mais l’apprentissage vient surtout des échanges entre participant·es, des essais, des erreurs et des découvertes faites en chemin.
 
 ### Quelques exemples
 
@@ -58,9 +58,9 @@ Cette liste n’est pas exhaustive : un Lab décrit l’esprit de la rencontre, 
 
 ### À quoi s’attendre ?
 
-Les Labs s’adressent aux personnes qui ont envie de pratiquer, découvrir et échanger autour du développement et de la tech. Il n’est pas nécessaire d’être expert·e du sujet proposé.
+Les Labs s’adressent actuellement surtout aux profils techniques : il faut déjà avoir quelques bases et savoir coder un minimum. Pas besoin d’être expert·e du sujet proposé : on explore ensemble et on apprend en pratiquant.
 
-Pour les premières éditions, la jauge est limitée à **15 personnes** afin de préserver la qualité des échanges. Les sessions de pratique durent généralement entre une et deux heures. Elles peuvent être accueillies dans les locaux d’entreprises, coworkings ou autres structures disposant de tables, de prises électriques, d’un Wi-Fi correct et, idéalement, d’un écran.
+Les places sont limitées pour préserver la qualité des échanges. La jauge de chaque Lab est indiquée sur sa page d’inscription. Si tu ne peux plus venir, pense à te désinscrire pour libérer une place. Les sessions de pratique durent généralement entre une et deux heures. Elles peuvent être accueillies dans les locaux d’entreprises, coworkings ou autres structures disposant de tables, de prises électriques, d’un Wi-Fi correct et, idéalement, d’un écran.
 
 Un apéro participatif permet aussi de démarrer la rencontre simplement : chacun·e peut apporter quelque chose à boire ou à grignoter. Les premières éditions serviront enfin à ajuster le format avec les retours de la communauté.
 
