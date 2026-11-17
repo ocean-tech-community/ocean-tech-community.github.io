@@ -80,9 +80,6 @@ params:
     time: "18:30"
     title: "Apéro Ocean Tech au Pub No Comment"
     location: "No Comment, 66 avenue de Bayonne, 64600 Anglet"
-    # Photo d’un apéro précédent de la communauté.
-    image: "/images/events/apero-bobs-beer.jpg"
-    imageAlt: "Des participant·es lors d’un apéro Ocean Tech au Bob’s Beer à Anglet"
     url: "https://luma.com/k42fvw8z"
   cfpUrl: "https://alder-art-bc7.notion.site/bc77aa935f42485697520feff67d2bbd?pvs=105"
   socialMedia:
