@@ -74,16 +74,13 @@ params:
   nextEvent:
     # Choix possibles : apero ou talk.
     type: "apero"
-    weekday: "JEU."
-    day: "29"
-    month: "OCT."
+    weekday: "MAR."
+    day: "17"
+    month: "NOV."
     time: "18:30"
-    title: "Apéro Ocean Tech"
-    location: "Bob’s Beer Brewpub, 18 rue des Barthes, 64600 Anglet"
-    # Pour une image spécifique à cet événement, décommente ces deux lignes :
-    # image: "/images/events/un-prochain-apero.webp"
-    # imageAlt: "Des participant·es lors d’un apéro Ocean Tech"
-    url: "https://luma.com/3ojwbkib"
+    title: "Apéro Ocean Tech au Pub No Comment"
+    location: "No Comment, 66 avenue de Bayonne, 64600 Anglet"
+    url: "https://luma.com/k42fvw8z"
   cfpUrl: "https://alder-art-bc7.notion.site/bc77aa935f42485697520feff67d2bbd?pvs=105"
   socialMedia:
     linkedin: "https://www.linkedin.com/company/oceantechcommunity"
