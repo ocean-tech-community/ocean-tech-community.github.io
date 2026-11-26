@@ -73,14 +73,14 @@ params:
   # L’URL est facultative : le lien d’inscription s’affiche seulement si elle est renseignée.
   nextEvent:
     # Choix possibles : apero ou talk.
-    type: "apero"
-    weekday: "MAR."
-    day: "17"
-    month: "NOV."
+    type: "talk"
+    weekday: "JEU."
+    day: "10"
+    month: "DÉC."
     time: "18:30"
-    title: "Apéro Ocean Tech au Pub No Comment"
-    location: "No Comment, 66 avenue de Bayonne, 64600 Anglet"
-    url: "https://luma.com/k42fvw8z"
+    title: "Soirée Ocean Tech chez SD Worx"
+    location: "SD Worx, 52 avenue du 8 Mai 1945, 64100 Bayonne"
+    url: "https://luma.com/94l89teo"
   cfpUrl: "https://alder-art-bc7.notion.site/bc77aa935f42485697520feff67d2bbd?pvs=105"
   socialMedia:
     linkedin: "https://www.linkedin.com/company/oceantechcommunity"
